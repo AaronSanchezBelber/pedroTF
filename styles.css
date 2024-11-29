@@ -1,0 +1,566 @@
+/* BoldExtraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-BoldExtraSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-BoldExtraSqueezed.otf') format('opentype');
+}
+
+/* BoldSemiSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-BoldSemiSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-BoldSemiSqueezed.otf') format('opentype');
+}
+
+/* BoldSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-BoldSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-BoldSqueezed.otf') format('opentype');
+}
+
+/* BoldUltraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-BoldUltraSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-BoldUltraSqueezed.otf') format('opentype');
+}
+
+/* BookExtraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-BookExtraSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-BookExtraSqueezed.otf') format('opentype');
+}
+
+/* BookSemiSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-BookSemiSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-BookSemiSqueezed.otf') format('opentype');
+}
+
+/* BookSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-BookSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-BookSqueezed.otf') format('opentype');
+}
+
+/* BookUltraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-BookUltraSqueezed';
+  src: url('assets/fonts/OTNeueMontreal-BookUltraSqueezed.otf') format('opentype');
+}
+
+/* ItalicExtraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-ItalicExtraSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-ItalicExtraSqueezed.otf') format('opentype');
+}
+
+/* ItalicSemiSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-ItalicSemiSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-ItalicSemiSqueezed.otf') format('opentype');
+}
+
+/* ItalicSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-ItalicSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-ItalicSqueezed.otf') format('opentype');
+}
+
+/* ItalicUltraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-ItalicUltraSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-ItalicUltraSqueezed.otf') format('opentype');
+}
+
+/* MediumExtraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-MediumExtraSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-MediumExtraSqueezed.otf') format('opentype');
+}
+
+/* MediumSemiSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-MediumSemiSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-MediumSemiSqueezed.otf') format('opentype');
+}
+
+/* MediumSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-MediumSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-MediumSqueezed.otf') format('opentype');
+}
+
+/* MediumUltraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-MediumUltraSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-MediumUltraSqueezed.otf') format('opentype');
+}
+
+/* SemiBoldExtraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-SemiBoldExtraSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-SemiBoldExtraSqueezed.otf') format('opentype');
+}
+
+/* SemiBoldSemiSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-SemiBoldSemiSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-SemiBoldSemiSqueezed.otf') format('opentype');
+}
+
+/* SemiBoldSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-SemiBoldSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-SemiBoldSqueezed.otf') format('opentype');
+}
+
+/* SemiBoldUltraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-SemiBoldUltraSqueezed.otf') format('opentype');
+}
+
+/* ThinExtraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-ThinExtraSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-ThinExtraSqueezed.otf') format('opentype');
+}
+
+/* ThinSemiSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-ThinSemiSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-ThinSemiSqueezed.otf') format('opentype');
+}
+
+/* ThinSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-ThinSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-ThinSqueezed.otf') format('opentype');
+}
+
+/* ThinUltraSqueezed */
+@font-face {
+  font-family: 'OTNeueMontreal-ThinUltraSqueezed';
+  src: url('./assets/fonts/OTNeueMontreal-ThinUltraSqueezed.otf') format('opentype');
+}
+
+/* .text-thin {
+  font-family: 'OTNeueMontreal', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-italic {
+  font-family: 'OTNeueMontreal', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.text-semibold {
+  font-family: 'BookUltraSqueezed', sans-serif;
+
+} */
+
+/* Header */
+/* Header */
+
+
+
+
+/* Logo */
+.logo {
+  height: 100%;  /* El logo ocupa el 100% de la altura del header */
+  width: auto;   /* Mantiene las proporciones de la imagen */
+  object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
+  padding-left: 0px; /* Si ya tienes un padding, ajustalo o elimínalo */
+  margin-left: 0;
+}
+
+
+
+/* Contenedor principal */
+.h-screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Para ocupar toda la altura */
+}
+
+main {
+  flex: 1; /* Ocupa todo el espacio disponible entre header y footer */
+  overflow: auto; /* Permite scroll si es necesario */
+}
+
+/* Cabecera y Navegación */
+.h-20 { 
+  height: 7rem; 
+}
+
+/* Contenedor de cuadrícula para galería */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Contenedor de video */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilo de las imágenes con la nueva clase */
+.custom-image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.image-container {
+  height: 540px;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-item-large {
+  height: 400px;
+}
+
+.image-container-work-final {
+  height: 700px; /* Establece la altura del contenedor */
+  width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+  overflow: hidden; /* Esconde cualquier parte de la imagen que salga del contenedor */
+}
+
+.image-container-work-final img {
+  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+  height: 100%; /* La imagen ocupa toda la altura del contenedor */
+  object-fit: cover; /* Hace que la imagen cubra todo el contenedor sin deformarse */
+}
+
+/* Estilos para la sección de créditos */
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.credit-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.credit-column p {
+  margin: 0;
+  padding: 2px 0;
+}
+
+/* Fondo para la imagen de sello */
+.background-image-sello {
+  background-image: url('../images/foto prueba fondo_Mesa de trabajo 1.png');
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.background-image-sello .z-10 {
+  position: relative;
+  z-index: 2;
+}
+
+/* Estilo inicial: extremo pixelado y desenfoque intenso */
+.pixelated-gif {
+  image-rendering: pixelated; /* Renderización extrema de pixeles */
+  filter: blur(10px); /* Aumenta el desenfoque */
+  transition: all 0.5s ease-in-out; /* Transición suave para todos los efectos */
+}
+
+/* Estilo al pasar el ratón: nítido y ajustado */
+.pixelated-gif:hover {
+  image-rendering: auto; /* Regresa a la resolución nítida */
+  filter: none; /* Elimina el desenfoque */
+  transform: scale(1); /* Retorna al tamaño original */
+}
+
+/* Contenedor para las imágenes con el hueco blanco a la derecha */
+.custom-image-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Imagen a la izquierda y hueco blanco a la derecha */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.image-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%; /* Imagen ocupa todo el ancho */
+  height: 100%; /* Imagen ocupa toda la altura */
+  object-fit: cover; /* Mantiene la proporción y cubre el área */
+}
+
+/* Contenedor para las imágenes con el hueco blanco a la izquierda */
+.custom-image-grid {
+  display: grid;
+  grid-template-columns: 3fr 3fr; /* Espacio blanco a la izquierda y la imagen */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.image-container {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%; /* Imagen ocupa todo el ancho */
+  height: 100%; /* Imagen ocupa toda la altura */
+  object-fit: cover; /* Mantiene la proporción y cubre el área */
+}
+
+.image-container-vertical {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Ajustar el tamaño de las imágenes */
+  overflow: hidden;
+}
+
+.image-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Contenedor de la imagen base */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Imagen para el hover: la segunda imagen */
+.image-hover {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: left 0.5s ease-in-out;
+}
+
+/* Efecto hover: mover la primera imagen a la izquierda */
+.image-item:hover .image-container {
+  transform: translateX(-100%);
+}
+
+.image-item:hover .image-hover {
+  left: 0;
+}
+
+.custom-image-grid-v {
+  display: flex;
+  width: 100%;
+}
+
+.image-container-v {
+  width: 50%; /* Un tercio de la pantalla */
+  padding: 5px;
+  position: relative;
+}
+
+.empty-space-v {
+  width: 66.66%; /* Dos tercios de la pantalla en blanco */
+}
+
+.image-item-v img {
+  width: 100%;
+  transition: opacity 0.3s ease;
+}
+
+.image-hover-v {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-item:hover .image-hover-v {
+  opacity: 1;
+}
+
+
+
+/* Contenedor principal del slider */
+.custom-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ajusta la altura del slider al 100% de la altura de la ventana */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
+}
+
+/* Estilo de las diapositivas */
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Las diapositivas inactivas no se verán */
+  transition: opacity 0.5s ease-in-out; /* Transición suave de opacidad */
+}
+
+/* La diapositiva activa se vuelve visible */
+.slide.active {
+  opacity: 1; /* Hace visible la diapositiva activa */
+}
+
+/* Estilo específico para las imágenes horizontales */
+.slide.horizontal img {
+  width: 100%; /* La imagen horizontal ocupa el 100% del ancho */
+  height: auto;
+  object-fit: cover;
+  transition: transform 1s ease-in-out;
+}
+
+.slide.horizontal img:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo específico para las imágenes verticales */
+.slide.vertical {
+ /* La imagen vertical ocupa solo el 50% del ancho del contenedor */
+   /* La altura de la diapositiva es igual a la del contenedor */
+  display: flex;
+  justify-content: flex-start; /* Alinea la imagen vertical a la izquierda */
+  overflow: hidden; /* Oculta el exceso de imagen que sobresale */
+}
+
+.slide.vertical img {
+  width: auto; /* La anchura de la imagen es auto para mantener la proporción */
+  height: 100%; /* La altura se ajusta a la altura del contenedor */
+  object-fit: contain; /* Asegura que la imagen no se recorte y mantenga su proporción */
+  transition: transform 1s ease-in-out;
+}
+
+.slide.vertical img:hover {
+  transform: scale(1.05);
+}
+
+/* Animación para la imagen vertical: crear espacio en blanco a la izquierda */
+.slide.vertical img {
+  margin-left: 50%; /* Mueve la imagen hacia la izquierda creando el espacio blanco */
+}
+
+/* Ajuste de transición de las imágenes verticales */
+@media screen and (max-width: 768px) {
+  /* En pantallas pequeñas, las imágenes verticales ocupan el 100% */
+  .slide.vertical {
+    width: 100%;
+  }
+  .slide.vertical img {
+    margin-left: 0; /* Elimina el margen a la izquierda en pantallas pequeñas */
+  }
+}
+
+body {
+  cursor: url('../images/cursor-mickie.png'), auto;
+}
+
+
+
+
+
+/* General footer styles */
+footer {
+  height: 10rem; /* Equivale a h-40 en Tailwind */
+  padding: 1rem; /* Equivale a p-4 */
+  color: #dc2626; /* Tailwind's text-red-600 */
+}
+
+/* Custom fonts */
+.OTNeueMontreal-ThinUltraSqueezed {
+  font-family: 'OTNeueMontreal', sans-serif; /* Usa la fuente que necesitas */
+  font-weight: 200; /* Thin */
+  font-stretch: ultra-condensed; /* Si tu fuente lo soporta */
+  font-size: 2rem; /* Equivalente a text-2xl */
+}
+
+.ThinUltraSqueezed {
+  font-weight: 200;
+  font-stretch: ultra-condensed;
+}
+
+.ThinSemiSqueezed {
+  font-weight: 200;
+  font-stretch: semi-condensed;
+}
+
+.OTNeueMontreal-ThinUltraSqueezed {
+  font-family: 'OTNeueMontreal', sans-serif;
+  font-weight: 200;
+  font-stretch: ultra-condensed;
+}
+
+.SemiBoldSemiSqueezed {
+  font-weight: 600; /* Semi-bold */
+  font-stretch: semi-condensed;
+}
+
+/* Aplica la fuente al header */
+.header-font {
+  font-family: 'OTNeueMontreal-BookUltraSqueezed', sans-serif;
+}
+
+.header-font a{
+  font-family: 'OTNeueMontreal-BookUltraSqueezed', sans-serif;
+  font-size: 4.5rem;
+  text-decoration: none;
+  color: red;
+  margin-right: 1rem;
+}
+
+header nav ul a:hover {
+  color: red; /* Cambia al color deseado */
+}

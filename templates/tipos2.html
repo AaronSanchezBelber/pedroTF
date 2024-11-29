@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vista de Tipografías</title>
+  <style>
+    /* Definición de las fuentes en formato WOFF2 */
+    @font-face {
+      font-family: 'ItalicSemiSqueezed';
+      src: url('./assets/fonts/otneuemontreal-italicsemisqueezed_1-webfont.woff2') format('woff2'),
+           url('./assets/fonts/otneuemontreal-italicsemisqueezed_1-webfont.woff') format('woff');
+    }
+
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #FF0000; /* Color rojo */
+      margin: 0;
+      padding: 0;
+    }
+
+    .font-sample {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .font-sample h2 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .font-sample p {
+      font-size: 1.8rem;
+    }
+
+    /* Aplicación de la tipografía */
+    .italic-semi-squeezed { font-family: 'ItalicSemiSqueezed'; }
+  </style>
+</head>
+<body>
+
+  <div class="font-sample italic-semi-squeezed">
+    <h2>ItalicSemiSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente ItalicSemiSqueezed en color rojo.</p>
+  </div>
+
+</body>
+</html>

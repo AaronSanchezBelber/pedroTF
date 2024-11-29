@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Pedro Triviño</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../styles.css">
+
+</head>
+<body>
+
+  <div class="h-screen d-flex flex-column">
+    
+    <!-- Incluir el header -->
+    <div id="header"></div>
+
+    <!-- Div para el video de Vimeo -->
+    <div class="video-container">
+      <iframe 
+        src="https://player.vimeo.com/video/678621750" 
+        title="Vimeo video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+      <iframe 
+        src="https://player.vimeo.com/video/666735144" 
+        title="Vimeo video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+      <iframe 
+        src="https://player.vimeo.com/video/666735506" 
+        title="Vimeo video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+      <iframe 
+        src="https://player.vimeo.com/video/666736016" 
+        title="Vimeo video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+    <div class="video-container">
+      <iframe 
+        src="https://player.vimeo.com/video/666736647" 
+        title="Vimeo video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+
+
+    <main class="flex-grow">
+      <section class="my-8">
+        <h2 class="text-4xl mb-4">YALLO IS MORE / YALLO</h2>
+        <h4>Directed for Yallo</h4>
+        <p class="text-black mb-4">
+          Yallo is telco provider. Let’s show people what we are all about and what we have to offer as a full
+          digital telco with our finger on the pulse of today .
+        </p>
+        <p class="text-black">
+          Yallo is sometimes internety, sometimes funny, sometimes serious, sometimes young, sometimes
+          more adult.
+        </p>
+        <p class="text-black">
+          But always striking, agile, simple and direct.
+        </p>
+        <p class="text-black">
+          Yallo connects people through devices
+        </p>
+        <p class="text-black">
+          This is why we use the screen of the devices as the connection between the scenes (people).
+        </p>
+        
+        <div class="custom-slider">
+          
+          <div class="slide horizontal active">
+            <img src="../proyectos/FOTOS WEB/25 YALLO IS MORE _ YALLO/scan0005-1.jpg" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/25 YALLO IS MORE _ YALLO/scan0010.jpg" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/25 YALLO IS MORE _ YALLO/scan0012-1.jpg" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/25 YALLO IS MORE _ YALLO/scan0015.jpg" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/25 YALLO IS MORE _ YALLO/scan0020.jpg" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/25 YALLO IS MORE _ YALLO/scan0037.jpg" alt="Imagen Horizontal">
+          </div>
+          
+          <div class="slide vertical">
+            <img src="../proyectos/FOTOS WEB/25 YALLO IS MORE _ YALLO/scan0014.jpg" alt="Imagen Vertical">
+          </div>
+          <div class="slide vertical">
+            <img src="../proyectos/FOTOS WEB/25 YALLO IS MORE _ YALLO/scan0019-1.jpg" alt="Imagen Vertical">
+          </div>
+          
+      </div>
+
+      <section class="my-8">
+        <h3 class="text-2xl mb-4">Creditos:</h3>
+        <div class="credits-grid text-black">
+          <div class="credit-column">
+            <p>Directors: @pedrotrivinofabro @guillermoaliaga</p>
+            <p>DoP: @oriolcolomar</p>
+            <p>Edit & post-production: @runzebra.run</p>
+            <p>Color: Marc Morató</p>
+          </div>
+          <div class="credit-column">
+            <p>Production: @Mygosh.co</p>
+            <p>Service production: @lightfilminternational</p>
+          </div>
+        </div>
+      </section>
+                  
+    </main>
+
+    <!-- Incluir el footer -->
+    <div id="footer"></div>
+    
+  </div>
+
+  <!-- Código JavaScript para manejar los eventos de hover y reproducir audio -->
+  <script>
+
+    // Función para cargar dinámicamente el contenido HTML
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+
+    // Cargar el encabezado y pie de página
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+
+    
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    function changeSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+
+      slides[currentSlide].classList.add('active');
+    }
+
+    let slideInterval = setInterval(changeSlide, 5000);
+    document.querySelector('.custom-slider').addEventListener('click', () => {
+      changeSlide();  // Cambia a la siguiente diapositiva cuando se hace clic
+    });
+
+      </script>

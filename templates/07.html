@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Pedro Triviño</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../styles.css">
+
+</head>
+<body>
+
+  <div class="h-screen d-flex flex-column">
+    
+    <!-- Incluir el header -->
+    <div id="header"></div>
+
+    <!-- Div para el video de Vimeo -->
+    <div class="video-container">
+      <iframe 
+        src="https://player.vimeo.com/video/903708109" 
+        title="Vimeo video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+
+    <main class="flex-grow">
+      <section class="my-8">
+        <h2 class="text-4xl mb-4">NUDE PROJECT & 545</h2>
+        <h4>Direction for Nude Project & 545.</h4>
+        <p class="text-black mb-4">
+          On the occasion of the opening of Nude Project in Milan, Fivefourfive and Nude Project joined forces
+          for this new collaboration. 
+        </p>
+        <p class="text-black">
+          On the occasion of this collaboration, the two CEOs of each company brought together their respective grandmothers to carry out a culinary exchange in which they could learn a typical dish from both
+          Italy and Spain.
+        </p>
+
+        <!-- Contenedor para las imágenes -->
+        <div class="custom-image-grid">
+          <div class="image-container">
+            <img src="../proyectos/FOTOS WEB/07 NUDE PROJECT & 545/Captura-de-pantalla-2024-01-16-104114.png" alt="Imagen 1" class="w-100 h-100">
+          </div>
+          <div class="image-container">
+            <!-- <img src="images/DSC_0008.JPG" alt="Imagen 2" class="w-100 h-100"> -->
+          </div>
+          <div class="image-container">
+            <!-- <img src="images/DSC_0994.JPG" alt="Imagen 3" class="w-100 h-100"> -->
+          </div>
+          <div class="image-container">
+            <img src="../proyectos/FOTOS WEB/07 NUDE PROJECT & 545/Captura-de-pantalla-2024-01-16-104225.png" alt="Imagen 4" class="w-100 h-100">
+          </div>
+          <div class="image-container">
+            <img src="../proyectos/FOTOS WEB/07 NUDE PROJECT & 545/Captura-de-pantalla-2024-01-16-104325.png" alt="Imagen 1" class="w-100 h-100">
+          </div>
+          <div class="image-container">
+            <!-- <img src="images/DSC_0008.JPG" alt="Imagen 2" class="w-100 h-100"> -->
+          </div>
+          <div class="image-container">
+            <!-- <img src="images/DSC_0994.JPG" alt="Imagen 3" class="w-100 h-100"> -->
+          </div>
+          <div class="image-container">
+            <img src="../proyectos/FOTOS WEB/07 NUDE PROJECT & 545/Captura-de-pantalla-2024-01-16-104640.png" alt="Imagen 4" class="w-100 h-100">
+          </div>
+        </div>
+      </section>
+      <!-- <div><p class="text-black">
+        "Cuatro Bodas" becomes an anthem of liberation and resistance in a world that seeks to suppress
+        the true expression of love.
+      </p></div> -->
+
+      <div class="image-container-work-final">
+        <img src="../proyectos/FOTOS WEB/07 NUDE PROJECT & 545/Captura-de-pantalla-2024-01-16-104253.png" alt="Imagen 1" class="w-100 h-100">
+      </div>
+      
+      <section class="my-8">
+        <h3 class="text-2xl mb-4">Credits:</h3>
+        <div class="credits-grid text-black">
+          <div class="credit-column">
+            <p>Client: @nudeproject & @fivefourfive.it</p>
+            <p>Direction: @pedrootf @guillermoaliaga @kinkifactory</p>
+            <p>Producer: @NoraCarbonell</p>
+            <p>Aux. Prod: @OriolNovella</p>
+            <p>Filmmaker: @FerranUreña</p>
+            <p>Spark: @CarlesCros</p>
+            <p>Gaffer: @NicolauÀlvarez</p>
+            <p>Art Direction: @AndreaGarcía</p>
+            <p>MUAH: @AlbaMoya</p>
+            <p>Stylist: @FerIzagui</p>
+          </div>
+          <div class="credit-column">
+            <p>Sound: @IgnasiPuigdollers</p>
+            <p>Edit: @GuillermoChaia</p>
+            <p>Content Creator: @RogerCostello</p>
+            <p>E-Commerce: @BeaLeoz</p>
+          </div>
+        </div>
+        <h3 class="text-2xl mt-4 mb-4">Starring:</h3>
+        <ul class="text-black list-inside">
+          <li>@GraziaDesii</li>
+          <li>@Andreu Tenor</li>
+          <li>@Alèxia Roca</li>
+          <li>@Rosa</li>
+          <li>@Malú</li>
+          <li>@Luca Santeramo</li>
+          <li>@Bruno Casanovas</li>
+        </ul>
+      </section>
+                  
+    </main>
+
+    <!-- Incluir el footer -->
+    <div id="footer"></div>
+    
+  </div>
+
+  <!-- Código JavaScript para manejar los eventos de hover y reproducir audio -->
+  <script>
+
+    // Función para cargar dinámicamente el contenido HTML
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+
+    // Cargar el encabezado y pie de página
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+
+  </script>

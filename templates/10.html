@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Pedro Triviño</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../styles.css">
+
+</head>
+<body>
+
+  <div class="h-screen d-flex flex-column">
+    
+    <!-- Incluir el header -->
+    <div id="header"></div>
+
+    <!-- Div para el video de Vimeo -->
+    <div class="video-container">
+      <iframe 
+        src="https://player.vimeo.com/video/832193084" 
+        title="Vimeo video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+
+    <main class="flex-grow">
+      <section class="my-8">
+        <h2 class="text-4xl mb-4">ALLIANZ GO!</h2>
+        <h4>Direction for Allianz</h4>
+        <p class="text-black mb-4">
+          Allianz is a German multinational financial services company. It is one of the world's largest insurance groups and financial service providers. 
+        </p>
+        <p class="text-black">
+          We want to demonstrate how these insurance services surround us on a daily basis and make our
+          daily lives more comfortable. Both for the youngest and the oldest.
+        </p>
+
+        <div class="custom-slider">
+          <div class="slide horizontal active">
+            <img src="../proyectos/FOTOS WEB/10 ALLIANZ GO!/AAO_9106-Editar-3400K-gigapixel-art-scale-0_30x.jpg" alt="Imagen Horizontal">
+          </div>
+          <div class="slide vertical">
+              <img src="../proyectos/FOTOS WEB/10 ALLIANZ GO!/AAO_7821-Editar-PNG-gigapixel-art-scale-0_30x.png" alt="Imagen Vertical">
+          </div>
+          <div class="slide vertical">
+            <img src="../proyectos/FOTOS WEB/10 ALLIANZ GO!/AAO_8719-Editar-gigapixel-art-scale-0_30x.jpg" alt="Imagen Vertical">
+          </div>
+          <div class="slide vertical">
+            <img src="../proyectos/FOTOS WEB/10 ALLIANZ GO!/AAO_8785-Editar-gigapixel-art-scale-0_30x.jpg" alt="Imagen Vertical">
+          </div>
+          <div class="slide vertical">
+            <img src="../proyectos/FOTOS WEB/10 ALLIANZ GO!/AAO_9449-Editar-gigapixel-art-scale-0_30x.jpg" alt="Imagen Vertical">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/10 ALLIANZ GO!/AAO_9511-Editar-3-gigapixel-art-scale-0_30x.jpg" alt="Imagen Horizontal">
+          </div>
+
+          
+      </div>
+      
+      <section class="my-8">
+        <h3 class="text-2xl mb-4">Credits:</h3>
+        <div class="credits-grid text-black">
+          <div class="credit-column">
+            <p>Production: @hello_Blua</p>
+            <p>Agency: Hamlet</p>
+            <p>Directed by: @pedrotrivinofabro @guillermoaliaga @kinkifactory</p>
+            <p>1st AD: @arnaugb_</p>
+            <p>DoP: @alvar.riu</p>
+            <p>1st AC: Hector Julián</p>
+            <p>2nd AC: Joel Perez</p>
+            <p>Video Assist: Berta Molina</p>
+            <p>DATA Wrangler: Carina Acedo</p>
+            <p>Gaffer: Pau Ramírez</p>
+          </div>
+          <div class="credit-column">
+            <p>Spark A: Alex Carvajal</p>
+            <p>Spark B: Paula Fernández</p>
+            <p>Grip: Dani Dejuan</p>
+            <p>Ay. Grip: Luis Vietes</p>
+            <p>Jefa de Producción: Andrea Arias</p>
+            <p>Ayte. Prod.: Lorena Garcia</p>
+            <p>Aux. Prod.: Alba Delgado</p>
+            <p>Aux. Prod.: Francisco Diaz</p>
+            <p>Aux. Prod.: Ian Dameson</p>
+            <p>MKUP Artist: Andrea Trenado</p>
+          </div>
+        </div>
+      
+        <h3 class="text-2xl mt-4 mb-4">Styling and Art:</h3>
+        <div class="credits-grid text-black">
+          <div class="credit-column">
+            <p>Jefe Vestuario: Delfina Ruíz</p>
+            <p>Assist Vestuario: Ola Zaworonko</p>
+            <p>Dir. Art: Laia Navarro</p>
+          </div>
+          <div class="credit-column">
+            <p>Ay. Arte: Lule Sánchez</p>
+            <p>Photo: Bryan Novak</p>
+            <p>BTS: Yago</p>
+          </div>
+        </div>
+      </section>
+                        
+    </main>
+
+    <!-- Incluir el footer -->
+    <div id="footer"></div>
+    
+  </div>
+
+  <!-- Código JavaScript para manejar los eventos de hover y reproducir audio -->
+  <script>
+
+    // Función para cargar dinámicamente el contenido HTML
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+
+    // Cargar el encabezado y pie de página
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    function changeSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+
+      slides[currentSlide].classList.add('active');
+    }
+
+    let slideInterval = setInterval(changeSlide, 5000);
+    document.querySelector('.custom-slider').addEventListener('click', () => {
+      changeSlide();  // Cambia a la siguiente diapositiva cuando se hace clic
+    });
+
+  </script>

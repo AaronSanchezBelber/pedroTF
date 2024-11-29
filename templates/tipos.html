@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vista de Tipografías</title>
+  <style>
+    /* Definición de las fuentes */
+    @font-face {
+      font-family: 'BoldExtraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-BoldExtraSqueezed (1).otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'BoldSemiSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-BoldSemiSqueezed (1).otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'BoldSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-BoldSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'BoldUltraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-BoldUltraSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'BookExtraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-BookExtraSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'BookSemiSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-BookSemiSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'BookSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-BookSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'BookUltraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-BookUltraSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'ItalicExtraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-ItalicExtraSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'ItalicSemiSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-ItalicSemiSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'ItalicSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-ItalicSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'ItalicUltraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-ItalicUltraSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'MediumExtraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-MediumExtraSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'MediumSemiSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-MediumSemiSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'MediumSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-MediumSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'MediumUltraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-MediumUltraSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'SemiBoldExtraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-SemiBoldExtraSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'SemiBoldSemiSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-SemiBoldSemiSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'SemiBoldSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-SemiBoldSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'SemiBoldUltraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-SemiBoldUltraSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'ThinExtraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-ThinExtraSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'ThinSemiSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-ThinSemiSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'ThinSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-ThinSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'ThinUltraSqueezed';
+      src: url('./assets/fonts/OTNeueMontreal-ThinUltraSqueezed.otf') format('opentype');
+    }
+    @font-face {
+      font-family: 'ItalicSemiSqueezed';
+      src: url('./assets/fonts/otneuemontreal-italicsemisqueezed_1-webfont.woff2') format('woff2');
+    }
+
+    /* Estilos generales */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      color: #FF0000; /* Color rojo */
+      margin: 0;
+      padding: 0;
+    }
+
+    .font-sample {
+      margin: 20px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .font-sample h2 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
+    .font-sample p {
+      font-size: 1.8rem;
+    }
+
+    /* Aplicación de cada tipografía */
+    .bold-extra-squeezed { font-family: 'BoldExtraSqueezed'; }
+    .bold-semi-squeezed { font-family: 'BoldSemiSqueezed'; }
+    .bold-squeezed { font-family: 'BoldSqueezed'; }
+    .bold-ultra-squeezed { font-family: 'BoldUltraSqueezed'; }
+    .book-extra-squeezed { font-family: 'BookExtraSqueezed'; }
+    .book-semi-squeezed { font-family: 'BookSemiSqueezed'; }
+    .book-squeezed { font-family: 'BookSqueezed'; }
+    .book-ultra-squeezed { font-family: 'BookUltraSqueezed'; }
+    .italic-extra-squeezed { font-family: 'ItalicExtraSqueezed'; }
+    .italic-semi-squeezed { font-family: 'ItalicSemiSqueezed'; }
+    .italic-squeezed { font-family: 'ItalicSqueezed'; }
+    .italic-ultra-squeezed { font-family: 'ItalicUltraSqueezed'; }
+    .medium-extra-squeezed { font-family: 'MediumExtraSqueezed'; }
+    .medium-semi-squeezed { font-family: 'MediumSemiSqueezed'; }
+    .medium-squeezed { font-family: 'MediumSqueezed'; }
+    .medium-ultra-squeezed { font-family: 'MediumUltraSqueezed'; }
+    .semi-bold-extra-squeezed { font-family: 'SemiBoldExtraSqueezed'; }
+    .semi-bold-semi-squeezed { font-family: 'SemiBoldSemiSqueezed'; }
+    .semi-bold-squeezed { font-family: 'SemiBoldSqueezed'; }
+    .semi-bold-ultra-squeezed { font-family: 'SemiBoldUltraSqueezed'; }
+    .thin-extra-squeezed { font-family: 'ThinExtraSqueezed'; }
+    .thin-semi-squeezed { font-family: 'ThinSemiSqueezed'; }
+    .thin-squeezed { font-family: 'ThinSqueezed'; }
+    .thin-ultra-squeezed { font-family: 'ThinUltraSqueezed'; }
+  </style>
+</head>
+<body>
+
+  <div class="font-sample italic-semi-squeezed">
+    <h2>BoldExtraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente BoldExtraSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample bold-semi-squeezed">
+    <h2>BoldSemiSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente BoldSemiSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample bold-squeezed">
+    <h2>BoldSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente BoldSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample bold-ultra-squeezed">
+    <h2>BoldUltraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente BoldUltraSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample book-extra-squeezed">
+    <h2>BookExtraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente BookExtraSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample book-semi-squeezed">
+    <h2>BookSemiSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente BookSemiSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample book-squeezed">
+    <h2>BookSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente BookSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample book-ultra-squeezed">
+    <h2>BookUltraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente BookUltraSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample italic-extra-squeezed">
+    <h2>ItalicExtraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente ItalicExtraSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample italic-semi-squeezed">
+    <h2>ItalicSemiSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente ItalicSemiSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample italic-squeezed">
+    <h2>ItalicSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente ItalicSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample italic-ultra-squeezed">
+    <h2>ItalicUltraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente ItalicUltraSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample medium-extra-squeezed">
+    <h2>MediumExtraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente MediumExtraSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample medium-semi-squeezed">
+    <h2>MediumSemiSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente MediumSemiSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample medium-squeezed">
+    <h2>MediumSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente MediumSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample medium-ultra-squeezed">
+    <h2>MediumUltraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente MediumUltraSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample semi-bold-extra-squeezed">
+    <h2>SemiBoldExtraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente SemiBoldExtraSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample semi-bold-semi-squeezed">
+    <h2>SemiBoldSemiSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente SemiBoldSemiSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample semi-bold-squeezed">
+    <h2>SemiBoldSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente SemiBoldSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample semi-bold-ultra-squeezed">
+    <h2>SemiBoldUltraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente SemiBoldUltraSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample thin-extra-squeezed">
+    <h2>ThinExtraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente ThinExtraSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample thin-semi-squeezed">
+    <h2>ThinSemiSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente ThinSemiSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample thin-squeezed">
+    <h2>ThinSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente ThinSqueezed en color rojo.</p>
+  </div>
+
+  <div class="font-sample thin-ultra-squeezed">
+    <h2>ThinUltraSqueezed</h2>
+    <p>Este es un texto de ejemplo utilizando la fuente ThinUltraSqueezed en color rojo.</p>
+  </div>
+
+</body>
+</html>
+

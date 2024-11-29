@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Pedro Triviño</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../styles.css">
+
+</head>
+<body>
+
+  <div class="h-screen d-flex flex-column">
+    
+    <!-- Incluir el header -->
+    <div id="header"></div>
+
+    <!-- Div para el video de Vimeo -->
+    <div class="video-container">
+      <iframe 
+        src="https://player.vimeo.com/video/493712298" 
+        title="Vimeo video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+
+
+    <main class="flex-grow">
+      <section class="my-8">
+        <h2 class="text-4xl mb-4">SSSTUFFF LOTTERI CAMPAIN</h2>
+        <h4>Produced & Directed for Ssstufff Supermarket.</h4>
+        <p class="text-black mb-4">
+          Last Lottery Campaign and Hoodie design for STF 2020.
+        </p>
+        <p class="text-black">
+          Every year Christmas Lottery is celebrated on December 22 where Ildefonso's children are in
+          charge of singing the winning prizes. Is one of the most famous events in Spain where the whole
+          country is waiting for its luck. That is why we wanted to take advantage of this event for the garment
+          campaign and show how the hoodie works.
+        </p>
+        
+        <div class="custom-slider">
+          
+          <div class="slide horizontal active">
+            <img src="../proyectos/FOTOS WEB/29 SSSTUFF LOTTERY/loteriamenu.jpg" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/29 SSSTUFF LOTTERY/SSSTUFFF-H264-NAVIDAD00000000.00_00_03_10.Imagen-fija008.png" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/29 SSSTUFF LOTTERY/SSSTUFFF-H264-NAVIDAD00000000.00_00_09_22.Imagen-fija002.png" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/29 SSSTUFF LOTTERY/SSSTUFFF-H264-NAVIDAD00000000.00_00_12_09.Imagen-fija003.png" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/29 SSSTUFF LOTTERY/SSSTUFFF-H264-NAVIDAD00000000.00_00_19_19.Imagen-fija004.png" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/29 SSSTUFF LOTTERY/SSSTUFFF-H264-NAVIDAD00000000.00_00_25_02.Imagen-fija005.png" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/29 SSSTUFF LOTTERY/SSSTUFFF-H264-NAVIDAD00000000.00_00_28_08.Imagen-fija006.png" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/29 SSSTUFF LOTTERY/SSSTUFFF-H264-NAVIDAD00000000.00_00_42_09.Imagen-fija007.png" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/29 SSSTUFF LOTTERY/ssstufff-lt.png" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="../proyectos/FOTOS WEB/29 SSSTUFF LOTTERY/ssstuffflt_1.2.1.png" alt="Imagen Horizontal">
+          </div>
+          
+
+          
+      </div>
+
+      <div><p class="text-black">
+        For the hoodie design we were inspired by lottery scratch cards, so we transferred it to a garment
+        where it has the same functionality and includes also a prize.
+      </p></div>
+        
+      <section class="my-8">
+        <h3 class="text-2xl mb-4">Credits:</h3>
+        <div class="credits-grid text-black">
+          <div class="credit-column">
+            <p>Direction Production: @kinkifactory</p>
+            <p>DOP & Edit: @oriolcolomar</p>
+            <p>Camera Aux & Color: @enyarodriguez</p>
+            <p>Gaffer: @pauum94</p>
+            <p>VFX: @bambi61729604</p>
+          </div>
+          <div class="credit-column">
+            <p>Starring: @juakipesudo @avet2020</p>
+            <p>Direction Assistants: @al.veiga @imthebollocks</p>
+            <p>Special Thanks to: @emmabean</p>
+            <p>Driver: @maxfrnndz</p>
+          </div>
+        </div>
+        
+        <h3 class="text-2xl mt-4 mb-4">Additional Starring:</h3>
+        <div class="credits-grid text-black">
+          <div class="credit-column">
+            <p>@laguiridetussuenos @lil.deve11 @marianben @mateo.is.online @xeniaorti @marxi.0711</p>
+            <p>@flama.ph @co.roni19 @mathew_yanez @looks.fragile.after.all @aranpetit @maxmoodhair</p>
+            <p>@pa-colo__ @alanneil @tulidotcom @hijxdelfuego @joancallau</p>
+          </div>
+        </div>
+      </section>
+                      
+    </main>
+
+    <!-- Incluir el footer -->
+    <div id="footer"></div>
+    
+  </div>
+
+  <!-- Código JavaScript para manejar los eventos de hover y reproducir audio -->
+  <script>
+
+    // Función para cargar dinámicamente el contenido HTML
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+
+    // Cargar el encabezado y pie de página
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+
+    
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    function changeSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+
+      slides[currentSlide].classList.add('active');
+    }
+
+    let slideInterval = setInterval(changeSlide, 5000);
+    document.querySelector('.custom-slider').addEventListener('click', () => {
+      changeSlide();  // Cambia a la siguiente diapositiva cuando se hace clic
+    });
+
+      </script>
