@@ -1,169 +1,36 @@
-/* BoldExtraSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-BoldExtraSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-BoldExtraSqueezed.otf') format('opentype');
-}
-
-/* BoldSemiSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-BoldSemiSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-BoldSemiSqueezed.otf') format('opentype');
-}
-
-/* BoldSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-BoldSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-BoldSqueezed.otf') format('opentype');
-}
-
-/* BoldUltraSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-BoldUltraSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-BoldUltraSqueezed.otf') format('opentype');
-}
-
-/* BookExtraSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-BookExtraSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-BookExtraSqueezed.otf') format('opentype');
-}
-
-/* BookSemiSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-BookSemiSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-BookSemiSqueezed.otf') format('opentype');
-}
-
-/* BookSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-BookSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-BookSqueezed.otf') format('opentype');
-}
-
 /* BookUltraSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-BookUltraSqueezed';
   src: url('assets/fonts/OTNeueMontreal-BookUltraSqueezed.otf') format('opentype');
 }
-
-/* ItalicExtraSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-ItalicExtraSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-ItalicExtraSqueezed.otf') format('opentype');
-}
-
-/* ItalicSemiSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-ItalicSemiSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-ItalicSemiSqueezed.otf') format('opentype');
-}
-
 /* ItalicSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-ItalicSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-ItalicSqueezed.otf') format('opentype');
+  src: url('assets/fonts/OTNeueMontreal-ItalicSqueezed.otf') format('opentype');
 }
 
-/* ItalicUltraSqueezed */
+/* BookSqueezed */
 @font-face {
-  font-family: 'OTNeueMontreal-ItalicUltraSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-ItalicUltraSqueezed.otf') format('opentype');
+  font-family: 'OTNeueMontreal-BookSqueezed';
+  src: url('assets/fonts/OTNeueMontreal-BookSqueezed.otf') format('opentype');
 }
 
-/* MediumExtraSqueezed */
+/* BoldUltraSqueezed */
 @font-face {
-  font-family: 'OTNeueMontreal-MediumExtraSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-MediumExtraSqueezed.otf') format('opentype');
+  font-family: 'OTNeueMontreal-BoldUltraSqueezed';
+  src: url('assets/fonts/OTNeueMontreal-BoldUltraSqueezed.otf') format('opentype');
 }
-
-/* MediumSemiSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-MediumSemiSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-MediumSemiSqueezed.otf') format('opentype');
-}
-
 /* MediumSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-MediumSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-MediumSqueezed.otf') format('opentype');
+  src: url('assets/fonts/OTNeueMontreal-MediumSqueezed.otf') format('opentype');
 }
 
-/* MediumUltraSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-MediumUltraSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-MediumUltraSqueezed.otf') format('opentype');
+
+header {
+  display: flex;
+  align-items: center; /* Asegura que el contenido, incluido el logo, esté centrado verticalmente */
 }
-
-/* SemiBoldExtraSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-SemiBoldExtraSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-SemiBoldExtraSqueezed.otf') format('opentype');
-}
-
-/* SemiBoldSemiSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-SemiBoldSemiSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-SemiBoldSemiSqueezed.otf') format('opentype');
-}
-
-/* SemiBoldSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-SemiBoldSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-SemiBoldSqueezed.otf') format('opentype');
-}
-
-/* SemiBoldUltraSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-SemiBoldUltraSqueezed.otf') format('opentype');
-}
-
-/* ThinExtraSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-ThinExtraSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-ThinExtraSqueezed.otf') format('opentype');
-}
-
-/* ThinSemiSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-ThinSemiSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-ThinSemiSqueezed.otf') format('opentype');
-}
-
-/* ThinSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-ThinSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-ThinSqueezed.otf') format('opentype');
-}
-
-/* ThinUltraSqueezed */
-@font-face {
-  font-family: 'OTNeueMontreal-ThinUltraSqueezed';
-  src: url('./assets/fonts/OTNeueMontreal-ThinUltraSqueezed.otf') format('opentype');
-}
-
-/* .text-thin {
-  font-family: 'OTNeueMontreal', sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.text-italic {
-  font-family: 'OTNeueMontreal', sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.text-semibold {
-  font-family: 'BookUltraSqueezed', sans-serif;
-
-} */
-
-/* Header */
-/* Header */
-
-
-
 
 /* Logo */
 .logo {
@@ -172,9 +39,8 @@
   object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
   padding-left: 0px; /* Si ya tienes un padding, ajustalo o elimínalo */
   margin-left: 0;
+  
 }
-
-
 
 /* Contenedor principal */
 .h-screen {
@@ -511,59 +377,125 @@ body {
 
 
 
+/* Banda blanca en el header */
+header {
+  display: flex;
+  align-items: center; /* Centra el contenido verticalmente */
+  background-color: white; /* Banda blanca */
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
 
-/* General footer styles */
-footer {
-  height: 10rem; /* Equivale a h-40 en Tailwind */
-  padding: 1rem; /* Equivale a p-4 */
-  color: #dc2626; /* Tailwind's text-red-600 */
 }
 
-/* Custom fonts */
-.OTNeueMontreal-ThinUltraSqueezed {
-  font-family: 'OTNeueMontreal', sans-serif; /* Usa la fuente que necesitas */
-  font-weight: 200; /* Thin */
-  font-stretch: ultra-condensed; /* Si tu fuente lo soporta */
-  font-size: 2rem; /* Equivalente a text-2xl */
+/* Logo a la izquierda */
+.logo {
+  height: 80px;  /* Ajusta el tamaño del logo */
+  width: auto;   /* Mantiene las proporciones de la imagen */
+  object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
 }
 
-.ThinUltraSqueezed {
-  font-weight: 200;
-  font-stretch: ultra-condensed;
-}
-
-.ThinSemiSqueezed {
-  font-weight: 200;
-  font-stretch: semi-condensed;
-}
-
-.OTNeueMontreal-ThinUltraSqueezed {
-  font-family: 'OTNeueMontreal', sans-serif;
-  font-weight: 200;
-  font-stretch: ultra-condensed;
-}
-
-.SemiBoldSemiSqueezed {
-  font-weight: 600; /* Semi-bold */
-  font-stretch: semi-condensed;
-}
-
-/* Aplica la fuente al header */
+/* Estilos de las letras a la derecha */
 .header-font {
-  font-family: 'OTNeueMontreal-BookUltraSqueezed', sans-serif;
+  font-family: 'OTNeueMontreal-BookUltraSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 7rem; /* Ajusta el tamaño de las letras */
+  color: red; /* Color de las letras */
+  display: flex;
+  align-items: center; /* Centra las letras verticalmente */
+  justify-content: flex-end; /* Alinea el texto a la derecha */
+  letter-spacing: 0.3rem; /* Separación entre las letras */
 }
 
-.header-font a{
-  font-family: 'OTNeueMontreal-BookUltraSqueezed', sans-serif;
-  font-size: 4.5rem;
-  text-decoration: none;
-  color: red;
-  margin-right: 1rem;
+/* Estilo de los enlaces */
+.header-font a {
+  font-family: 'OTNeueMontreal-BookUltraSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 7rem; /* Ajusta el tamaño de las letras */
+  text-decoration: none; /* Quita el subrayado */
+  color: red; /* Color de las letras */
+  margin-left: 9rem; /* Espacio entre los enlaces */
 }
 
-header nav ul a:hover {
-  color: red; /* Cambia al color deseado */
+/* Estilo para las imágenes dentro del logo */
+.header-logo-images {
+  display: flex;
+  gap: 0px; /* Espacio entre las dos imágenes del logo */
+  align-items: center; /* Alinea las imágenes verticalmente */
 }
+
 
 /* div {
   cursor:url(myBall.cur),auto;} */
+
+footer {
+  height: 10rem; /* Equivale a h-40 en Tailwind
+  padding: 1rem; Equivale a p-4
+  color: #dc2626; /* Tailwind's text-red-600 */
+}
+
+.foot1 {
+  font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 2rem; /* Ajusta el tamaño de las letras */
+  color: red; /* Color de las letras */
+  display: flex;
+  align-items: center; /* Centra las letras verticalmente */
+  justify-content: flex-start; /* Alinea el texto a la derecha */
+  letter-spacing: 0.3rem; /* Separación entre las letras */
+}
+
+.foot2 {
+  font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
+  color: red; /* Color de las letras */
+  display: flex;
+  align-items: center; /* Centra las letras verticalmente */
+  justify-content: flex-start; /* Alinea el texto a la derecha */
+  letter-spacing: 0.1rem; /* Separación entre las letras */
+}
+
+body {
+  font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Fuente principal para el cuerpo */
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Títulos de las secciones */
+h2, h3, h4 {
+  font-family: 'OTNeueMontreal-BoldUltraSqueezed', sans-serif; /* Fuente para títulos */
+  margin: 0 0;
+}
+
+/* Párrafos */
+p {
+  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Fuente para párrafos */
+  line-height: 1.6;
+  color: red;
+}
+
+.p-p {
+  font-family: 'OTNeueMontreal-BoldUltraSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
+  color: red; /* Color de las letras */
+  display: flex;
+  align-items: center; /* Centra las letras verticalmente */
+  justify-content: flex-start; /* Alinea el texto a la derecha */
+
+}
+
+.h2-h2 {
+  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
+  color: red; /* Color de las letras */
+  display: flex;
+  align-items: center; /* Centra las letras verticalmente */
+  justify-content: flex-start; /* Alinea el texto a la derecha */
+
+}
+
+.textillo {
+  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
+  color: red; /* Color de las letras */
+  display: flex;
+  align-items: center; /* Centra las letras verticalmente */
+  justify-content: flex-start; /* Alinea el texto a la derecha */
+  letter-spacing: 0.1rem; /* Separación entre las letras */
+}
