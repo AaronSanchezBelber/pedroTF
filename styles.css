@@ -533,15 +533,15 @@ p {
   }
 
   .header-font {
-    font-size: 3rem; /* Reduce el tamaño de la fuente en la versión móvil */
+    font-size: 1rem; /* Reduce el tamaño de la fuente en la versión móvil */
     text-align: center; /* Asegura que el texto esté centrado */
     margin-left: 0; /* Elimina márgenes adicionales */
     letter-spacing: 0.1rem; /* Reduce el espaciado de las letras */
   }
 
   .header-font a {
-    font-size: 3.8rem; /* Ajusta el tamaño de los enlaces */
-    margin-left: 6.5rem; /* Reduce el espacio entre enlaces */
+    font-size: 3rem; /* Ajusta el tamaño de los enlaces */
+    margin-left: 5rem; /* Reduce el espacio entre enlaces */
   }
 }
 
