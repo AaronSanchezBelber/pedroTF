@@ -455,6 +455,7 @@ body {
   background-color: #f4f4f4;
   margin: 0;
   padding: 0;
+  cursor: url('images/cursor-mickie.png') 16 16, auto;
 }
 
 /* Títulos de las secciones */
