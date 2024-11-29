@@ -500,3 +500,14 @@ p {
   justify-content: flex-start; /* Alinea el texto a la derecha */
   letter-spacing: 0.1rem; /* Separación entre las letras */
 }
+
+@media (max-width: 768px) {
+  header {
+      flex-direction: column; /* Cambia a diseño vertical */
+      text-align: center; /* Alinea contenido al centro */
+  }
+
+  nav {
+      margin-top: 10px; /* Ajusta el espaciado */
+  }
+}
