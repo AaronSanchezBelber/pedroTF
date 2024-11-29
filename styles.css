@@ -430,7 +430,27 @@ footer {
   color: #dc2626; /* Tailwind's text-red-600 */
 }
 
-.foot1 {
+.foot1 a {
+  font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 2rem; /* Ajusta el tamaño de las letras */
+  color: red; /* Color de las letras */
+  display: flex;
+  align-items: center; /* Centra las letras verticalmente */
+  justify-content: flex-start; /* Alinea el texto a la derecha */
+  letter-spacing: 0.3rem; /* Separación entre las letras */
+}
+
+.foot2 a{
+  font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
+  color: red; /* Color de las letras */
+  display: flex;
+  align-items: center; /* Centra las letras verticalmente */
+  justify-content: flex-start; /* Alinea el texto a la derecha */
+  letter-spacing: 0.1rem; /* Separación entre las letras */
+}
+
+.foot1  {
   font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif; /* Tipografía personalizada */
   font-size: 2rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
@@ -449,7 +469,6 @@ footer {
   justify-content: flex-start; /* Alinea el texto a la derecha */
   letter-spacing: 0.1rem; /* Separación entre las letras */
 }
-
 body {
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Fuente principal para el cuerpo */
   background-color: #f4f4f4;
@@ -503,11 +522,32 @@ p {
 
 @media (max-width: 768px) {
   header {
-      flex-direction: column; /* Cambia a diseño vertical */
-      text-align: center; /* Alinea contenido al centro */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten al ancho disponible */
+    justify-content: center; /* Asegura que el contenido esté centrado */
+    overflow: hidden; /* Evita que el contenido se desborde */
   }
 
-  nav {
-      margin-top: 10px; /* Ajusta el espaciado */
+  .logo {
+    height: 50px; /* Ajusta la altura del logo en pantallas más pequeñas */
+    margin-right: auto; /* Mantiene el logo alineado a la izquierda */
+  }
+
+  .header-font {
+    font-size: 3rem; /* Reduce el tamaño de la fuente en la versión móvil */
+    text-align: center; /* Asegura que el texto esté centrado */
+    margin-left: 0; /* Elimina márgenes adicionales */
+    letter-spacing: 0.1rem; /* Reduce el espaciado de las letras */
+  }
+
+  .header-font a {
+    font-size: 3.8rem; /* Ajusta el tamaño de los enlaces */
+    margin-left: 6.5rem; /* Reduce el espacio entre enlaces */
+  }
+}
+
+@media (max-width: 767px) {
+  footer {
+      position: relative; /* Asegura que el footer siga el flujo normal */
+      padding-bottom: 1rem; /* Añade espacio adicional si es necesario */
   }
 }
