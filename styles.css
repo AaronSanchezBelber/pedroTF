@@ -564,3 +564,6 @@ footer {
 header nav ul a:hover {
   color: red; /* Cambia al color deseado */
 }
+
+/* div {
+  cursor:url(myBall.cur),auto;} */
