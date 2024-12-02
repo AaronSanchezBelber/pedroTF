@@ -8,6 +8,10 @@
   font-family: 'OTNeueMontreal-ItalicSqueezed';
   src: url('assets/fonts/OTNeueMontreal-ItalicSqueezed.otf') format('opentype');
 }
+@font-face {
+  font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed';
+  src: url('assets/fonts/OTNeueMontreal-SemiBoldUltraSqueezed.otf') format('opentype');
+}
 
 /* BookSqueezed */
 @font-face {
@@ -395,22 +399,23 @@ header {
 
 /* Estilos de las letras a la derecha */
 .header-font {
-  font-family: 'OTNeueMontreal-BookUltraSqueezed', sans-serif; /* Tipografía personalizada */
+  font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif; /* Tipografía personalizada */
   font-size: 7rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-end; /* Alinea el texto a la derecha */
-  letter-spacing: 0.1rem; /* Separación entre las letras */
+  justify-content: flex-start; /* Alinea el texto a la derecha */
+  letter-spacing: -0.2rem; /* Separación entre las letras */
 }
 
 /* Estilo de los enlaces */
 .header-font a {
-  font-family: 'OTNeueMontreal-BookUltraSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 7rem; /* Ajusta el tamaño de las letras */
+  font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 8rem; /* Ajusta el tamaño de las letras */
   text-decoration: none; /* Quita el subrayado */
   color: red; /* Color de las letras */
-  margin-left: 3rem; /* Espacio entre los enlaces */
+  margin-left: 19rem; /* Espacio entre los enlaces */
+  justify-content: flex-start
 }
 
 /* Estilo para las imágenes dentro del logo */
@@ -432,7 +437,7 @@ footer {
 
 .foot1 a {
   font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 2rem; /* Ajusta el tamaño de las letras */
+  font-size: 1rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
@@ -442,33 +447,82 @@ footer {
 
 .foot2 a{
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
+  font-size: 4rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
   justify-content: flex-start; /* Alinea el texto a la derecha */
   letter-spacing: 0.1rem; /* Separación entre las letras */
+  margin: 0; /* Elimina los márgenes del contenedor */
+  padding: 0; /* Elimina el relleno del contenedor */
+  line-height: 1; /* Reduce la altura de línea para evitar espacios extra */
 }
 
 .foot1  {
   font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 2rem; /* Ajusta el tamaño de las letras */
+  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
   justify-content: flex-start; /* Alinea el texto a la derecha */
   letter-spacing: 0.3rem; /* Separación entre las letras */
+  width: 80%; /* Ancho reducido */
+  max-width: 600px; /* Opcional: define un máximo para pantallas grandes */
 }
 
 .foot2 {
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
+  font-size: 1rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
   justify-content: flex-start; /* Alinea el texto a la derecha */
   letter-spacing: 0.1rem; /* Separación entre las letras */
+  padding-left: 1rem; /* Espacio desde el borde izquierdo */
+  width: 80%; /* Ancho reducido */
+  max-width: 600px; /* Opcional: define un máximo para pantallas grandes */
 }
+
+
+.foot3 {
+  font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 2.5rem; /* Ajusta el tamaño de las letras */
+  color: red; /* Color de las letras */
+  display: flex;
+  align-items: center; /* Centra las letras verticalmente */
+  justify-content: flex-start; /* Alinea el texto a la derecha */
+  letter-spacing: 0.1rem; /* Separación entre las letras */
+  position: relative; /* Posicionamiento relativo */
+  top: -90px; /* Sube el div3 para invadir div2 */
+  z-index: 2; /* Asegúrate de que esté por encima de div2 */
+}
+
+
+.left-group {
+  display: flex;
+  flex-direction: column; /* Alinea los elementos verticalmente */
+  align-items: center; /* Centra horizontalmente los elementos dentro del contenedor */
+  justify-content: right; /* Centra verticalmente los elementos dentro del contenedor */
+  gap: 2rem; /* Espacio entre la imagen y el texto "MAD/BCN/CDMX" */
+  padding-left: 50rem;
+
+  position: relative; /* Añadimos position relative para que top funcione */
+  top: -90px; /* Sube el grupo para invadir otro elemento */
+  z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+.left-group img {
+  max-width: 100%; /* Asegura que la imagen sea responsiva */
+  height: 100px;  /* Ajusta el tamaño del logo */
+  width: auto;   /* Mantiene las proporciones de la imagen */
+  object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
+  position: relative; /* Añadimos position para que top funcione */
+  top: -70px; /* Ajusta la posición del logo específico */
+  z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+
+
 body {
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Fuente principal para el cuerpo */
   background-color: #f4f4f4;
@@ -486,13 +540,13 @@ h2, h3, h4 {
 /* Párrafos */
 p {
   font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Fuente para párrafos */
-  line-height: 1.6;
+
   color: red;
 }
 
 .p-p {
   font-family: 'OTNeueMontreal-BoldUltraSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
+  font-size: 2.5rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
@@ -502,22 +556,40 @@ p {
 
 .h2-h2 {
   font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
+  font-size: 10rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-start; /* Alinea el texto a la derecha */
-
+  justify-content: flex-start; /* Alinea el texto a la izquierda */
+  margin: 0; /* Elimina cualquier margen */
+  padding: 0; /* Elimina cualquier relleno */
+  letter-spacing: -0.3rem; /* Ajusta la separación entre letras (puedes cambiar el valor según lo necesites) */
+  width: fit-content; /* Ajusta el contenedor al contenido del texto */
 }
+
+.h4-h4 {
+  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 3rem; /* Ajusta el tamaño de las letras */
+  color: red; /* Color de las letras */
+  display: flex;
+  align-items: center; /* Centra las letras verticalmente */
+  justify-content: flex-start; /* Alinea el texto a la izquierda */
+  margin: 0; /* Elimina cualquier margen */
+  padding: 0; /* Elimina cualquier relleno */
+  letter-spacing: -0.1rem; /* Ajusta la separación entre letras (puedes cambiar el valor según lo necesites) */
+  width: fit-content; /* Ajusta el contenedor al contenido del texto */
+}
+
+
 
 .textillo {
   font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
+  font-size: 3rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
   justify-content: flex-start; /* Alinea el texto a la derecha */
-  letter-spacing: 0.1rem; /* Separación entre las letras */
+  letter-spacing: 0.0rem; /* Separación entre las letras */
 }
 
 @media (max-width: 768px) {
@@ -536,7 +608,7 @@ p {
     font-size: 0.5rem; /* Reduce el tamaño de la fuente en la versión móvil */
     text-align: center; /* Asegura que el texto esté centrado */
     margin-left: 0; /* Elimina márgenes adicionales */
-    letter-spacing: 0.1rem; /* Reduce el espaciado de las letras */
+    letter-spacing: -0.2rem; /* Reduce el espaciado de las letras */
   }
 
   .header-font a {
