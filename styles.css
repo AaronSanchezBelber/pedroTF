@@ -620,8 +620,8 @@ p {
 
   .header-font a {
     font-size: 3.8rem; /* Ajusta el tamaño de los enlaces */
-    margin-left: 2rem; /* Reduce el espacio entre enlaces */
-    /* line-height: 1rem; */
+    margin-left: 2.5rem; /* Reduce el espacio entre enlaces */
+    line-height: 1rem;
   }
 }
 
