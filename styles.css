@@ -631,6 +631,8 @@ p {
     padding: 1rem; /* Mantiene el padding alrededor */
     color: #dc2626; /* Color de las letras */
     text-align: center; /* Centra el texto dentro del footer */
+    letter-spacing: -0.1rem; /* Reduce el espaciado de las letras */
+    line-height: 1rem;
   }
 
   .foot1, .foot2, .foot3 {
@@ -641,6 +643,8 @@ p {
     align-items: center; /* Centra los elementos horizontalmente */
     justify-content: center; /* Centra los elementos verticalmente */
     margin: 0.5rem 0; /* Espacio entre los elementos */
+    letter-spacing: -0.1rem; /* Reduce el espaciado de las letras */
+    line-height: 1rem;
   }
 
   .foot1 a, .foot2 a, .foot3 a {
@@ -648,6 +652,7 @@ p {
     letter-spacing: 0.1rem; /* Ajusta la separación entre las letras */
     display: block; /* Hace que los enlaces ocupen el ancho completo */
     margin: 0.5rem 0; /* Añade un pequeño margen entre los enlaces */
+    line-height: 1rem;
   }
 
   .foot1 {
@@ -676,6 +681,8 @@ p {
     gap: 1rem; /* Espacio entre los elementos */
     margin-top: 1rem; /* Añade un margen superior */
     padding-left: 0; /* Elimina el relleno izquierdo */
+    letter-spacing: 0.1rem; /* Reduce el espaciado de las letras */
+    line-height: 1rem;
   }
 
   .left-group img {
