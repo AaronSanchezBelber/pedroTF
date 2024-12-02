@@ -615,18 +615,73 @@ p {
     font-size: 0.5rem; /* Reduce el tamaño de la fuente en la versión móvil */
     text-align: center; /* Asegura que el texto esté centrado */
     margin-left: 0; /* Elimina márgenes adicionales */
-    letter-spacing: -0.2rem; /* Reduce el espaciado de las letras */
+    letter-spacing: -0.1rem; /* Reduce el espaciado de las letras */
   }
 
   .header-font a {
     font-size: 3.8rem; /* Ajusta el tamaño de los enlaces */
-    margin-left: 3rem; /* Reduce el espacio entre enlaces */
+    margin-left: 4rem; /* Reduce el espacio entre enlaces */
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   footer {
-      position: relative; /* Asegura que el footer siga el flujo normal */
-      padding-bottom: 1rem; /* Añade espacio adicional si es necesario */
+    height: auto; /* Ajusta la altura del footer según su contenido */
+    padding: 1rem; /* Mantiene el padding alrededor */
+    color: #dc2626; /* Color de las letras */
+    text-align: center; /* Centra el texto dentro del footer */
+  }
+
+  .foot1, .foot2, .foot3 {
+    width: 100%; /* Elimina los anchos fijos y hace que los elementos ocupen todo el ancho disponible */
+    max-width: none; /* Elimina el límite de ancho máximo */
+    display: flex; /* Utiliza flexbox para centrar los contenidos */
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    margin: 0.5rem 0; /* Espacio entre los elementos */
+  }
+
+  .foot1 a, .foot2 a, .foot3 a {
+    font-size: 1.2rem; /* Ajusta el tamaño de la fuente para que se vea bien en móvil */
+    letter-spacing: 0.1rem; /* Ajusta la separación entre las letras */
+    display: block; /* Hace que los enlaces ocupen el ancho completo */
+    margin: 0.5rem 0; /* Añade un pequeño margen entre los enlaces */
+  }
+
+  .foot1 {
+    font-size: 1.5rem; /* Ajusta el tamaño del texto */
+    letter-spacing: 0.2rem; /* Ajusta la separación entre letras */
+    padding-left: 0; /* Elimina el relleno izquierdo */
+  }
+
+  .foot2 {
+    font-size: 1.2rem; /* Ajusta el tamaño del texto */
+    padding-left: 0; /* Elimina el relleno izquierdo */
+  }
+
+  .foot3 {
+    font-size: 1.8rem; /* Ajusta el tamaño del texto */
+    position: relative; /* Asegura que el posicionamiento relativo funcione bien en móvil */
+    top: 0; /* Elimina el desplazamiento hacia arriba */
+    z-index: 1; /* Ajusta el orden de apilamiento */
+  }
+
+  .left-group {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    gap: 1rem; /* Espacio entre los elementos */
+    margin-top: 1rem; /* Añade un margen superior */
+    padding-left: 0; /* Elimina el relleno izquierdo */
+  }
+
+  .left-group img {
+    height: 70px; /* Ajusta el tamaño del logo */
+    width: auto; /* Mantiene las proporciones */
+    object-fit: contain; /* Mantiene la proporción del logo */
+    top: 0; /* Elimina el desplazamiento */
   }
 }
+
