@@ -545,12 +545,14 @@ p {
 }
 
 .p-p {
-  font-family: 'OTNeueMontreal-BoldUltraSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 2.5rem; /* Ajusta el tamaño de las letras */
+  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
+  font-size: 2rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-start; /* Alinea el texto a la derecha */
+  justify-content: flex-start; /* Alinea el texto a la izquierda */
+  letter-spacing: 0.0rem; /* Separación entre las letras */
+  line-height: 2rem; /* Ajusta el interlineado (puedes experimentar con este valor) */
 
 }
 
@@ -565,6 +567,7 @@ p {
   padding: 0; /* Elimina cualquier relleno */
   letter-spacing: -0.3rem; /* Ajusta la separación entre letras (puedes cambiar el valor según lo necesites) */
   width: fit-content; /* Ajusta el contenedor al contenido del texto */
+  line-height: 10rem;
 }
 
 .h4-h4 {
@@ -578,6 +581,7 @@ p {
   padding: 0; /* Elimina cualquier relleno */
   letter-spacing: -0.1rem; /* Ajusta la separación entre letras (puedes cambiar el valor según lo necesites) */
   width: fit-content; /* Ajusta el contenedor al contenido del texto */
+  line-height: 2.2rem;
 }
 
 
@@ -588,9 +592,12 @@ p {
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-start; /* Alinea el texto a la derecha */
+  justify-content: flex-start; /* Alinea el texto a la izquierda */
   letter-spacing: 0.0rem; /* Separación entre las letras */
+  line-height: 1.8rem; /* Ajusta el interlineado (puedes experimentar con este valor) */
+  
 }
+
 
 @media (max-width: 768px) {
   header {
@@ -613,7 +620,7 @@ p {
 
   .header-font a {
     font-size: 3.8rem; /* Ajusta el tamaño de los enlaces */
-    margin-left: 6.5rem; /* Reduce el espacio entre enlaces */
+    margin-left: 3rem; /* Reduce el espacio entre enlaces */
   }
 }
 
