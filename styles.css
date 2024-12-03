@@ -578,7 +578,7 @@ p {
 
 .h2-h2 {
   font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 10rem; /* Ajusta el tamaño de las letras */
+  font-size: 7rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
@@ -587,7 +587,7 @@ p {
   padding: 0; /* Elimina cualquier relleno */
   letter-spacing: -0.3rem; /* Ajusta la separación entre letras (puedes cambiar el valor según lo necesites) */
   width: fit-content; /* Ajusta el contenedor al contenido del texto */
-  line-height: 10rem;
+  line-height: 7rem;
 }
 
 .h4-h4 {
