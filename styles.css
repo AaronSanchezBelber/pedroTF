@@ -630,7 +630,7 @@ p {
   .header-font a {
     font-size: 3.8rem;
     margin-left: 2.5rem;
-    line-height: 1rem;
+    line-height: 0.1rem;
   }
 }
 
@@ -696,7 +696,7 @@ p {
 
   .left-group img {
     height: 70px;
-    width: auto;
+    width: fit-content;
     object-fit: contain;
     top: 0;
   }
