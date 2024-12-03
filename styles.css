@@ -598,6 +598,14 @@ p {
   padding-top: 0.5rem;
 }
 
+.content-overlay {
+  position: relative;
+  z-index: 2; /* Asegura que el texto quede encima */
+  color: red; /* Cambia el color si lo deseas */
+  padding: 20px;
+  top: -300px;
+
+}
 
 
 @media (max-width: 768px) {
