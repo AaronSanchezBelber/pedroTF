@@ -541,14 +541,7 @@ footer {
 
 
 
-body {
-  font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Fuente principal para el cuerpo */
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  cursor: url('images/cursor.cur'), auto;
 
-}
 
 
 /* Títulos de las secciones */
