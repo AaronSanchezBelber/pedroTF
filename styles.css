@@ -600,10 +600,7 @@ p {
 
 
 
-
-
-
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
   header {
     flex-wrap: wrap;
     justify-content: center;
@@ -695,6 +692,6 @@ p {
     object-fit: contain;
     top: 0;
   }
-} */
+}
 
 
