@@ -406,7 +406,7 @@ header {
 /* Estilos de las letras a la derecha */
 .header-font {
   font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif; /* Tipografía personalizada */
-
+  /* font-size: 7rem; */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
@@ -500,14 +500,14 @@ footer {
 
 .foot3 {
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 6.25rem; /* Ajusta el tamaño de las letras */
+  font-size: 5rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
   justify-content: flex-start; /* Alinea el texto a la derecha */
   letter-spacing: 0.0rem; /* Separación entre las letras */
   position: relative; /* Posicionamiento relativo */
-  top: -90px; /* Sube el div3 para invadir div2 */
+  top: -50px; /* Sube el div3 para invadir div2 */
   z-index: 2; /* Asegúrate de que esté por encima de div2 */
   left: -20px;
 
@@ -530,11 +530,11 @@ footer {
 
 .left-group img {
   max-width: 100%; /* Asegura que la imagen sea responsiva */
-  height: 150px;  /* Ajusta el tamaño del logo */
+  height: 130px;  /* Ajusta el tamaño del logo */
   width: auto;   /* Mantiene las proporciones de la imagen */
   object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
   position: relative; /* Añadimos position para que top funcione */
-  top: -70px; /* Ajusta la posición del logo específico */
+  top: -40px; /* Ajusta la posición del logo específico */
   z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
   left: -150px;
   align-items: center;
