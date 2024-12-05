@@ -631,25 +631,18 @@ p {
     height: 3rem;
     margin-right: auto;
     overflow: hidden;
-
-  
   }
 
   .header-font {
-
     text-align: center;
     margin-left: 0;
     letter-spacing: -0.1rem;
     justify-content: center;
     align-items: center ;
     overflow: hidden;
-
-    
   }
-
   .header-font a {
     font-size: 3.8rem;
-    margin-left: 2.5rem;
     line-height: 0.5rem;
     justify-content: flex-end;
 
