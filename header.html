@@ -8,7 +8,20 @@
     <a href="about.html">ABOUT</a>
     <a href="mailto:pedrotrivinofabro@gmail.com">CONTACT</a>
   </div>
+  <div class="hamburger-menu" onclick="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
 </header>
+
+<script>
+  function toggleMenu() {
+    const menu = document.querySelector('.header-font');
+    menu.classList.toggle('active'); // Cambia la clase "active" para mostrar/ocultar el menú
+  }
+</script>
+
 
 
 
