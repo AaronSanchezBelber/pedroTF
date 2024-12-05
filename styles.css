@@ -396,12 +396,13 @@ header {
   overflow: hidden;
   width: 100%;
   max-width: 100%;
+  
 
 }
 
 /* Logo a la izquierda */
 .logo {
-  height: 280px;  /* Ajusta el tamaño del logo */
+  height: 15rem;  /* Ajusta el tamaño del logo */
   width: auto;   /* Mantiene las proporciones de la imagen */
   object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
 }
@@ -422,7 +423,7 @@ header {
 /* Estilo de los enlaces */
 .header-font a {
   font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 23rem; /* Ajusta el tamaño de las letras */
+  font-size: 16.3rem; /* Ajusta el tamaño de las letras */
   text-decoration: none; /* Quita el subrayado */
   color: red; /* Color de las letras */
   margin-left: 3.9rem; /* Espacio entre los enlaces */
@@ -533,13 +534,13 @@ footer {
 
 .left-group img {
   max-width: 100%; /* Asegura que la imagen sea responsiva */
-  height: 130px;  /* Ajusta el tamaño del logo */
+  height: 8rem;  /* Ajusta el tamaño del logo */
   width: auto;   /* Mantiene las proporciones de la imagen */
   object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
   position: relative; /* Añadimos position para que top funcione */
   top: -40px; /* Ajusta la posición del logo específico */
   z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
-  left: -150px;
+  left: -7rem;
   align-items: center;
 }
 
@@ -620,18 +621,18 @@ p {
     align-items: center; /* Centra el contenido verticalmente */
     width: 100%; /* El header ocupa el ancho completo de la pantalla */
     height: auto; /* Permite que el header ajuste su altura según el contenido */
-    overflow: hidden; /* Previene que el contenido desbordado sea visible */
  /* Espaciado para el contenido */
     height: fit-content;
+
 
   }
 
   .logo {
-    height: 60px;
+    height: 3rem;
     margin-right: auto;
     overflow: hidden;
-    
-    
+
+  
   }
 
   .header-font {
@@ -642,17 +643,17 @@ p {
     justify-content: center;
     align-items: center ;
     overflow: hidden;
-    padding: 0% 0% 0% 0%;
-    margin: 0%;
+
     
   }
 
   .header-font a {
-    font-size: 6rem;
+    font-size: 3.8rem;
     margin-left: 4.5rem;
     line-height: 0.5rem;
     justify-content: flex-end;
-    overflow: hidden;
+
+
   }
 }
 
