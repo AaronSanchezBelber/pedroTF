@@ -391,12 +391,13 @@ header {
   align-items: center; /* Centra el contenido verticalmente */
   background-color: white; /* Banda blanca */
   box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
+  justify-content: space-between;
 
 }
 
 /* Logo a la izquierda */
 .logo {
-  height: 130px;  /* Ajusta el tamaño del logo */
+  height: 280px;  /* Ajusta el tamaño del logo */
   width: auto;   /* Mantiene las proporciones de la imagen */
   object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
 }
@@ -417,7 +418,7 @@ header {
 /* Estilo de los enlaces */
 .header-font a {
   font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 11rem; /* Ajusta el tamaño de las letras */
+  font-size: 23rem; /* Ajusta el tamaño de las letras */
   text-decoration: none; /* Quita el subrayado */
   color: red; /* Color de las letras */
   margin-left: 3.9rem; /* Espacio entre los enlaces */
