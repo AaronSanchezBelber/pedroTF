@@ -157,7 +157,7 @@ main {
 
 /* Fondo para la imagen de sello */
 .background-image-sello {
-  background-image: url('../images/foto prueba fondo_Mesa de trabajo 1.png');
+  background-image: url('images/foto prueba fondo_Mesa de trabajo 1.png');
   background-size: cover;
   background-position: center;
   height: 500px;
