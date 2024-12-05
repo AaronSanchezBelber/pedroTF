@@ -146,7 +146,8 @@ main {
   margin: 0;
   padding: 2px 0;
   font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif;
-  line-height: 1rem;
+  line-height: 1.3rem;
+  font-size: 2rem;
 }
 
 
@@ -442,6 +443,7 @@ footer {
   height: 10rem; /* Equivale a h-40 en Tailwind
   padding: 1rem; Equivale a p-4
   color: #dc2626; /* Tailwind's text-red-600 */
+  
 }
 
 .foot1 a {
@@ -456,7 +458,7 @@ footer {
 
 .foot2 a{
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 4rem; /* Ajusta el tamaño de las letras */
+  font-size: 6rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
@@ -472,19 +474,19 @@ footer {
 
 .foot1  {
   font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 1.8rem; /* Ajusta el tamaño de las letras */
+  font-size: 2.7rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
   justify-content: flex-start; /* Alinea el texto a la derecha */
   letter-spacing: -0.0rem; /* Separación entre las letras */
   width: 80%; /* Ancho reducido */
-  max-width: 600px; /* Opcional: define un máximo para pantallas grandes */
+
 }
 
 .foot2 {
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 1rem; /* Ajusta el tamaño de las letras */
+  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
@@ -492,13 +494,13 @@ footer {
   letter-spacing: -0.0rem; /* Separación entre las letras */
   padding-left: 1rem; /* Espacio desde el borde izquierdo */
   width: 80%; /* Ancho reducido */
-  max-width: 600px; /* Opcional: define un máximo para pantallas grandes */
+
 }
 
 
 .foot3 {
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 2.5rem; /* Ajusta el tamaño de las letras */
+  font-size: 6.25rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
@@ -517,27 +519,25 @@ footer {
 .left-group {
   display: flex;
   flex-direction: column; /* Alinea los elementos verticalmente */
-  align-items: center; /* Centra horizontalmente los elementos dentro del contenedor */
-  justify-content: right; /* Centra verticalmente los elementos dentro del contenedor */
+  align-items: flex-end; /* Centra horizontalmente los elementos dentro del contenedor */
+  justify-content: center; /* Centra verticalmente los elementos dentro del contenedor */
   gap: 2rem; /* Espacio entre la imagen y el texto "MAD/BCN/CDMX" */
-  padding-left: 50rem;
- 
-
   position: relative; /* Añadimos position relative para que top funcione */
-  top: -90px; /* Sube el grupo para invadir otro elemento */
+  top: -140%; /* Sube el grupo para invadir otro elemento */
   z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
   
 }
 
 .left-group img {
   max-width: 100%; /* Asegura que la imagen sea responsiva */
-  height: 100px;  /* Ajusta el tamaño del logo */
+  height: 150px;  /* Ajusta el tamaño del logo */
   width: auto;   /* Mantiene las proporciones de la imagen */
   object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
   position: relative; /* Añadimos position para que top funcione */
   top: -70px; /* Ajusta la posición del logo específico */
   z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
-  left: -20px
+  left: -150px;
+  align-items: center;
 }
 
 
@@ -560,19 +560,19 @@ p {
 
 .p-p {
   font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 2.2rem; /* Ajusta el tamaño de las letras */
+  font-size: 3.3rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
   justify-content: flex-start; /* Alinea el texto a la izquierda */
   letter-spacing: 0.0rem; /* Separación entre las letras */
-  line-height: 2rem; /* Ajusta el interlineado (puedes experimentar con este valor) */
+  line-height: 3rem; /* Ajusta el interlineado (puedes experimentar con este valor) */
 
 }
 
 .h2-h2 {
   font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 7rem; /* Ajusta el tamaño de las letras */
+  font-size: 10.5rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
@@ -581,12 +581,12 @@ p {
   padding: 0; /* Elimina cualquier relleno */
   letter-spacing: -0.3rem; /* Ajusta la separación entre letras (puedes cambiar el valor según lo necesites) */
   width: fit-content; /* Ajusta el contenedor al contenido del texto */
-  line-height: 7rem;
+  line-height: 10rem;
 }
 
 .h4-h4 {
   font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 3rem; /* Ajusta el tamaño de las letras */
+  font-size: 3.5rem; /* Ajusta el tamaño de las letras */
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
@@ -595,8 +595,8 @@ p {
   padding: 0; /* Elimina cualquier relleno */
   letter-spacing: -0.1rem; /* Ajusta la separación entre letras (puedes cambiar el valor según lo necesites) */
   width: fit-content; /* Ajusta el contenedor al contenido del texto */
-  line-height: 2.2rem;
-  padding-top: 0.5rem;
+  line-height: 0.5em;
+  padding-top: 2rem;
 }
 
 .content-overlay {
