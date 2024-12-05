@@ -406,7 +406,7 @@ header {
 /* Estilos de las letras a la derecha */
 .header-font {
   font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 7rem; /* Ajusta el tamaño de las letras */
+
   color: red; /* Color de las letras */
   display: flex;
   align-items: center; /* Centra las letras verticalmente */
@@ -611,13 +611,19 @@ p {
 
 @media (max-width: 768px) {
   header {
-    flex-wrap: wrap;
-    justify-content: center;
-    overflow: hidden;
+    display: flex; /* Asegura el uso de Flexbox */
+    flex-wrap: wrap; /* Permite que el contenido baje a la siguiente línea si es necesario */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    width: 100%; /* El header ocupa el ancho completo de la pantalla */
+    height: auto; /* Permite que el header ajuste su altura según el contenido */
+    overflow: hidden; /* Previene que el contenido desbordado sea visible */
+ /* Espaciado para el contenido */
+    box-sizing: border-box; /* Incluye padding en las dimensiones del header */
   }
 
   .logo {
-    height: 50px;
+    height: 70px;
     margin-right: auto;
   }
 
@@ -626,12 +632,14 @@ p {
     text-align: center;
     margin-left: 0;
     letter-spacing: -0.1rem;
+    
   }
 
   .header-font a {
-    font-size: 3.8rem;
-    margin-left: 2.5rem;
-    line-height: 0.1rem;
+    font-size: 6rem;
+    margin-left: 5.7rem;
+    line-height: 0.5rem;
+    justify-content: flex-end;
   }
 }
 
@@ -693,6 +701,7 @@ p {
     padding-left: 0;
     letter-spacing: 0.1rem;
     line-height: 1rem;
+    left: -0px;
   }
 
   .left-group img {
@@ -700,6 +709,10 @@ p {
     width: fit-content;
     object-fit: contain;
     top: 0;
+    justify-content: center; 
+    align-items: center;
+    left: 0px;
+
   }
 }
 
