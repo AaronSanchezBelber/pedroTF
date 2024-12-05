@@ -650,7 +650,7 @@ p {
     justify-content: flex-start; /* Alinea el texto a la izquierda */
     margin: 0; /* Elimina cualquier margen */
     padding: 0; /* Elimina cualquier relleno */
-    letter-spacing: -0.1rem; /* Ajusta la separación entre letras (puedes cambiar el valor según lo necesites) */
+    letter-spacing: -0.1rem; 
     width: fit-content; /* Ajusta el contenedor al contenido del texto */
     line-height: 1em;
     padding-top: 2rem;
