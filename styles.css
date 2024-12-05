@@ -393,6 +393,9 @@ header {
   background-color: white; /* Banda blanca */
   box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
   justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
 
 }
 
@@ -612,34 +615,44 @@ p {
 @media (max-width: 768px) {
   header {
     display: flex; /* Asegura el uso de Flexbox */
-    flex-wrap: wrap; /* Permite que el contenido baje a la siguiente línea si es necesario */
+  /* Permite que el contenido baje a la siguiente línea si es necesario */
     justify-content: center; /* Centra el contenido horizontalmente */
     align-items: center; /* Centra el contenido verticalmente */
     width: 100%; /* El header ocupa el ancho completo de la pantalla */
     height: auto; /* Permite que el header ajuste su altura según el contenido */
     overflow: hidden; /* Previene que el contenido desbordado sea visible */
  /* Espaciado para el contenido */
-    box-sizing: border-box; /* Incluye padding en las dimensiones del header */
+    height: fit-content;
+
   }
 
   .logo {
-    height: 70px;
+    height: 60px;
     margin-right: auto;
+    overflow: hidden;
+    
+    
   }
 
   .header-font {
-    font-size: 0.5rem;
+
     text-align: center;
     margin-left: 0;
     letter-spacing: -0.1rem;
+    justify-content: center;
+    align-items: center ;
+    overflow: hidden;
+    padding: 0% 0% 0% 0%;
+    margin: 0%;
     
   }
 
   .header-font a {
     font-size: 6rem;
-    margin-left: 5.7rem;
+    margin-left: 4.5rem;
     line-height: 0.5rem;
     justify-content: flex-end;
+    overflow: hidden;
   }
 }
 
@@ -689,6 +702,7 @@ p {
     position: relative;
     top: 0;
     z-index: 1;
+    left: 0px;
   }
 
   .left-group {
@@ -698,10 +712,10 @@ p {
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
-    padding-left: 0;
+
     letter-spacing: 0.1rem;
     line-height: 1rem;
-    left: -0px;
+    left: 00px;
   }
 
   .left-group img {
