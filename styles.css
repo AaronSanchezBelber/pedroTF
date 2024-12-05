@@ -652,18 +652,7 @@ p {
   
 }
 
-@media (min-width: 769px) {
-  .header-font {
-    display: flex; /* Volver a mostrar los enlaces en pantallas más grandes */
-    justify-content: center;
-    margin-left: 0;
-    letter-spacing: -0.1rem;
-  }
 
-  .hamburger-menu {
-    display: none; /* Ocultar el menú hamburguesa en pantallas grandes */
-  }
-}
 
 @media (max-width: 768px) {
   footer {
