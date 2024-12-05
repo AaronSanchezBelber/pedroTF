@@ -430,7 +430,7 @@ header {
   font-size: 16.3rem; /* Ajusta el tamaño de las letras */
   text-decoration: none; /* Quita el subrayado */
   color: red; /* Color de las letras */
-  margin-left: 3.9rem; /* Espacio entre los enlaces */
+  margin-left: 3rem; /* Espacio entre los enlaces */
   justify-content: flex-start;
   line-height: 1rem;
   
@@ -520,9 +520,6 @@ footer {
 
 }
 
-
-
-
 .left-group {
   display: flex;
   flex-direction: column; /* Alinea los elementos verticalmente */
@@ -546,11 +543,6 @@ footer {
   left: -7rem;
   align-items: center;
 }
-
-
-
-
-
 
 /* Títulos de las secciones */
 h2, h3, h4 {
