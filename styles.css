@@ -616,86 +616,54 @@ p {
 }
 
 
-/* Media Query para pantallas pequeñas */
 @media (max-width: 768px) {
   header {
-    display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    width: 100%; 
+    display: flex; /* Asegura el uso de Flexbox */
+  /* Permite que el contenido baje a la siguiente línea si es necesario */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    width: 100%; /* El header ocupa el ancho completo de la pantalla */
+    height: auto; /* Permite que el header ajuste su altura según el contenido */
+ /* Espaciado para el contenido */
     height: fit-content;
-    position: relative;
-  }
-
-  .header-logo-images {
-    display: flex;
-    justify-content: center;
   }
 
   .logo {
     height: 3rem;
+    margin-right: auto;
     overflow: hidden;
   }
 
   .header-font {
-    display: none; /* Ocultamos los enlaces inicialmente */
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    z-index: 10;
     text-align: center;
+    margin-left: -5rem;
+    letter-spacing: -0.1rem;
+    justify-content: center;
+    align-items: center ;
+    overflow: hidden;
   }
-
   .header-font a {
-    font-size: 2.5rem;
-    color: white;
-    margin: 1rem 0;
-    text-decoration: none;
-    letter-spacing: 0.1rem;
-  }
+    font-size: 3.8rem;
+    line-height: 0.5rem;
+    justify-content: flex-end;
 
-  .hamburger-menu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 25px;
-    cursor: pointer;
-    z-index: 20;
-  }
 
-  .hamburger-menu .bar {
-    width: 100%;
-    height: 5px;
-    background-color: black;
   }
-
-  /* Mostrar el menú cuando la clase "active" esté presente */
-  .header-font.active {
-    display: flex;
-  }
+  
 }
 
-/* Media Query para pantallas grandes */
 @media (min-width: 769px) {
   .header-font {
-    display: flex; /* Los enlaces son visibles en pantallas grandes */
+    display: flex; /* Volver a mostrar los enlaces en pantallas más grandes */
     justify-content: center;
+    margin-left: 0;
     letter-spacing: -0.1rem;
   }
 
   .hamburger-menu {
-    display: none; /* El menú hamburguesa se oculta en pantallas grandes */
+    display: none; /* Ocultar el menú hamburguesa en pantallas grandes */
   }
 }
-
 
 @media (max-width: 768px) {
   footer {
