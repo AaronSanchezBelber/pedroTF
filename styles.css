@@ -628,7 +628,7 @@ p {
 
   .header-font {
     text-align: center;
-    margin-left: -5rem;
+    margin-left: 2rem;
     letter-spacing: -0.1rem;
     justify-content: center;
     align-items: center ;
@@ -639,7 +639,20 @@ p {
     line-height: 0.5rem;
     justify-content: flex-end;
 
+  }
 
+  .h2-h2 {
+    font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
+    font-size: 8rem; /* Ajusta el tamaño de las letras */
+    color: red; /* Color de las letras */
+    display: flex;
+    align-items: center; /* Centra las letras verticalmente */
+    justify-content: flex-start; /* Alinea el texto a la izquierda */
+    margin: 0; /* Elimina cualquier margen */
+    padding: 0; /* Elimina cualquier relleno */
+    letter-spacing: -0.3rem; /* Ajusta la separación entre letras (puedes cambiar el valor según lo necesites) */
+    width: fit-content; /* Ajusta el contenedor al contenido del texto */
+    line-height: 8rem;
   }
   
 }
