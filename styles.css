@@ -377,6 +377,51 @@ main {
   margin-left: 50%; /* Mueve la imagen hacia la izquierda creando el espacio blanco */
 }
 
+/* Contenedor de la flecha (fuera de la galería para que quede a los lados) */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Centrado vertical */
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+/* Flecha izquierda */
+.left-arrow {
+  left: 10px; /* Coloca la flecha a la izquierda */
+}
+
+/* Flecha derecha */
+.right-arrow {
+  right: 10px; /* Coloca la flecha a la derecha */
+}
+
+/* Cambiar la opacidad de las flechas al hacer hover */
+.custom-slider:hover .arrow {
+  opacity: 1;
+}
+
+/* Por defecto, las flechas están invisibles */
+.arrow {
+  opacity: 0;
+}
+
+/* Estilo para las imágenes de las flechas */
+.arrow img {
+  width: 6rem; /* Ajusta el tamaño de las flechas */
+  height: auto;
+}
+
+/* Opcional: Agregar efecto visual a las flechas */
+.arrow:hover img {
+  transform: scale(1.1); /* Escalar ligeramente cuando se pase el ratón */
+  transition: transform 0.3s ease-in-out;
+}
+
+
 /* Ajuste de transición de las imágenes verticales */
 @media screen and (max-width: 768px) {
   /* En pantallas pequeñas, las imágenes verticales ocupan el 100% */
@@ -566,6 +611,7 @@ p {
   justify-content: flex-start; /* Alinea el texto a la izquierda */
   letter-spacing: 0.0rem; /* Separación entre las letras */
   line-height: 3rem; /* Ajusta el interlineado (puedes experimentar con este valor) */
+  
 
 }
 
@@ -603,8 +649,9 @@ p {
   position: relative;
   z-index: 2; /* Asegura que el texto quede encima */
   color: red; /* Cambia el color si lo deseas */
-  padding: 20px;
-  top: -300px;
+  margin: 0;
+  padding-bottom: 0;
+  top: -65rem;
 
 }
 
