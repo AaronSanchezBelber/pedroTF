@@ -532,6 +532,7 @@ footer {
   letter-spacing: -0.0rem; /* Separación entre las letras */
   padding-left: 1rem; /* Espacio desde el borde izquierdo */
   width: 80%; /* Ancho reducido */
+  
 
 }
 
@@ -546,8 +547,9 @@ footer {
   letter-spacing: 0.0rem; /* Separación entre las letras */
   position: relative; /* Posicionamiento relativo */
   top: -50px; /* Sube el div3 para invadir div2 */
-  z-index: 2; /* Asegúrate de que esté por encima de div2 */
+  z-index: 1; 
   left: -20px;
+  pointer-events: none;
 
 }
 .foot2 a {
@@ -558,6 +560,8 @@ footer {
   text-decoration: none; /* Elimina el subrayado */
   margin: 0 0.5rem; /* Espaciado entre los enlaces */
   line-height: 1;
+  z-index: 2;
+  
 }
 
 .left-group {
