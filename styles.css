@@ -55,7 +55,7 @@ header {
 .h-screen {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* Para ocupar toda la altura */
+  min-height: 130vh; 
 }
 
 main {
@@ -509,16 +509,6 @@ footer {
   letter-spacing: 0.0rem; /* Separación entre las letras */
 }
 
-.foot2 a {
-  display: inline-block; /* Hace que los enlaces sean más estándar */
-  font-family: 'OTNeueMontreal-BookSqueezed', sans-serif;
-  font-size: 6rem;
-  color: red;
-  text-decoration: none; /* Elimina el subrayado */
-  margin: 0 0.5rem; /* Espaciado entre los enlaces */
-  line-height: 1;
-}
-
 
 .foot1  {
   font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif; /* Tipografía personalizada */
@@ -559,6 +549,15 @@ footer {
   z-index: 2; /* Asegúrate de que esté por encima de div2 */
   left: -20px;
 
+}
+.foot2 a {
+  display: inline-block; /* Hace que los enlaces sean más estándar */
+  font-family: 'OTNeueMontreal-BookSqueezed', sans-serif;
+  font-size: 6rem;
+  color: red;
+  text-decoration: none; /* Elimina el subrayado */
+  margin: 0 0.5rem; /* Espaciado entre los enlaces */
+  line-height: 1;
 }
 
 .left-group {
@@ -642,15 +641,20 @@ p {
 }
 
 .content-container {
-  position: relative; /* Contenedor principal */
-  width: 100%; /* Ajusta el ancho al tamaño deseado */
-  height: auto; /* O fija un alto específico */
+  position: relative;
+  width: 100%;
+  height: 100%; /* Ajusta el alto al contenedor principal */
+  max-width: 1200px; /* (Opcional) Establece un ancho máximo */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
 }
 
+
 .background-image {
-  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-  height: auto; /* Mantén la proporción de la imagen */
+  width: 100%;
+  height: auto; /* Esto evita que se deformen */
+  object-fit: cover; /* Útil si la imagen se recorta dentro del contenedor */
 }
+
 
 .content-overlay {
   position: absolute; /* Posiciona el texto dentro del contenedor */
@@ -662,6 +666,13 @@ p {
   
 }
 
+
+.flex-grow-1 {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 
 @media (max-width: 768px) {
