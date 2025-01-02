@@ -1,3 +1,7 @@
+/* ========================
+   1. Fuentes personalizadas
+   ======================== */
+
 /* BookUltraSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-BookUltraSqueezed';
@@ -8,17 +12,16 @@
   font-family: 'OTNeueMontreal-ItalicSqueezed';
   src: url('assets/fonts/OTNeueMontreal-ItalicSqueezed.otf') format('opentype');
 }
+/* SemiBoldUltraSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed';
   src: url('assets/fonts/OTNeueMontreal-SemiBoldUltraSqueezed.otf') format('opentype');
 }
-
 /* BookSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-BookSqueezed';
   src: url('assets/fonts/OTNeueMontreal-BookSqueezed.otf') format('opentype');
 }
-
 /* BoldUltraSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-BoldUltraSqueezed';
@@ -30,51 +33,74 @@
   src: url('assets/fonts/OTNeueMontreal-MediumSqueezed.otf') format('opentype');
 }
 
-
+/* ========================
+   2. Cursor personalizado
+   ======================== */
 * {
-  cursor: url('images/cursor2.png'), default ;
-  
+  cursor: url('images/cursor2.png'), default;
 }
 
+/* ========================
+   3. Header
+   ======================== */
 header {
   display: flex;
-  align-items: center; /* Asegura que el contenido, incluido el logo, esté centrado verticalmente */
+  align-items: center;
+  background-color: white;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-/* Logo */
 .logo {
-  height: 100%;  /* El logo ocupa el 100% de la altura del header */
-  width: auto;   /* Mantiene las proporciones de la imagen */
-  object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
-  padding-left: 0px; /* Si ya tienes un padding, ajustalo o elimínalo */
-  margin-left: 0;
-  
+  height: 15rem;  
+  width: auto;
+  object-fit: contain; 
 }
 
-/* Contenedor principal */
+.header-font {
+  font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif;
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  letter-spacing: -0.1rem; 
+  padding: 2.5rem 2rem;
+}
+
+/* Enlaces del header */
+.header-font a {
+  font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif;
+  font-size: 16.3rem;
+  text-decoration: none;
+  color: red;
+  margin-left: 2rem;
+  line-height: 1rem;
+}
+
+/* ========================
+   4. Layout principal
+   ======================== */
 .h-screen {
   display: flex;
   flex-direction: column;
-  min-height: 130vh; 
+  min-height: 130vh;
 }
 
 main {
-  flex: 1; /* Ocupa todo el espacio disponible entre header y footer */
-  overflow: auto; /* Permite scroll si es necesario */
-  
+  flex: 1;
+  overflow: auto;
 }
 
-/* Cabecera y Navegación */
-.h-20 { 
-  height: 7rem; 
-}
-
-/* Contenedor de cuadrícula para galería */
+/* ========================
+   5. Galería de index.html
+   ======================== */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-
 
 .gallery-item img {
   width: 100%;
@@ -82,7 +108,9 @@ main {
   object-fit: cover;
 }
 
-/* Contenedor de video */
+/* ========================
+   6. Video containers
+   ======================== */
 .video-container {
   position: relative;
   width: 100%;
@@ -90,7 +118,6 @@ main {
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
   overflow: hidden;
 }
-
 .video-container iframe {
   position: absolute;
   top: 0;
@@ -99,54 +126,105 @@ main {
   height: 100%;
 }
 
-/* Estilo de las imágenes con la nueva clase */
-.custom-image-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.image-container {
-  height: 540px;
+/* ==============================
+   7. Slider (páginas de proyecto)
+   ============================== */
+.custom-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh; 
   overflow: hidden;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer; 
 }
 
-.image-container img {
+.slide {
+  position: absolute;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out; 
+}
+.slide.active {
+  opacity: 1; 
+}
+
+/* Imágenes horizontales */
+.slide.horizontal img {
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  transition: transform 1s ease-in-out;
+}
+.slide.horizontal img:hover {
+  transform: scale(1.05);
 }
 
-.gallery-item-large {
-  height: 400px;
+/* Imágenes verticales */
+.slide.vertical {
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+.slide.vertical img {
+  width: auto; 
+  height: 100%;
+  object-fit: contain; 
+  transition: transform 1s ease-in-out;
+  margin-left: 50%; /* Espacio en blanco a la izquierda */
+}
+.slide.vertical img:hover {
+  transform: scale(1.05);
 }
 
-.image-container-work-final {
-  height: 700px; /* Establece la altura del contenedor */
-  width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
-  overflow: hidden; /* Esconde cualquier parte de la imagen que salga del contenedor */
+/* Flechas del slider */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+  opacity: 0; /* Por defecto, están ocultas */
+}
+.left-arrow {
+  left: 10px;
+}
+.right-arrow {
+  right: 10px;
+}
+.custom-slider:hover .arrow {
+  opacity: 1; /* Aparecen al hacer hover sobre el slider */
+}
+.arrow img {
+  width: 6rem; 
+  height: auto;
+}
+.arrow:hover img {
+  transform: scale(1.1); 
+  transition: transform 0.3s ease-in-out;
 }
 
-.image-container-work-final img {
-  width: 100%; /* La imagen ocupa todo el ancho del contenedor */
-  height: 100%; /* La imagen ocupa toda la altura del contenedor */
-  object-fit: cover; /* Hace que la imagen cubra todo el contenedor sin deformarse */
-}
-
-/* Estilos para la sección de créditos */
-/* Estilos para la sección de créditos */
+/* ========================
+   8. Créditos
+   ======================== */
 .credits-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
-  gap: 1rem; /* Espacio entre las columnas */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; 
 }
-
 .credit-column {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
 }
-
 .credit-column p {
   margin: 0;
   padding: 2px 0;
@@ -155,611 +233,155 @@ main {
   font-size: 2rem;
 }
 
-
-/* Fondo para la imagen de sello */
-.background-image-sello {
-  background-image: url('images/foto prueba fondo_Mesa de trabajo 1.png');
-  background-size: cover;
-  background-position: center;
-  height: 500px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-}
-
-.background-image-sello .z-10 {
-  position: relative;
-  z-index: 2;
-}
-
-/* Estilo inicial: extremo pixelado y desenfoque intenso */
-.pixelated-gif {
-  image-rendering: pixelated; /* Renderización extrema de pixeles */
-  filter: blur(10px); /* Aumenta el desenfoque */
-  transition: all 0.5s ease-in-out; /* Transición suave para todos los efectos */
-}
-
-/* Estilo al pasar el ratón: nítido y ajustado */
-.pixelated-gif:hover {
-  image-rendering: auto; /* Regresa a la resolución nítida */
-  filter: none; /* Elimina el desenfoque */
-  transform: scale(1); /* Retorna al tamaño original */
-}
-
-/* Contenedor para las imágenes con el hueco blanco a la derecha */
-.custom-image-grid {
-  display: grid;
-  grid-template-columns: 3fr 1fr; /* Imagen a la izquierda y hueco blanco a la derecha */
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
-.image-container {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-}
-
-.image-container img {
-  width: 100%; /* Imagen ocupa todo el ancho */
-  height: 100%; /* Imagen ocupa toda la altura */
-  object-fit: cover; /* Mantiene la proporción y cubre el área */
-}
-
-/* Contenedor para las imágenes con el hueco blanco a la izquierda */
-.custom-image-grid {
-  display: grid;
-  grid-template-columns: 3fr 3fr; /* Espacio blanco a la izquierda y la imagen */
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
-.image-container {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-}
-
-.image-container img {
-  width: 100%; /* Imagen ocupa todo el ancho */
-  height: 100%; /* Imagen ocupa toda la altura */
-  object-fit: cover; /* Mantiene la proporción y cubre el área */
-}
-
-.image-container-vertical {
-  position: relative;
-  width: 100%;
-  height: 500px; /* Ajustar el tamaño de las imágenes */
-  overflow: hidden;
-}
-
-.image-item {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Contenedor de la imagen base */
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Imagen para el hover: la segunda imagen */
-.image-hover {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: left 0.5s ease-in-out;
-}
-
-/* Efecto hover: mover la primera imagen a la izquierda */
-.image-item:hover .image-container {
-  transform: translateX(-100%);
-}
-
-.image-item:hover .image-hover {
-  left: 0;
-}
-
-.custom-image-grid-v {
-  display: flex;
-  width: 100%;
-}
-
-.image-container-v {
-  width: 50%; /* Un tercio de la pantalla */
-  padding: 5px;
-  position: relative;
-}
-
-.empty-space-v {
-  width: 66.66%; /* Dos tercios de la pantalla en blanco */
-}
-
-.image-item-v img {
-  width: 100%;
-  transition: opacity 0.3s ease;
-}
-
-.image-hover-v {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.image-item:hover .image-hover-v {
-  opacity: 1;
-}
-
-
-
-/* Contenedor principal del slider */
-.custom-slider {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Ajusta la altura del slider al 100% de la altura de la ventana */
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer; /* Cambiar el cursor para indicar que es clickeable */
-}
-
-/* Estilo de las diapositivas */
-.slide {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0; /* Las diapositivas inactivas no se verán */
-  transition: opacity 0.5s ease-in-out; /* Transición suave de opacidad */
-}
-
-/* La diapositiva activa se vuelve visible */
-.slide.active {
-  opacity: 1; /* Hace visible la diapositiva activa */
-}
-
-/* Estilo específico para las imágenes horizontales */
-.slide.horizontal img {
-  width: 100%; /* La imagen horizontal ocupa el 100% del ancho */
-  height: auto;
-  object-fit: cover;
-  transition: transform 1s ease-in-out;
-}
-
-.slide.horizontal img:hover {
-  transform: scale(1.05);
-}
-
-/* Estilo específico para las imágenes verticales */
-.slide.vertical {
- /* La imagen vertical ocupa solo el 50% del ancho del contenedor */
-   /* La altura de la diapositiva es igual a la del contenedor */
-  display: flex;
-  justify-content: flex-start; /* Alinea la imagen vertical a la izquierda */
-  overflow: hidden; /* Oculta el exceso de imagen que sobresale */
-}
-
-.slide.vertical img {
-  width: auto; /* La anchura de la imagen es auto para mantener la proporción */
-  height: 100%; /* La altura se ajusta a la altura del contenedor */
-  object-fit: contain; /* Asegura que la imagen no se recorte y mantenga su proporción */
-  transition: transform 1s ease-in-out;
-}
-
-.slide.vertical img:hover {
-  transform: scale(1.05);
-}
-
-/* Animación para la imagen vertical: crear espacio en blanco a la izquierda */
-.slide.vertical img {
-  margin-left: 50%; /* Mueve la imagen hacia la izquierda creando el espacio blanco */
-}
-
-/* Contenedor de la flecha (fuera de la galería para que quede a los lados) */
-.arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%); /* Centrado vertical */
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 10;
-  transition: opacity 0.3s ease;
-}
-
-/* Flecha izquierda */
-.left-arrow {
-  left: 10px; /* Coloca la flecha a la izquierda */
-}
-
-/* Flecha derecha */
-.right-arrow {
-  right: 10px; /* Coloca la flecha a la derecha */
-}
-
-/* Cambiar la opacidad de las flechas al hacer hover */
-.custom-slider:hover .arrow {
-  opacity: 1;
-}
-
-/* Por defecto, las flechas están invisibles */
-.arrow {
-  opacity: 0;
-}
-
-/* Estilo para las imágenes de las flechas */
-.arrow img {
-  width: 6rem; /* Ajusta el tamaño de las flechas */
-  height: auto;
-}
-
-/* Opcional: Agregar efecto visual a las flechas */
-.arrow:hover img {
-  transform: scale(1.1); /* Escalar ligeramente cuando se pase el ratón */
-  transition: transform 0.3s ease-in-out;
-}
-
-
-/* Ajuste de transición de las imágenes verticales */
-@media screen and (max-width: 768px) {
-  /* En pantallas pequeñas, las imágenes verticales ocupan el 100% */
-  .slide.vertical {
-    width: 100%;
-  }
-  .slide.vertical img {
-    margin-left: 0; /* Elimina el margen a la izquierda en pantallas pequeñas */
-  }
-}
-
-
-
-/* Banda blanca en el header */
-header {
-  display: flex;
-  align-items: center; /* Centra el contenido verticalmente */
-  background-color: white; /* Banda blanca */
-  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño */
-  justify-content: space-between;
-  overflow: hidden;
-  width: 100%;
-  max-width: 100%;
-  
-
-}
-
-/* Logo a la izquierda */
-.logo {
-  height: 15rem;  /* Ajusta el tamaño del logo */
-  width: auto;   /* Mantiene las proporciones de la imagen */
-  object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
-}
-
-/* Estilos de las letras a la derecha */
-.header-font {
-  font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif; /* Tipografía personalizada */
-  /* font-size: 7rem; */
-  color: red; /* Color de las letras */
-  display: flex;
-  align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-start; /* Alinea el texto a la derecha */
-  letter-spacing: -0.1rem; 
-  padding: 2.5rem 2rem;
-
-}
-
-/* Estilo de los enlaces */
-.header-font a {
-  font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 16.3rem; /* Ajusta el tamaño de las letras */
-  text-decoration: none; /* Quita el subrayado */
-  color: red; /* Color de las letras */
-  margin-left: 2rem; /* Espacio entre los enlaces */
-  justify-content: flex-start;
-  line-height: 1rem;
-  
-}
-
-/* Estilo para las imágenes dentro del logo */
-.header-logo-images {
-  display: flex;
-  gap: 0px; /* Espacio entre las dos imágenes del logo */
-  align-items: center; /* Alinea las imágenes verticalmente */
-}
-
-
-
-
+/* ========================
+   9. Footer
+   ======================== */
 footer {
-  height: 10rem; /* Equivale a h-40 en Tailwind
-  padding: 1rem; Equivale a p-4
-  color: #dc2626; /* Tailwind's text-red-600 */
-  
+  height: 10rem; /* Ajusta según necesites */
 }
 
-.foot1 a {
-  font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 1rem; /* Ajusta el tamaño de las letras */
-  color: red; /* Color de las letras */
-  display: flex;
-  align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-start; /* Alinea el texto a la derecha */
-  letter-spacing: 0.0rem; /* Separación entre las letras */
-}
-
-
-.foot1  {
-  font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 2.7rem; /* Ajusta el tamaño de las letras */
-  color: red; /* Color de las letras */
-  display: flex;
-  align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-start; /* Alinea el texto a la derecha */
-  letter-spacing: -0.0rem; /* Separación entre las letras */
-  width: 80%; /* Ancho reducido */
-
-}
-
-.foot2 {
-  font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 1.5rem; /* Ajusta el tamaño de las letras */
-  color: red; /* Color de las letras */
-  display: flex;
-  align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-start; /* Alinea el texto a la derecha */
-  letter-spacing: -0.0rem; /* Separación entre las letras */
-  padding-left: 1rem; /* Espacio desde el borde izquierdo */
-  width: 80%; /* Ancho reducido */
-  
-
-}
-
-
+.foot1,
+.foot2,
 .foot3 {
-  font-family: 'OTNeueMontreal-BookSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 5rem; /* Ajusta el tamaño de las letras */
-  color: red; /* Color de las letras */
-  display: flex;
-  align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-start; /* Alinea el texto a la derecha */
-  letter-spacing: 0.0rem; /* Separación entre las letras */
-  position: relative; /* Posicionamiento relativo */
-  top: -50px; /* Sube el div3 para invadir div2 */
-  z-index: 1; 
-  left: -20px;
-  pointer-events: none;
+  color: red;
+  font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif;
+}
 
+/* Ejemplo de foot1 */
+.foot1 {
+  font-size: 2.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 80%; 
+}
+.foot1 a {
+  font-size: 1rem; 
+  letter-spacing: 0rem;
+  text-decoration: none;
+  color: red;
+}
+
+/* foot2 */
+.foot2 {
+  font-family: 'OTNeueMontreal-BookSqueezed', sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: -0rem;
+  padding-left: 1rem; 
+  width: 80%; 
 }
 .foot2 a {
-  display: inline-block; /* Hace que los enlaces sean más estándar */
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif;
   font-size: 6rem;
+  text-decoration: none;
   color: red;
-  text-decoration: none; /* Elimina el subrayado */
-  margin: 0 0.5rem; /* Espaciado entre los enlaces */
+  margin: 0 0.5rem;
   line-height: 1;
-  z-index: 2;
-  
 }
 
+/* foot3 */
+.foot3 {
+  font-family: 'OTNeueMontreal-BookSqueezed', sans-serif;
+  font-size: 5rem;
+  letter-spacing: 0rem; 
+  position: relative; 
+  top: -50px; 
+  left: -20px;
+  pointer-events: none;
+  z-index: 1; 
+}
+
+/* Elemento “left-group” en el footer */
 .left-group {
   display: flex;
-  flex-direction: column; /* Alinea los elementos verticalmente */
-  align-items: flex-end; /* Centra horizontalmente los elementos dentro del contenedor */
-  justify-content: center; /* Centra verticalmente los elementos dentro del contenedor */
-  gap: 2rem; /* Espacio entre la imagen y el texto "MAD/BCN/CDMX" */
-  position: relative; /* Añadimos position relative para que top funcione */
-  top: -140%; /* Sube el grupo para invadir otro elemento */
-  z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
-  
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  top: -140%;
+  z-index: 2;
 }
-
 .left-group img {
-  max-width: 100%; /* Asegura que la imagen sea responsiva */
-  height: 8rem;  /* Ajusta el tamaño del logo */
-  width: auto;   /* Mantiene las proporciones de la imagen */
-  object-fit: contain; /* Asegura que el logo no se recorte ni se deforme */
-  position: relative; /* Añadimos position para que top funcione */
-  top: -40px; /* Ajusta la posición del logo específico */
-  z-index: 2; /* Asegúrate de que esté por encima de otros elementos */
+  max-width: 100%;
+  height: 8rem; 
+  width: auto;
+  object-fit: contain;
+  position: relative;
+  top: -40px;
   left: -7rem;
-  align-items: center;
 }
 
-/* Títulos de las secciones */
-h2, h3, h4 {
-  font-family: 'OTNeueMontreal-BoldUltraSqueezed', sans-serif; /* Fuente para títulos */
-  margin: 0 0;
-}
-
-/* Párrafos */
+/* ========================
+   10. Estilos de texto genéricos
+   ======================== */
 p {
-  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Fuente para párrafos */
-
+  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; 
   color: red;
 }
-
 .p-p {
-  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 3.3rem; /* Ajusta el tamaño de las letras */
-  color: red; /* Color de las letras */
-  display: flex;
-  align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-start; /* Alinea el texto a la izquierda */
-  letter-spacing: 0.0rem; /* Separación entre las letras */
-  line-height: 3rem; /* Ajusta el interlineado (puedes experimentar con este valor) */
-  
-
+  font-size: 3.3rem; 
+  line-height: 3rem; 
+  letter-spacing: 0rem; 
 }
-
 .h2-h2 {
-  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 9rem; /* Ajusta el tamaño de las letras */
-  color: red; /* Color de las letras */
-  display: flex;
-  align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-start; /* Alinea el texto a la izquierda */
-  margin: 0; /* Elimina cualquier margen */
-  padding: 0; /* Elimina cualquier relleno */
-  letter-spacing: -0.3rem; /* Ajusta la separación entre letras (puedes cambiar el valor según lo necesites) */
-  width: fit-content; /* Ajusta el contenedor al contenido del texto */
+  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif;
+  font-size: 9rem;
+  color: red;
+  margin: 0; 
+  letter-spacing: -0.3rem; 
+  width: fit-content;
   line-height: 10rem;
 }
-
-
 .h4-h4 {
-  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
-  font-size: 3.5rem; /* Ajusta el tamaño de las letras */
-  color: red; /* Color de las letras */
-  display: flex;
-  align-items: center; /* Centra las letras verticalmente */
-  justify-content: flex-start; /* Alinea el texto a la izquierda */
-  margin: 0; /* Elimina cualquier margen */
-  padding: 0; /* Elimina cualquier relleno */
-  letter-spacing: -0.1rem; /* Ajusta la separación entre letras (puedes cambiar el valor según lo necesites) */
-  width: fit-content; /* Ajusta el contenedor al contenido del texto */
-  line-height: 0.5em;
+  font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; 
+  font-size: 3.5rem; 
+  color: red;
+  margin: 0; 
   padding-top: 2rem;
+  letter-spacing: -0.1rem; 
+  line-height: 0.5em;
+  width: fit-content;
 }
 
-.content-container {
-  position: relative;
-  width: 100%;
-  height: 100%; /* Ajusta el alto al contenedor principal */
-  max-width: 1200px; /* (Opcional) Establece un ancho máximo */
-  margin: 0 auto; /* Centra el contenedor horizontalmente */
-}
-
-
-.background-image {
-  width: 100%;
-  height: auto; /* Esto evita que se deformen */
-  object-fit: cover; /* Útil si la imagen se recorta dentro del contenedor */
-}
-
-
-.content-overlay {
-  position: absolute; /* Posiciona el texto dentro del contenedor */
-  top: 0; /* Fija el texto en la parte superior */
-  left: 0; /* Alinea el texto a la izquierda */
-  width: 100%; /* Ocupa todo el ancho */
-  color: red; /* Cambia el color del texto */
-  text-align: left; /* Centra el texto horizontalmente */
-  
-}
-
-
-.flex-grow-1 {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-
+/* ===============================
+   11. Media queries para móviles
+   =============================== */
 @media (max-width: 768px) {
+  /* Header */
   header {
-    display: flex; /* Asegura el uso de Flexbox */
-  /* Permite que el contenido baje a la siguiente línea si es necesario */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    width: 100%; /* El header ocupa el ancho completo de la pantalla */
-    height: auto; /* Permite que el header ajuste su altura según el contenido */
- /* Espaciado para el contenido */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     height: fit-content;
   }
-
   .logo {
     height: 3rem;
     margin-right: auto;
-    overflow: hidden;
   }
-
   .header-font {
     text-align: center;
     margin-left: 2rem;
     letter-spacing: -0.1rem;
     justify-content: center;
-    align-items: center ;
-    overflow: hidden;
+    align-items: center;
   }
   .header-font a {
     font-size: 3.8rem;
     line-height: 0.5rem;
-    justify-content: flex-end;
-
   }
 
-  .h4-h4 {
-    font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; /* Tipografía personalizada */
-    font-size: 3.5rem; /* Ajusta el tamaño de las letras */
-    color: red; /* Color de las letras */
-    display: flex;
-    align-items: center; /* Centra las letras verticalmente */
-    justify-content: flex-start; /* Alinea el texto a la izquierda */
-    margin: 0; /* Elimina cualquier margen */
-    padding: 0; /* Elimina cualquier relleno */
-    letter-spacing: -0.1rem; 
-    width: fit-content; /* Ajusta el contenedor al contenido del texto */
-    line-height: 1em;
-    padding-top: 2rem;
-  }
-  
-}
-/* 
-@media (max-width: 768px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    width: 100%;
-    padding: 0 1rem;
-  }
-
-  .grid-container img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-} */
-
-
-
-@media (max-width: 768px) {
+  /* Footer */
   footer {
     height: auto;
     padding: 1rem;
-    color: #dc2626;
     text-align: center;
     letter-spacing: -0.1rem;
     line-height: 1rem;
   }
-
   .foot1, .foot2, .foot3 {
     width: 100%;
-    max-width: none;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -768,57 +390,47 @@ p {
     letter-spacing: -0.1rem;
     line-height: 1rem;
   }
-
   .foot1 a, .foot2 a, .foot3 a {
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
-    display: block;
     margin: 0.5rem 0;
     line-height: 1rem;
   }
-
   .foot1 {
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
     padding-left: 0;
   }
-
   .foot2 {
     font-size: 1.2rem;
     padding-left: 0;
   }
-
   .foot3 {
     font-size: 1.8rem;
     position: relative;
     top: 0;
-    z-index: 1;
-    left: 0px;
+    left: 0;
   }
-
   .left-group {
-    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
-
-    letter-spacing: 0.1rem;
     line-height: 1rem;
-    left: 00px;
+    left: 0px;
+    top: 0px; /* Para no “invadir” nada */
   }
-
   .left-group img {
     height: 70px;
     width: fit-content;
     object-fit: contain;
     top: 0;
-    justify-content: center; 
-    align-items: center;
-    left: 0px;
+    left: 0;
+  }
 
+  /* Si quieres que la galería principal se muestre en 2 columnas en móvil: */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
-
-
