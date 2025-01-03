@@ -54,10 +54,19 @@ header {
   box-sizing: border-box;
 }
 
+.header-logo-images {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 0; 
+}
+ 
 .logo {
-  height: 15rem;  
+  /*height: 15rem;  */
+  height: 13vw;
   width: auto;
   object-fit: contain; 
+  line-height: 1;
 }
 
 .header-font {
@@ -65,19 +74,23 @@ header {
   color: red;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: stretch;
   letter-spacing: -0.1rem; 
-  padding: 2.5rem 2rem;
+  /* padding: 2.5rem 2rem; */
+  padding: clamp(1rem, 5vw, 2.5rem) clamp(1rem, 3vw, 2rem);
 }
 
 /* Enlaces del header */
 .header-font a {
   font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif;
-  font-size: 16.3rem;
+  /*font-size: 16.3rem;*/
+  font-size: 14vw;
   text-decoration: none;
   color: red;
-  margin-left: 2rem;
-  line-height: 1rem;
+/*   margin-left: 2rem;
+  line-height: 1rem; */
+  margin-left: 2vw;
+  line-height: 2vw;
 }
 
 /* ========================
@@ -349,28 +362,30 @@ p {
    =============================== */
 @media (max-width: 768px) {
   /* Header */
-  header {
+ /* header {
     display: flex; 
     justify-content: center;
     align-items: center;
     width: 100%;
     height: fit-content;
-  }
+  }*/
+  /*
   .logo {
     height: 3rem;
     margin-right: auto;
-  }
-  .header-font {
+  }*/
+ /*  .header-font {
     text-align: center;
     margin-left: 2rem;
     letter-spacing: -0.1rem;
     justify-content: center;
     align-items: center;
-  }
+  } */
+  /*
   .header-font a {
     font-size: 3.8rem;
     line-height: 0.5rem;
-  }
+  }*/
 
   /* Footer */
   footer {
@@ -441,22 +456,22 @@ p {
   }
 
   /* flechas debajo del carrusel */
-  .arrow {
+  /* .arrow {
     top: auto; 
     bottom: 10px; 
     transform: translateY(0);
-  } 
-  /* Flechas centradas en el carrusel 
+  }  */
+  /* Flechas centradas en el carrusel */
   .arrow {
     top: 50%;
     transform: translateY(-50%);
   }
-    */
+    
   /* Reubica la flecha izquierda/derecha para que no queden pegadas al borde */
   .left-arrow {
-    left: 20%; /* si flechas debajo, poner a 20% */
+    left: 2%; /* si flechas debajo, poner a 20% */
   }
   .right-arrow {
-    right: 20%;
+    right: 2%;
   }
 }
