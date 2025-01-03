@@ -151,6 +151,7 @@
     
   </div>
 
+  <script src="../pedroTF/Scripts/carousel.js"></script>
   <script>
     // Función para cargar dinámicamente el contenido HTML
     function loadHTML(elementId, filePath) {
@@ -165,49 +166,7 @@
     // Cargar el encabezado y pie de página
     loadHTML('header', 'header.html');
     loadHTML('footer', 'footer.html');
-  
-    // Seleccionamos todas las diapositivas
-    const slides = document.querySelectorAll('.custom-slider .slide');
-  
-    // Variable para saber cuál es la diapositiva actual
-    let currentSlide = 0;
-  
-    // Función para cambiar a la siguiente diapositiva
-    function changeSlide() {
-      // Eliminar la clase 'active' de la diapositiva actual
-      slides[currentSlide].classList.remove('active');
-      
-      // Incrementar el índice para la siguiente diapositiva
-      currentSlide = (currentSlide + 1) % slides.length;
-  
-      // Añadir la clase 'active' a la siguiente diapositiva
-      slides[currentSlide].classList.add('active');
-    }
-  
-    // Cambiar la diapositiva cada 5 segundos (automático)
-    let slideInterval = setInterval(changeSlide, 5000);
-  
-    // Agregar evento de clic para cambiar la diapositiva al hacer clic en el slider
-    document.querySelector('.custom-slider').addEventListener('click', () => {
-      changeSlide();  // Cambia a la siguiente diapositiva cuando se hace clic
-    });
-  
-    // Función para mover la diapositiva (flechas)
-    let currentSlideIndex = 0; // Índice de la diapositiva actual
-    const slidesForMove = document.querySelectorAll('.custom-slider .slide');
-    const totalSlides = slidesForMove.length;
-  
-    // Función para mover la diapositiva
-    function moveSlide(direction) {
-      // Elimina la clase 'active' de la diapositiva actual
-      slidesForMove[currentSlideIndex].classList.remove('active');
-  
-      // Calcula el índice de la siguiente diapositiva
-      currentSlideIndex = (currentSlideIndex + direction + totalSlides) % totalSlides;
-  
-      // Añade la clase 'active' a la siguiente diapositiva
-      slidesForMove[currentSlideIndex].classList.add('active');
-    }
+    initCarousel();
   </script>
   
 </body>

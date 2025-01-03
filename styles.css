@@ -192,7 +192,7 @@ main {
   cursor: pointer;
   z-index: 10;
   transition: opacity 0.3s ease;
-  opacity: 0; /* Por defecto, están ocultas */
+  opacity: 0; /* Por defecto ocultas */
 }
 .left-arrow {
   left: 10px;
@@ -237,7 +237,7 @@ main {
    9. Footer
    ======================== */
 footer {
-  height: 10rem; /* Ajusta según necesites */
+  height: 10rem;
 }
 
 .foot1,
