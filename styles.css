@@ -429,8 +429,34 @@ p {
     left: 0;
   }
 
-  /* Si quieres que la galería principal se muestre en 2 columnas en móvil: */
+  /* 2 columnas para versión movil  */
   .grid-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* FLECHAS DE CARRUSEL, ADAPTACION */
+  .arrow img {
+    /* adaptación del tamanyo */
+    width: 3rem;
+  }
+
+  /* flechas debajo del carrusel */
+  .arrow {
+    top: auto; 
+    bottom: 10px; 
+    transform: translateY(0);
+  } 
+  /* Flechas centradas en el carrusel 
+  .arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+    */
+  /* Reubica la flecha izquierda/derecha para que no queden pegadas al borde */
+  .left-arrow {
+    left: 20%; /* si flechas debajo, poner a 20% */
+  }
+  .right-arrow {
+    right: 20%;
   }
 }

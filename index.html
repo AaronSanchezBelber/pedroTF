@@ -363,6 +363,23 @@
       });
     });
 
+    if (window.innerWidth <= 768) {
+    // Pantallas smartphone y tablet, usar directamente la version de imagen 'textSrc'
+    items.forEach(item => {
+      const img = document.getElementById(item.imgId);
+      const audio = document.getElementById(item.audioId);
+
+      img.src = item.textSrc;
+
+      //eliminar audios
+      img.removeEventListener('mouseover', () => {});
+      img.removeEventListener('mouseout', () => {});
+
+      // si mejor eliminar audio:
+      // audio.remove(); 
+    });
+  }
+
     
   </script>
 
