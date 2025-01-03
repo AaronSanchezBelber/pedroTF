@@ -63,7 +63,7 @@ header {
  
 .logo {
   /*height: 15rem;  */
-  height: 13vw;
+  height: 12.5vw;
   width: auto;
   object-fit: contain; 
   line-height: 1;
@@ -84,12 +84,12 @@ header {
 .header-font a {
   font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif;
   /*font-size: 16.3rem;*/
-  font-size: 14vw;
+  font-size: 13.6vw;
   text-decoration: none;
   color: red;
 /*   margin-left: 2rem;
   line-height: 1rem; */
-  margin-left: 2vw;
+  margin-left: 1.65vw;
   line-height: 2vw;
 }
 
@@ -104,7 +104,7 @@ header {
 
 main {
   flex: 1;
-  overflow: auto;
+ overflow: auto;
 }
 
 /* ========================
@@ -449,18 +449,16 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .custom-slider:hover .arrow {
+    opacity: 1 !important; /* O el valor que quieras */
+  }
+
   /* FLECHAS DE CARRUSEL, ADAPTACION */
   .arrow img {
     /* adaptación del tamanyo */
     width: 3rem;
   }
 
-  /* flechas debajo del carrusel */
-  /* .arrow {
-    top: auto; 
-    bottom: 10px; 
-    transform: translateY(0);
-  }  */
   /* Flechas centradas en el carrusel */
   .arrow {
     top: 50%;
@@ -474,4 +472,11 @@ p {
   .right-arrow {
     right: 2%;
   }
+
+  /* flechas debajo del carrusel */
+  /* .arrow {
+    top: auto; 
+    bottom: 10px; 
+    transform: translateY(0);
+  }  */
 }
