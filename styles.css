@@ -305,7 +305,7 @@ footer {
 }
 
 /* Elemento “left-group” en el footer */
-.left-group {
+.left-group-foot3 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
