@@ -450,7 +450,7 @@ p {
   }
 
   .custom-slider:hover .arrow {
-    opacity: 1 !important; /* O el valor que quieras */
+    opacity: 1 !important; 
   }
 
   /* FLECHAS DE CARRUSEL, ADAPTACION */
@@ -465,7 +465,6 @@ p {
     transform: translateY(-50%);
   }
     
-  /* Reubica la flecha izquierda/derecha para que no queden pegadas al borde */
   .left-arrow {
     left: 2%; /* si flechas debajo, poner a 20% */
   }
