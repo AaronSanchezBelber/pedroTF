@@ -104,7 +104,7 @@ header {
 
 main {
   flex: 1;
- overflow: auto;
+ /*overflow: auto;*/
 }
 
 /* ========================
@@ -449,10 +449,6 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .custom-slider:hover .arrow {
-    opacity: 1 !important; 
-  }
-
   /* FLECHAS DE CARRUSEL, ADAPTACION */
   .arrow img {
     /* adaptación del tamanyo */
@@ -470,6 +466,10 @@ p {
   }
   .right-arrow {
     right: 2%;
+  }
+
+  .custom-slider .arrow {
+    opacity: 1; /* Siempre visible, ya que hover no funciona en móvil */
   }
 
   /* flechas debajo del carrusel */
