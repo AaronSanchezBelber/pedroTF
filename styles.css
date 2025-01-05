@@ -390,41 +390,45 @@ p {
   /* Footer */
   footer {
     height: auto;
-    padding: 1rem;
     text-align: center;
     letter-spacing: -0.1rem;
     line-height: 1rem;
+    padding-top: 1.5rem;
   }
-  .foot1, .foot2, .foot3 {
+   .foot1 {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0.5rem 0;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    letter-spacing: 0.1rem;
+    line-height: 1rem;
+    padding-left: 0;
+  } 
+ .foot2{
+    width: 100%;
+    margin: 0.7rem 0;
     letter-spacing: -0.1rem;
     line-height: 1rem;
-  }
-  .foot1 a, .foot2 a, .foot3 a {
     font-size: 1.2rem;
-    letter-spacing: 0.1rem;
-    margin: 0.5rem 0;
-    line-height: 1rem;
-  }
-  .foot1 {
-    font-size: 1.5rem;
-    letter-spacing: 0.2rem;
-    padding-left: 0;
-  }
-  .foot2 {
-    font-size: 1.2rem;
-    padding-left: 0;
-  }
+    padding-left: 1.5rem;
+    text-align: left;
+  } 
+
   .foot3 {
+    width: 100%;
+    margin: 0.7rem 0;
+    letter-spacing: -0.1rem;
+    line-height: 1rem;
     font-size: 1.8rem;
     position: relative;
     top: 0;
     left: 0;
+  } 
+  .foot2 a, .foot3 a {
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    margin: 0.5rem 0;
+    line-height: 1rem;
+    text-align: left;
   }
   .left-group {
     flex-direction: column;
@@ -434,7 +438,7 @@ p {
     margin-top: 1rem;
     line-height: 1rem;
     left: 0px;
-    top: 0px; /* Para no “invadir” nada */
+    top: 0px;
   }
   .left-group img {
     height: 70px;
@@ -442,6 +446,7 @@ p {
     object-fit: contain;
     top: 0;
     left: 0;
+    margin-top: -2.5rem;
   }
 
   /* 2 columnas para versión movil  */
