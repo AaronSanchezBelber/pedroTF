@@ -399,6 +399,7 @@ p {
     width: 100%;
     font-size: 1.5rem;
     margin: 1rem 0;
+    padding-top: 1.5rem;
     letter-spacing: 0.1rem;
     line-height: 1rem;
     padding-left: 0;
@@ -430,6 +431,10 @@ p {
     line-height: 1rem;
     text-align: left;
   }
+  .left-group-foot3 {
+    margin-top: -7.2rem;
+    margin-right: -13rem;
+  }
   .left-group {
     flex-direction: column;
     align-items: center;
@@ -446,7 +451,7 @@ p {
     object-fit: contain;
     top: 0;
     left: 0;
-    margin-top: -2rem;
+    /* margin-top: -2rem; */
   }
 
   /* 2 columnas para versión movil  */
