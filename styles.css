@@ -366,7 +366,7 @@ p {
   Header
   ======
    */
-   header {
+/*    header {
     height: 5rem;
   }
 
@@ -374,12 +374,32 @@ p {
     height: 4.8rem; 
   }
   .header-font {
-    padding-left: clamp(0.1rem, 1vw, 1rem); /* Reduce solo el padding izquierdo */
+    padding-left: clamp(0.1rem, 1vw, 1rem); 
   }
   
   .header-font a {
     font-size: 4.1rem; 
+  } */
+
+  */
+  header {
+    height: clamp(5.5rem, 7vw, 5.8rem); /* Altura del header adaptable */
   }
+  
+  .logo {
+    height: clamp(5.3rem, 6vw, 5.1rem); /* Altura del logo adaptable */
+  }
+  
+  .header-font {
+    padding-left: clamp(0rem, 1vw, 0rem); /* Padding adaptable */
+    padding-right: clamp(0.5rem, 3vw, 1.5rem); /* Asegurar simetría */
+  }
+  
+  .header-font a {
+    font-size: clamp(4.6rem, 5vw, 4.8rem); /* Tamaño de fuente adaptable */
+  }
+  
+
 
 
   /* 
@@ -528,4 +548,17 @@ p {
     line-height: 2.2rem; 
     letter-spacing: 0rem; 
   }
+
+  @media (max-width: 375px) {
+    header {
+      height: 5rem; /* Más pequeño en pantallas estrechas */
+    }
+  
+    .logo {
+      height: 4.8rem; /* Escala acorde a pantallas pequeñas */
+    }
+  
+    .header-font a {
+      font-size: 4rem; /* Fuente más pequeña en pantallas pequeñas */
+    }
 }
