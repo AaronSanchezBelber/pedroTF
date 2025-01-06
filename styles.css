@@ -366,32 +366,18 @@ p {
   Header
   ======
    */
- /* header {
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: fit-content;
-  }*/
-  /*
-  .logo {
-    height: 3rem;
-    margin-right: auto;
-  }*/
- /*  .header-font {
-    text-align: center;
-    margin-left: 2rem;
-    letter-spacing: -0.1rem;
-    justify-content: center;
-    align-items: center;
-  } */
-  /*
-  .header-font a {
-    font-size: 3.8rem;
-    line-height: 0.5rem;
-  }*/
+   header {
+    height: 4.5rem;
+  }
 
- 
+  .logo {
+    height: 4.5rem; 
+  }
+
+  .header-font a {
+    font-size: 4rem; 
+  }
+
 
   /* 
   =========================
@@ -399,7 +385,8 @@ p {
   =========================
   */
   .grid-container {
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns: repeat(3, 1fr);
   }
 
   /* 
@@ -427,7 +414,6 @@ p {
     margin: 0 auto; 
   }
  
-
   /* flechas carousel */
   .arrow img {
     /* adaptación del tamanyo */
@@ -463,6 +449,7 @@ p {
     letter-spacing: -0.1rem;
     line-height: 1rem;
     padding-top: 1rem;
+    padding-bottom: 1rem;
   }
    .foot1 {
     width: 100%;
@@ -481,15 +468,6 @@ p {
     text-align: left;
   } 
 
-  .foot3 {
-    width: 100%;
-    margin: 0.7rem 0;
-    line-height: 1rem;
-    font-size: 1.8rem;
-    position: relative;
-    top: 0;
-    left: 0;
-  } 
   .foot2 a, .foot3 a {
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
@@ -497,9 +475,17 @@ p {
     line-height: 1rem;
     text-align: left;
   }
+  .foot3 {
+    width: 100%;
+    margin: 0.7rem 0;
+    line-height: 1rem;
+    font-size: 1.8rem;
+    top: -1rem;
+    left: 5rem;
+  } 
   .left-group-foot3 {
-    margin-top: -7.2rem;
-    margin-right: -13rem;
+    margin-top: -5rem;
+    margin-right: -3rem
   }
   .left-group {
     flex-direction: column;
@@ -513,8 +499,6 @@ p {
   }
   .left-group img {
     height: 70px;
-    width: fit-content;
-    object-fit: contain;
     top: 0;
   }
 
