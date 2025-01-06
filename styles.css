@@ -189,7 +189,7 @@ main {
   height: 100%;
   object-fit: contain; 
   transition: transform 1s ease-in-out;
-  margin-left: 50%; /* Espacio en blanco a la izquierda */
+  /*margin-left: 50%;  Espacio en blanco a la izquierda */
 }
 .slide.vertical img:hover {
   transform: scale(1.05);
@@ -361,7 +361,11 @@ p {
    11. Media queries para móviles
    =============================== */
 @media (max-width: 768px) {
-  /* Header */
+  /*
+  ====== 
+  Header
+  ======
+   */
  /* header {
     display: flex; 
     justify-content: center;
@@ -387,27 +391,90 @@ p {
     line-height: 0.5rem;
   }*/
 
-  /* Footer */
-  footer {
+ 
+
+  /* 
+  =========================
+  INDEX - ORGANIZACION GRID
+  =========================
+  */
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* 
+  ========
+  CAROUSEL
+  ========
+  */
+  .slide {
+    height: auto; 
+
+  }
+
+  .slide img {
+    max-width: 100%; 
+  }
+
+  .slide.vertical img {
+    margin-left: 0; 
+    display: block;
+    margin: 0 auto; 
+  }
+  .slide.slide.horizontal img {
+    margin-left: 0;
+    display: block;
+    margin: 0 auto; 
+  }
+ 
+
+  /* flechas carousel */
+  .arrow img {
+    /* adaptación del tamanyo */
+    width: 1.5rem;
+  }
+
+  /* espacio q ocupan las flechas */
+  .arrow {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+    
+  .left-arrow {
+    left: 2%; /* si flechas debajo, poner a 20% */
+  }
+
+  .right-arrow {
+    right: 2%;
+  }
+
+  .custom-slider .arrow {
+    opacity: 1; /* Siempre visible, ya que hover no funciona en móvil */
+  }
+
+   /* 
+   ======
+   FOOTER
+   ======
+   */
+   footer {
     height: auto;
     text-align: center;
     letter-spacing: -0.1rem;
     line-height: 1rem;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
   }
    .foot1 {
     width: 100%;
     font-size: 1.5rem;
-    margin: 1rem 0;
-    padding-top: 1.5rem;
+    padding-top: 0.5rem;
     letter-spacing: 0.1rem;
     line-height: 1rem;
     padding-left: 0;
   } 
  .foot2{
     width: 100%;
-    margin: 0.7rem 0;
-    letter-spacing: -0.1rem;
+    margin-top: 0.7rem;
     line-height: 1rem;
     font-size: 1.2rem;
     padding-left: 1.5rem;
@@ -417,7 +484,6 @@ p {
   .foot3 {
     width: 100%;
     margin: 0.7rem 0;
-    letter-spacing: -0.1rem;
     line-height: 1rem;
     font-size: 1.8rem;
     position: relative;
@@ -450,42 +516,31 @@ p {
     width: fit-content;
     object-fit: contain;
     top: 0;
-    left: 0;
-    /* margin-top: -2rem; */
   }
 
-  /* 2 columnas para versión movil  */
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
+  /*
+  ============================
+  TITULOS PROYECTOS + DETALLES
+  ============================
+  3.5 9 3.3
+  */
+  .h4-h4 {
+    font-size: 2.4rem;
+    line-height: 1; 
+    padding-top: 0.51rem;
   }
 
-  /* FLECHAS DE CARRUSEL, ADAPTACION */
-  .arrow img {
-    /* adaptación del tamanyo */
-    width: 3rem;
+  .h2-h2 {
+    font-size: 6rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem; 
+    width: fit-content;
+    line-height: 5rem;
   }
 
-  /* Flechas centradas en el carrusel */
-  .arrow {
-    top: 50%;
-    transform: translateY(-50%);
+  .p-p {
+    font-size: 2.4rem; 
+    line-height: 2.2rem; 
+    letter-spacing: 0rem; 
   }
-    
-  .left-arrow {
-    left: 2%; /* si flechas debajo, poner a 20% */
-  }
-  .right-arrow {
-    right: 2%;
-  }
-
-  .custom-slider .arrow {
-    opacity: 1; /* Siempre visible, ya que hover no funciona en móvil */
-  }
-
-  /* flechas debajo del carrusel */
-  /* .arrow {
-    top: auto; 
-    bottom: 10px; 
-    transform: translateY(0);
-  }  */
 }
