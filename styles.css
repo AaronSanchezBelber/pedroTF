@@ -1,3 +1,17 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh; /* Asegura que llene toda la altura visible */
+}
+
+
 /* ========================
    1. Fuentes personalizadas
    ======================== */
@@ -361,6 +375,19 @@ p {
    11. Media queries para móviles
    =============================== */
 @media (max-width: 768px) {
+
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%;
+    min-height: 100vh; /* Asegura que llene toda la altura visible */
+  }
   /*
   ====== 
   Header
