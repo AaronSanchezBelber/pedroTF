@@ -367,15 +367,18 @@ p {
   ======
    */
    header {
-    height: 4.5rem;
+    height: 5rem;
   }
 
   .logo {
-    height: 4.5rem; 
+    height: 4.8rem; 
   }
-
+  .header-font {
+    padding-left: clamp(0.1rem, 1vw, 1rem); /* Reduce solo el padding izquierdo */
+  }
+  
   .header-font a {
-    font-size: 4rem; 
+    font-size: 4.1rem; 
   }
 
 
@@ -394,15 +397,12 @@ p {
   CAROUSEL
   ========
   */
-  .slide {
-    height: auto; 
 
+  .custom-slider {
+    height: 20rem; /* Altura máxima razonable */
+    max-height: 90rem; /* Límite superior para pantallas pequeñas */
+    width: 100%;
   }
-
-  .slide img {
-    max-width: 100%; 
-  }
-
   .slide.vertical img {
     margin-left: 0; 
     display: block;
@@ -412,6 +412,7 @@ p {
     margin-left: 0;
     display: block;
     margin: 0 auto; 
+
   }
  
   /* flechas carousel */
