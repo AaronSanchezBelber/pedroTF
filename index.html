@@ -300,8 +300,99 @@
     
   </div>
 
-  <!-- Código JavaScript para manejar los eventos de hover y reproducir audio -->
   <script>
+    // 1 - cargar contenido HTML
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+  
+    // 2 - Cargar header y footer
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+  
+    // 3 - Array fotos pixeladas o con título
+    const items = [
+      { imgId: 'gif1',  pixelSrc: 'gifs/01-PIXEL GIFF.gif',               textSrc: 'gifs/01-NO PIXEL WALLAPOP.gif', audioId: 'audio1' },
+      { imgId: 'gif2',  pixelSrc: 'gifs/02-PIXEL KARONT.gif',             textSrc: 'gifs/02-NO PIXEL KARONT.gif',   audioId: 'audio2' },
+      { imgId: 'gif3',  pixelSrc: 'gifs/03-PIXEL XCELIRATE.gif',          textSrc: 'gifs/03-NO PIXEL XCELIRATE.gif',audioId: 'audio3' },
+      { imgId: 'gif4',  pixelSrc: 'gifs/04-PIXEL CAN PIZZA.gif',          textSrc: 'gifs/04-NO PIXEL CAN PIZZA.gif',audioId: 'audio4' },
+      { imgId: 'gif5',  pixelSrc: 'gifs/05-PIXEL HONOR.gif',              textSrc: 'gifs/05-NO PIXEL HONOR.gif',    audioId: 'audio5' },
+      { imgId: 'gif6',  pixelSrc: 'gifs/06-PIXEL LUNAKI.gif',             textSrc: 'gifs/06-NO PIXEL LUNAKI.gif',   audioId: 'audio6' },
+      { imgId: 'gif7',  pixelSrc: 'gifs/07-PIXEL NUDE.gif',               textSrc: 'gifs/07-NO PIXEL NUDE.gif',     audioId: 'audio7' },
+      { imgId: 'gif8',  pixelSrc: 'gifs/08-PIXEL MCDONALS.gif',           textSrc: 'gifs/08-NO PIXEL MCDONALS.gif', audioId: 'audio8' },
+      { imgId: 'gif9',  pixelSrc: 'gifs/09-PIXEL SSANGYONG.gif',          textSrc: 'gifs/09-NO PIXEL SSANGYONG.gif',audioId: 'audio9' },
+      { imgId: 'gif10', pixelSrc: 'gifs/10-PIXEL HONOR.gif',              textSrc: 'gifs/10-NO PIXEL HONOR.gif',    audioId: 'audio10' },
+      { imgId: 'gif11', pixelSrc: 'gifs/11-PIXEL LEMON SODA.gif',         textSrc: 'gifs/11-NO PIXEL LEMON SODA.gif', audioId: 'audio11' },
+      { imgId: 'gif12', pixelSrc: 'gifs/12-PIXEL MANSO.gif',              textSrc: 'gifs/12-NO PIXEL MANSO.gif',    audioId: 'audio12' },
+      { imgId: 'gif13', pixelSrc: 'gifs/13-PIXEL HELI.gif',               textSrc: 'gifs/13-NO PIXEL HELI.gif',     audioId: 'audio13' },
+      { imgId: 'gif14', pixelSrc: 'gifs/14-PIXEL SHADOWS.gif',            textSrc: 'gifs/14-NO PIXEL SHADOWS.gif',  audioId: 'audio14' },
+      { imgId: 'gif15', pixelSrc: 'gifs/15-PIXEL EBAY.gif',               textSrc: 'gifs/15-NO PIXEL EBAY.gif',     audioId: 'audio15' },
+      { imgId: 'gif16', pixelSrc: 'gifs/16-PIXEL LOTTERY.gif',            textSrc: 'gifs/16-NO PIXEL LOTTERY.gif',  audioId: 'audio16' },
+      { imgId: 'gif17', pixelSrc: 'gifs/17-PIXEL MARKET.gif',             textSrc: 'gifs/17-NO PIXEL MARKET.gif',   audioId: 'audio17' },
+      { imgId: 'gif18', pixelSrc: 'gifs/18-NoNuevaColeccin_Wallapop_Aftermovie-low (1).gif', textSrc: 'gifs/18-NOPIXEL BMW.gif', audioId: 'audio18' },
+      { imgId: 'gif19', pixelSrc: 'gifs/19-PIXEL ARCA.gif',               textSrc: 'gifs/19-NO PIXEL ARCA.gif',     audioId: 'audio19' },
+      { imgId: 'gif20', pixelSrc: 'gifs/20-PIXEL CIUTAT.gif',             textSrc: 'gifs/20-NO PIXEL CIUTAT.gif',   audioId: 'audio20' },
+      { imgId: 'gif21', pixelSrc: 'gifs/21-PIXEL YALLO.gif',              textSrc: 'gifs/21-NO PIXEL YALLO.gif',    audioId: 'audio21' },
+      { imgId: 'gif22', pixelSrc: 'gifs/22-PIXEL 4 CATAS.gif',            textSrc: 'gifs/22-NO PIXEL 4 CATAS.gif',  audioId: 'audio22' },
+      { imgId: 'gif23', pixelSrc: 'gifs/23-pPIXEL GOOD NEWS.gif',         textSrc: 'gifs/23-NO pPIXEL GOOD NEWS.gif', audioId: 'audio23' },
+      { imgId: 'gif24', pixelSrc: 'gifs/24-PIXEL JUNIOR.gif',             textSrc: 'gifs/24-NO PIXEL JUNIOR.gif',   audioId: 'audio24' },
+      { imgId: 'gif25', pixelSrc: 'gifs/25-PIXEL I LOVE BCN.gif',         textSrc: 'gifs/25-NO PIXEL I LOVE BCN.gif', audioId: 'audio25' },
+      { imgId: 'gif26', pixelSrc: 'gifs/26-PIXEL MAREMOTO.gif',           textSrc: 'gifs/26-NO PIXEL MAREMOTO.gif', audioId: 'audio26' },
+    ];
+  
+    // 4 - Detectar si es Safari + Mac
+    const isSafariMac = (
+      /Macintosh|Mac OS X/.test(navigator.userAgent) &&  
+      /Safari/.test(navigator.userAgent) &&            
+      !/Chrome/.test(navigator.userAgent) &&         
+      !/Chromium/.test(navigator.userAgent) 
+    );
+  
+    // 5 - Listeners a todos los items
+    items.forEach(item => {
+      const img = document.getElementById(item.imgId);
+      const audio = document.getElementById(item.audioId);
+  
+      // 6 - Funcionamiento HOVER. mostramos textSrc + audio
+      img.addEventListener('mouseover', () => {
+        img.src = item.textSrc;
+        audio.play();
+      });
+  
+      // restaur pixelSrc - audio
+      img.addEventListener('mouseout', () => {
+        img.src = item.pixelSrc;
+        audio.pause();
+        audio.currentTime = 0;
+      });
+    });
+  
+    // 6. Si la pantalla es pequeña (<=768) y NO es Safari en Mac => se usa movil configuration
+    if (window.innerWidth <= 768 && !isSafariMac) {
+      items.forEach(item => {
+        const img = document.getElementById(item.imgId);
+        const audio = document.getElementById(item.audioId);
+  
+        // versión 'textSrc'
+        img.src = item.textSrc;
+  
+        // NO HOVER
+        img.removeEventListener('mouseover', () => {});
+        img.removeEventListener('mouseout', () => {});
+  
+        // Eliminar audio de DOM?
+        // audio.remove();
+      });
+    }
+  </script>
+  
+  <!-- Código JavaScript para manejar los eventos de hover y reproducir audio -->
+<!--   <script>
 
     // Función para cargar dinámicamente el contenido HTML
     function loadHTML(elementId, filePath) {
@@ -381,7 +472,7 @@
   }
 
     
-  </script>
+  </script> -->
 
 </body>
 </html>
