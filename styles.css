@@ -1,14 +1,15 @@
 html, body {
-  width: 100%;
+  width: 100%; 
   height: 100%;
-  overflow-x: hidden; /* Evita el desplazamiento horizontal */
+  overflow-x: hidden; 
   margin: 0;
   padding: 0;
+  -webkit-text-size-adjust: 100%; /* resolver problemas con safari */
 }
 
 .container {
   width: 100%;
-  min-height: 100vh; /* Asegura que llene toda la altura visible */
+  min-height: 100vh; 
 }
 
 
@@ -195,7 +196,7 @@ main {
 /* Imágenes verticales */
 .slide.vertical {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   overflow: hidden;
 }
 .slide.vertical img {
@@ -318,7 +319,11 @@ footer {
   z-index: 1; 
 }
 
-/* Elemento “left-group” en el footer */
+/*
+ parte derecha del footer.
+He añadido una linea que ignora clicks
+para asegurar que se puedan clikar los link
+*/
 .left-group-foot3 {
   display: flex;
   flex-direction: column;
@@ -327,7 +332,9 @@ footer {
   gap: 2rem;
   position: relative;
   top: -140%;
-  z-index: 2;
+  z-index: -2;
+  pointer-events: none;
+
 }
 .left-group img {
   max-width: 100%;
@@ -372,7 +379,41 @@ p {
 }
 
 /* ===============================
-   11. Media queries para móviles
+   11. About
+   =============================== */
+
+  .hero-section {
+    position: relative; 
+    overflow: hidden;  
+   
+  }
+  
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: auto; 
+    object-fit: cover; 
+  }
+  
+ 
+  .content-overlay {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height:auto; 
+    z-index: 10;  
+    padding-top: 10rem; 
+  }
+  
+  .max-w-2xl {
+    max-width:auto; /
+  
+  }
+  
+
+/* ===============================
+   12. Media queries para phone
    =============================== */
 @media (max-width: 768px) {
 
