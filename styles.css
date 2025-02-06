@@ -400,12 +400,19 @@ p {
    
   }
   
-  .hero-image img {
-    display: block;
+  .background-gif {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto; 
-    object-fit: cover; 
+    height: 100%;
+    z-index: 0; /* Debe estar por debajo del contenido (z-index: 10 en content-overlay) */
+    background-image: url('gifs\Giff_about.gif'); /* Reemplaza con la ruta correcta */
+    background-size: cover;       /* O 'contain', según el efecto deseado */
+    background-position: center;
+    background-repeat: no-repeat;
   }
+  
   
  
   .content-overlay {
@@ -441,26 +448,14 @@ p {
     width: 100%;
     min-height: 100vh; /* Asegura que llene toda la altura visible */
   }
+  .content-overlay {
+    position: relative;
+    padding-top: 2rem; /* Ajusta este valor según lo que necesites */
+   }
   /*
   ====== 
   Header
   ======
-   */
-/*    header {
-    height: 5rem;
-  }
-
-  .logo {
-    height: 4.8rem; 
-  }
-  .header-font {
-    padding-left: clamp(0.1rem, 1vw, 1rem); 
-  }
-  
-  .header-font a {
-    font-size: 4.1rem; 
-  } */
-
   */
   header {
     height: clamp(5.1rem, 7vw, 5.8rem); /* Altura del header adaptable */
@@ -478,9 +473,9 @@ p {
   .header-font a {
     font-size: clamp(4.4rem, 5vw, 4.8rem); /* Tamaño de fuente adaptable */
   }
+
+
   
-
-
 
   /* 
   =========================
@@ -547,7 +542,7 @@ p {
    footer {
     height: auto;
     text-align: center;
-
+    position: relative;
     line-height: 1rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -577,6 +572,7 @@ p {
     text-align: left;
   }
   .foot3 {
+    position: static;
     width: 100%;
     margin: 0.7rem 0;
     line-height: 1rem;
@@ -586,7 +582,9 @@ p {
   } 
   .left-group-foot3 {
     margin-top: -5rem;
-    margin-right: -3rem
+    margin-right: -3rem;
+    position: static;
+    z-index: 0;
   }
   .left-group {
     flex-direction: column;
@@ -601,6 +599,10 @@ p {
   .left-group img {
     height: 70px;
     top: 0;
+  }
+
+  .h-screen {
+    min-width: auto;
   }
 
   /*
