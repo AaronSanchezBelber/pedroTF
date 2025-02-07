@@ -359,31 +359,35 @@
     });
   
     // 6 - Configuración para dispositivos móviles (<=768px y no Safari en Mac)
-    if (window.innerWidth <= 768 ) {
+    let activeItem = null;
+
+if (window.innerWidth <= 768 && !isSafariMac) {
   items.forEach(item => {
     const img = document.getElementById(item.imgId);
     const audio = document.getElementById(item.audioId);
-
-    // Al tocar la pantalla, se activa el efecto hover (cambia la imagen y reproduce el audio)
+    
+    // Cuando se toca la imagen, se activa el efecto hover.
     img.addEventListener('pointerdown', (e) => {
+      // Se asigna el item activo.
+      activeItem = { img, audio, item };
       img.src = item.textSrc;
       audio.play();
     });
-
-    // Al soltar el toque, se restaura la imagen y se detiene el audio
-    img.addEventListener('pointerup', (e) => {
-      img.src = item.pixelSrc;
-      audio.pause();
-      audio.currentTime = 0;
-    });
-
-    // Si el pointer se cancela (por ejemplo, al iniciar un scroll) también se restaura
-    img.addEventListener('pointercancel', (e) => {
-      img.src = item.pixelSrc;
-      audio.pause();
-      audio.currentTime = 0;
-    });
   });
+  
+  // Listener global para detectar cuando se levanta el dedo (pointerup)
+  document.addEventListener('pointerup', (e) => {
+    if (activeItem) {
+      const { img, audio, item } = activeItem;
+      img.src = item.pixelSrc;
+      audio.pause();
+      audio.currentTime = 0;
+      activeItem = null;
+    }
+  });
+  
+  // No añadimos ningún listener para pointercancel, de modo que si se inicia el scroll,
+  // el efecto hover se mantiene hasta que se levante el dedo.
 }
 
 
