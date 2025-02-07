@@ -359,37 +359,38 @@
     });
   
     // 6 - Configuración para dispositivos móviles (<=768px y no Safari en Mac)
-    let activeItem = null;
-
-if (window.innerWidth <= 768 && !isSafariMac) {
+    if (window.innerWidth <= 768 && !isSafariMac) {
   items.forEach(item => {
     const img = document.getElementById(item.imgId);
     const audio = document.getElementById(item.audioId);
-    
-    // Cuando se toca la imagen, se activa el efecto hover.
+
+    // Al tocar la imagen (pointerdown) se activa el efecto y se captura el puntero.
     img.addEventListener('pointerdown', (e) => {
-      // Se asigna el item activo.
-      activeItem = { img, audio, item };
+      // Captura el puntero para que los eventos no se cancelen al hacer scroll.
+      img.setPointerCapture(e.pointerId);
       img.src = item.textSrc;
       audio.play();
     });
-  });
-  
-  // Listener global para detectar cuando se levanta el dedo (pointerup)
-  document.addEventListener('pointerup', (e) => {
-    if (activeItem) {
-      const { img, audio, item } = activeItem;
+
+    // Al levantar el dedo (pointerup) se revierte el efecto.
+    img.addEventListener('pointerup', (e) => {
+      img.releasePointerCapture(e.pointerId);
       img.src = item.pixelSrc;
       audio.pause();
       audio.currentTime = 0;
-      activeItem = null;
-    }
-  });
-  
-  // No añadimos ningún listener para pointercancel, de modo que si se inicia el scroll,
-  // el efecto hover se mantiene hasta que se levante el dedo.
-}
+    });
 
+    // Opcionalmente, si llega a dispararse pointercancel, puedes restaurar el estado.
+    img.addEventListener('pointercancel', (e) => {
+      // En este caso, la idea es no revertir la imagen inmediatamente,
+      // o bien, podrías hacerlo si lo consideras necesario:
+      img.releasePointerCapture(e.pointerId);
+      img.src = item.pixelSrc;
+      audio.pause();
+      audio.currentTime = 0;
+    });
+  });
+}
 
   </script>
  
