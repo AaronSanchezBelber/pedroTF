@@ -13,37 +13,27 @@
     <div id="header"></div>
 
     <main class="flex-grow-1">      
-      <section class="h-screen mb-8 position-relative overflow-hidden">
+      <section class="about-section">
         <div class="background-gif"></div>
-
-          <div class=" content-overlay" id="about1">
+        <div class="content-overlay" id="about1">
           <div class="max-w-2xl">
             <p class="p-p">
-              KUMO better known as Pedro Triviño´s a versatile creative professional, who has explored numerous fields, with a particular focus on Creative Direction, Audiovisual Direction and Production, areas in which he has been most active in recent years.</p>
-
-              <p>&nbsp;</p>
-
-              <p class="p-p">His work revolves around transforming ideas into unique projects, tailoring his approach to each client’s needs. He excels at building solid concepts and crafting visual narratives that resonate, always with a refined aesthetic touch.</p>
-
-              <p>&nbsp;</p>
-
-              <p class="p-p">KUMO draws inspiration from anything that sparks his curiosity, whether it be artistic movements or the simplest details of daily life. He consistently seeks to imbue his work with a conceptual angle while maintaining a strong visual and creative focus.</p>
-
-              <p>&nbsp;</p>
-
-              <p class="p-p">From the outset, KUMO has never shied away from giving his all. He has engaged in every stage of project development, from handling the most fundamental tasks to leading international productions. This hands-on experience has provided him with a global and practical perspective, ideal for elevating any idea to the next level.</p>
-
+              KUMO better known as Pedro Triviño is a visual storyteller, crafting narratives through images that exist only in the world of thoughts. For him, every project is an opportunity to create something truly special, ensuring strong concepts and visual narratives that deeply connect and inspire. He draws inspiration from all forms of art and the small details of life, blending concepts and aesthetics to create pieces that expand and illuminate the unique essence of each project.
+            </p>
+            <p class="p-p">
+              CREATIVE DIRECTION, PRODUCTION, AND AUDIOVISUAL DIRECTION FOR ARTISTS, BRANDS, AND PROJECTS MADE WITH LOVE ❤
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
 
-   <!-- Incluir el footer -->
-   <div id="footer"></div>
-    
-  </div>
 
-  <!-- Código JavaScript para manejar los eventos de hover y reproducir audio -->
+   <div id="footer"></div>
+
+
   <script>
 
-    // Función para cargar dinámicamente el contenido HTML
     function loadHTML(elementId, filePath) {
       fetch(filePath)
         .then(response => response.text())
@@ -52,8 +42,6 @@
         })
         .catch(error => console.error('Error al cargar el archivo:', error));
     }
-
-    // Cargar el encabezado y pie de página
     loadHTML('header', 'header.html');
     loadHTML('footer', 'footer.html');
     </script>
