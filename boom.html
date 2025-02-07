@@ -360,32 +360,40 @@
   
     // 6 - Configuración para dispositivos móviles (<=768px y no Safari en Mac)
     if (window.innerWidth <= 768 && !isSafariMac) {
-      items.forEach(item => {
-        const img = document.getElementById(item.imgId);
-        const audio = document.getElementById(item.audioId);
-  
-        // touchstart simula el hover
-        img.addEventListener('touchstart', (e) => {
-          e.preventDefault();  // Opcional: prevenir el click inmediato
-          img.src = item.textSrc;
-          audio.play();
-        });
-  
-        // touchend restaura la imagen y detiene el audio
-        img.addEventListener('touchend', () => {
-          img.src = item.pixelSrc;
-          audio.pause();
-          audio.currentTime = 0;
-        });
-  
-        // Opcional: touchcancel para manejar interrupciones
-        img.addEventListener('touchcancel', () => {
-          img.src = item.pixelSrc;
-          audio.pause();
-          audio.currentTime = 0;
-        });
-      });
-    }
+  items.forEach(item => {
+    const img = document.getElementById(item.imgId);
+    const audio = document.getElementById(item.audioId);
+    
+    let touchMoved = false;
+    
+    img.addEventListener('touchstart', (e) => {
+      e.preventDefault();  // Evita que se dispare el scroll de inmediato.
+      touchMoved = false;
+      img.src = item.textSrc;
+      audio.play();
+    }, { passive: false });
+    
+    img.addEventListener('touchmove', () => {
+      touchMoved = true;
+    });
+    
+    img.addEventListener('touchend', () => {
+      // Si el usuario no se desplazó, restaura la imagen y detiene el audio.
+      if (!touchMoved) {
+        img.src = item.pixelSrc;
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    });
+    
+    img.addEventListener('touchcancel', () => {
+      img.src = item.pixelSrc;
+      audio.pause();
+      audio.currentTime = 0;
+    });
+  });
+}
+
   </script>
  
 </body>
