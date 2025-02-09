@@ -454,6 +454,11 @@ p {
     min-height: 100vh; /* Asegura que llene toda la altura visible */
   }
 
+  #grid{
+    width: auto;
+    height: auto;
+  }
+
   /*
   =====
   ABOUT
@@ -507,13 +512,31 @@ p {
   INDEX - ORGANIZACION GRID
   =========================
   */
+
+  main {
+    display: flex;
+    flex-direction:column;
+  }
   .grid-container {
 
+    flex: 1; /* Hace que el grid se expanda para ocupar todo el espacio del main */
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;  /* Fuerza que todas las filas tengan la misma altura */
+    gap: 0;  /* Asegura que no haya espacio entre celdas */
   }
-  .grid-container-2{
+ 
+  .gallery-item {
+    overflow: hidden; /* Evita que el contenido se desborde de la celda */
 
-    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .gallery-item img {
+    display: block;
+    width: 100%;
+    height: 100%;      /* Fuerza a la imagen a ocupar toda la celda */
+    object-fit: cover; /* Ajusta la imagen para que cubra toda el área sin distorsionarse */
+  
   }
 
   /* 
