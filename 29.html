@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Pedro Triviño</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+  <div class="h-screen d-flex flex-column">
+    
+    <!-- Incluir el header -->
+    <div id="header"></div>
+
+    <!-- Div para el video de Vimeo -->
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/AGLUh5sxQwo" 
+        title="Vimeo video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+    </div>
+    <main class="flex-grow">
+      <section class="my-8">
+        <h4 class="h4-h4">Creative Direction / Direction & Production for:</h4>
+        <h2 class="h2-h2">SSSTUFFF / </h2>
+
+        <p class="p-p">
+          A drop inspired in the relationship between chaos and the artistic moment of creation. For this reason, they have created “The Good Coffee Agreement”. An agreement to unite coffee companies under a common goal: change the coffee industry and child labor free.       </p>
+     
+        
+        <div class="custom-slider">
+
+          <button class="arrow left-arrow">
+            <img src="images/FLECHITAS-01.png" alt="Flecha izquierda">
+          </button>
+          
+          <div class="slide horizontal active">
+            <img src="proyectos/FOTOS WEB/30 SSSTUF_CAMPING/H1.jpg" alt="Imagen Horizontal">
+          </div>
+          <div class="slide vertical">
+            <img src="proyectos/FOTOS WEB/30 SSSTUF_CAMPING/V1.jpg" alt="Imagen Vertical">
+          </div>
+          <div class="slide vertical">
+            <img src="proyectos/FOTOS WEB/30 SSSTUF_CAMPING/V2.jpg" alt="Imagen Vertical">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/FOTOS WEB/30 SSSTUF_CAMPING/H2.jpg" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/FOTOS WEB/30 SSSTUF_CAMPING/H3.jpg" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/FOTOS WEB/30 SSSTUF_CAMPING/H4.jpg" alt="Imagen Horizontal">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/FOTOS WEB/30 SSSTUF_CAMPING/H5.jpg" alt="Imagen Horizontal">
+          </div>
+          <button class="arrow right-arrow">
+            <img src="images/FLECHITAS-02.png" alt="Flecha derecha">
+          </button>
+      </div>
+      <section class="my-8">
+        <h4 class="h4-h4">Credits:</h4>
+        <div class="credits-grid text-black">
+          <div class="credit-column">
+            <p>Shot by: @faketopia</p>
+            <p>Stylin: @jeeepy</p>
+            <p>Starring: @lvteddybear</p>
+            <p>Thanks to @juakicaninoa @JudithGomez</p>
+          </div>
+        </div>
+        <div class="credits-grid text-black">
+          <div class="credit-column">
+            <p>Starring:</p>
+            <p>@marcnugueda</p>
+          </div>
+        </div>
+      </section>
+      
+                  
+    </main>
+
+    <!-- Incluir el footer -->
+    <div id="footer"></div>
+    
+  </div>
+
+ <script src="Scripts/carousel.js"></script>
+  <!-- Código JavaScript para manejar los eventos de hover y reproducir audio -->
+  <script>
+    // Función para cargar dinámicamente el contenido HTML
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+  
+    // Cargar el encabezado y pie de página
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+    initCarousel();
+   </script>
