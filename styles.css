@@ -280,7 +280,7 @@ main {
 footer {
   height: 10rem;
 
-    margin-top: auto; /* Empuja el footer hacia abajo si hay espacio disponible */
+    margin-top: 30rem; /* Empuja el footer hacia abajo si hay espacio disponible */
 }
 
 .foot1,
@@ -415,7 +415,6 @@ p {
     height: auto !important; /* Se ajusta al contenido */
     min-height: 0;
     padding: 0;
-    margin: 0;
   }
   #aboutMain, .about-section {
     margin-bottom: 0 !important;
@@ -435,21 +434,32 @@ p {
   }
 
   .about-section p {
-    max-width: 70%;
+    margin-top:5rem;
+    max-width: 75%;
+    margin-bottom: 2rem;
+    font-size: 5rem; 
+    line-height: 4.5rem; 
+    letter-spacing: 0rem; 
+  
   }
-
   .background-gif {
-    position: absolute;
-    right: 7rem;
-    top: 5rem;
-    width: 20%;
-    height: 100%;
-    z-index: 0; /* Debe estar por debajo del contenido (z-index: 10 en content-overlay) */
-    background-image: url('gifs/Giff_about.gif'); /* Reemplaza con la ruta correcta */
-    background-size: contain;       /* O 'contain', según el efecto deseado */
+    position: absolute; /* Se posiciona dentro del contenedor */
+   /* Lo coloca debajo del texto */
+   top: 15%;
+    left: 80%; /* Lo centra horizontalmente */
+    transform: translateX(-50%) rotate(10deg); /* Centrado + rotación */
+    
+    width: 70vw; /* Escala proporcional en función del ancho de la pantalla */
+    max-width: 800px; /* Máximo tamaño del GIF */
+    height: 220%; /* Mantiene la proporción original */
+
+    background-image: url('gifs/Giff_about.gif'); /* Ruta del GIF */
+    background-size: contain; /* Se ajusta sin recorte */
     background-repeat: no-repeat;
-    transform: rotate(15deg);
-  }
+    background-position: center;
+    z-index: 1; /* Asegura que esté debajo del texto */
+}
+
    
   .content-overlay {
     position: absolute; 
@@ -493,12 +503,20 @@ p {
   .about-section {
     /* Puedes ajustar la altura mínima si lo necesitas */
     min-height: 70vh;
+    margin-top: 5rem;
   }
 
   .background-gif{
     height: 100%;
-    width: 40%;
-    right:8rem;
+    width: 80%;
+    top: -5.5rem;
+    left: 11.5rem;
+  }
+
+  .about-section p {
+    max-width: 100%;
+    margin-top:2rem;
+  
   }
 
   .content-overlay {
@@ -620,11 +638,11 @@ p {
    ======
    */
    footer {
+    margin: 0;
     height: auto;
     text-align: center;
     position: relative;
     line-height: 1rem;
-    padding-top: 1rem;
     padding-bottom: 1rem;
   }
    .foot1 {
@@ -709,6 +727,13 @@ p {
     font-size: 2.4rem; 
     line-height: 2.2rem; 
     letter-spacing: 0rem; 
+  }
+
+  .about-section p {
+    font-size: 2.4rem; 
+    line-height: 2.2rem; 
+    letter-spacing: 0rem; 
+  
   }
 
   @media (max-width: 375px) {
