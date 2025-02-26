@@ -278,9 +278,8 @@ main {
    9. Footer
    ======================== */
 footer {
-  height: 10rem;
-
-    margin-top: 30rem; /* Empuja el footer hacia abajo si hay espacio disponible */
+    height: 10rem;
+    margin-top: 15rem; /* Empuja el footer hacia abajo si hay espacio disponible */
 }
 
 .foot1,
@@ -445,7 +444,7 @@ p {
   .background-gif {
     position: absolute; /* Se posiciona dentro del contenedor */
    /* Lo coloca debajo del texto */
-   top: 15%;
+    top: 15%;
     left: 80%; /* Lo centra horizontalmente */
     transform: translateX(-50%) rotate(10deg); /* Centrado + rotación */
     

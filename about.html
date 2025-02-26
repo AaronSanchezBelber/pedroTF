@@ -3,36 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pedro Triviño Portfolio</title>
+  <title>KUMO CREATIVE PROJECT</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <style>
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+   
+    .container-about {
+      position: relative; 
+      width: 70vw;
+      margin-top: 5rem;
+      padding: 0;
+      width: 100%;
+      margin-top:2rem;
+    }
+    .bg_gif {
+      position: absolute;
+      top: 0;
+      left: 110%;
+      transform: translateX(-50%) rotate(10deg);
+      width: 70vw;
+      max-width: 1800px;  
+      aspect-ratio: 16 / 9; 
+      background-image: url('gifs/Giff_about.gif');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      z-index: -5;
+      pointer-events: none;
+    }
+    .parrafo {
+      font-size: 5rem; 
+      line-height: 4.5rem;
+      font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif;
+      color: red;
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      html, body {
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+      }
+      .container-about {
+        min-height: 70vh;
+        margin-top: 5rem;
+      }
+
+      .bg_gif{
+        height: 100%;
+        width: 80%;
+        top: -5.5rem;
+        left: 11.5rem;
+      }
+
+      .parrafo{
+       
+        font-size: 2.4rem; 
+        line-height: 2.2rem; 
+        letter-spacing: 0rem; 
+
+      }
+
+      .content-overlay {
+        position: relative; 
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+      }
+          }
+  </style>
 </head>
 <body>
-  <div class="h-screen d-flex flex-column" id="divGeneral">
+  <div id="header"></div>
 
-    <div id="header"></div>
+  <!-- Contenedor principal que engloba texto y GIF -->
+  <div class="container-about">
+    <div class="bg_gif"></div>
+    <p class="parrafo">
+      KUMO better known as Pedro Triviño is a visual storyteller, crafting narratives through images that exist only in the world of thoughts. For him, every project is an opportunity to create something truly special, ensuring strong concepts and visual narratives that deeply connect and inspire. He draws inspiration from all forms of art and the small details of life, blending concepts and aesthetics to create pieces that expand and illuminate the unique essence of each project.
+    </p>
+    <p class="parrafo">
+       <br>
+      CREATIVE DIRECTION, AUDIOVISUAL DIRECTION & PRODUCTION FOR ARTISTS AND BRANDS MADE WITH LOVE ❤
+    </p>
+  </div>
 
-    <main class="flex-grow-1" id="aboutMain">      
-      <section class="about-section">
-        <div class="background-gif"></div>
-        <div class="content-overlay" id="about1">
-          <div class="max-w-2xl">
-            <p class="p-p">
-              KUMO better known as Pedro Triviño is a visual storyteller, crafting narratives through images that exist only in the world of thoughts. For him, every project is an opportunity to create something truly special, ensuring strong concepts and visual narratives that deeply connect and inspire. He draws inspiration from all forms of art and the small details of life, blending concepts and aesthetics to create pieces that expand and illuminate the unique essence of each project.
-            </p>
-            <p class="p-p">
-              CREATIVE DIRECTION, AUDIOVISUAL DIRECTION & PRODUCTION FOR ARTISTS AND BRANDS MADE WITH LOVE ❤            </p>
-          </div>
-        </div>
-      </section>
-    </main>
-
-
-   <div id="footer"></div>
-
-
+  <div id="footer"></div>
+  
   <script>
-
     function loadHTML(elementId, filePath) {
       fetch(filePath)
         .then(response => response.text())
@@ -43,9 +110,6 @@
     }
     loadHTML('header', 'header.html');
     loadHTML('footer', 'footer.html');
-    </script>
-
-  </div>
+  </script>
 </body>
 </html>
- 
