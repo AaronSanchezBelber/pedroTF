@@ -120,21 +120,22 @@
             <img src="images/FLECHITAS-02.png" alt="Flecha derecha">
           </button>
         </div>
+      </section>
 
-        <section class="my-8">
-          <h4 class="h4-h4">Credits:</h4>
-          <div class="credits-grid text-black">
-            <div class="credit-column">
-              <p>Production: KUMO CREATIVE PROJECT</p>
-              <p>PR: Anita calvo / Arantxa / Roco</p>
-            </div>
-
-            <div class="credit-column">
-              <p>Creative Direction: Pedro Triviño</p>
-              <p>Direction Ass: @al.veiga</p>
-            </div>
+      <section class="my-8">
+        <h4 class="h4-h4">Credits:</h4>
+        <div class="credits-grid text-black">
+          <div class="credit-column">
+            <p>Production: KUMO CREATIVE PROJECT</p>
+            <p>PR: Anita calvo / Arantxa / Roco</p>
           </div>
-        </section>          
+
+          <div class="credit-column">
+            <p>Creative Direction: Pedro Triviño</p>
+            <p>Direction Ass: @al.veiga</p>
+          </div>
+        </div>
+      </section>          
     </main>
 
     <!-- Incluir el footer -->
@@ -143,7 +144,6 @@
   </div>
 
   <script src="Scripts/carousel.js"></script>
-  <!-- Código JavaScript para cargar elementos comunes -->
   <script>
     function loadHTML(elementId, filePath) {
       fetch(filePath)
@@ -156,7 +156,15 @@
   
     loadHTML('header', 'header.html');
     loadHTML('footer', 'footer.html');
-    initCarousel();
+
+    // Esperar a que el DOM esté listo antes de llamar a initCarousel
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof initCarousel === 'function') {
+        initCarousel();
+      } else {
+        console.warn('initCarousel() no está definida en Scripts/carousel.js');
+      }
+    });
   </script>
 </body>
 </html>
