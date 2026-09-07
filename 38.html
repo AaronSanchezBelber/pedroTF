@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XCELIRATE / HIRING PEOPLE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="h-screen d-flex flex-column">
+    
+    <!-- Incluir el header -->
+    <div id="header"></div>
+
+    <!-- Div para el video de YouTube -->
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/_ub61-o6Qj4" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <main class="flex-grow">
+      <section class="my-8">
+        <h4 class="h4-h4">Direction for:</h4>
+        <h2 class="h2-h2">XCELIRATE / HIRING PEOPLE</h2>
+
+        <p class="p-p">
+          Xcelirate is an unapologetic technology innovator.<br>
+          They have been market leaders for a decade and continue to set trends in their various niches.<br>
+          They have opened a new studio, designed by La Granja Design, in Paseo de Gracia. So, we wanted to show the new offices differently to transmit their energy and good work environment through different characters. Each one has different actions and personalities according to the place that they are in.
+        </p>
+
+        <div class="custom-slider">
+          <button class="arrow left-arrow">
+            <img src="images/FLECHITAS-01.png" alt="Flecha izquierda">
+          </button>
+          
+          <div class="slide horizontal active">
+            <img src="proyectos/XCELIRATE/000008.JPG" alt="Xcelirate Image 1">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/XCELIRATE/000034.JPG" alt="Xcelirate Image 2">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/XCELIRATE/000037.JPG" alt="Xcelirate Image 3">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/XCELIRATE/julia-ofi.jpg" alt="Xcelirate Image 4">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/XCELIRATE/masaje-.jpg" alt="Xcelirate Image 5">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/XCELIRATE/Mina-01.jpg" alt="Xcelirate Image 6">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/XCELIRATE/mina02.jpg" alt="Xcelirate Image 7">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/XCELIRATE/Pelea.jpg" alt="Xcelirate Image 8">
+          </div>
+
+          <button class="arrow right-arrow">
+            <img src="images/FLECHITAS-02.png" alt="Flecha derecha">
+          </button>
+        </div>
+
+        <section class="my-8">
+          <h4 class="h4-h4">Credits:</h4>
+          <div class="credits-grid text-black">
+            <div class="credit-column">
+              <p>Production: Kinkifactory</p>
+              <p>Direction: Pedro Triviño Guillermo Aliaga</p>
+              <p>Direction Ass: @al.veiga</p>
+              <p>Producer: @_a_a_s_</p>
+              <p>DoP: @oriolcolomar</p>
+              <p>Foquist: @enyarodriguez</p>
+              <p>Gaffer: @martipluma</p>
+              <p>Electric: @jordisanpra</p>
+            </div>
+
+            <div class="credit-column">
+              <p>Stylist: @e.bernal.s</p>
+              <p>Art Director: @marcialennona</p>
+              <p>MUAH: @yarasnimo</p>
+              <p>Driver: @cnasser.pj</p>
+              <p>FX: @flxgs</p>
+              <p>Music design: @cardopusher</p>
+              <p>Starring: @aperacaula, @juliapsanchez, @cnasser.pj, Mina, Antonella, Barket, Gerard, Enric, Edu, Maria and Andrea.</p>
+            </div>
+          </div>
+        </section>          
+    </main>
+
+    <!-- Incluir el footer -->
+    <div id="footer"></div>
+    
+  </div>
+
+  <script src="Scripts/carousel.js"></script>
+  <!-- Código JavaScript para cargar elementos comunes -->
+  <script>
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+  
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+    initCarousel();
+  </script>
+</body>
+</html>

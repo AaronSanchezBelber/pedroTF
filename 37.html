@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FINETWORK / BARATO BIEN</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="h-screen d-flex flex-column">
+    
+    <!-- Incluir el header -->
+    <div id="header"></div>
+
+    <!-- Div para el video de YouTube -->
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/LNEiTECdtgI" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <main class="flex-grow">
+      <section class="my-8">
+        <h4 class="h4-h4">Direction for:</h4>
+        <h2 class="h2-h2">FINETWORK / BARATO BIEN</h2>
+
+        <p class="p-p">
+          To reclaim the word “CHEAP” and give it a positive meaning.<br>
+          It’s true that many cheap things can end up being disappointing or fail to meet expectations. But with Finetwork, the opposite is true: its products are affordable without compromising on quality.<br>
+          An accessible proposition that proves that a good price doesn’t mean low quality, but rather intelligence, efficiency, and real value for the user.
+        </p>
+
+        <section class="my-8">
+          <h4 class="h4-h4">Credits:</h4>
+          <div class="credits-grid text-black">
+            <div class="credit-column">
+              <p>Production: @petra_garmon</p>
+              <p>Agency: @havascreativespain</p>
+              <p>Direction: Pedro Triviño @kumocreativeproject</p>
+              <p>DoP: Darío Rivera @darioriveraa</p>
+              <p>Executive production: @raquel_perez_tato_producer</p>
+              <p>Producer: @_oliviacabello_</p>
+            </div>
+
+            <div class="credit-column">
+              <p>Head of Production: @javierkiran</p>
+              <p>AD: @clara_gomara</p>
+              <p>Edit: @fran_pigni</p>
+              <p>Color: @serena_postproduction</p>
+              <p>Styling: @gretamaccchi</p>
+              <p>Art Director: @esther._.ventu</p>
+            </div>
+          </div>
+        </section>          
+    </main>
+
+    <!-- Incluir el footer -->
+    <div id="footer"></div>
+    
+  </div>
+
+  <!-- Código JavaScript para cargar elementos comunes -->
+  <script>
+    // Función para cargar dinámicamente el contenido HTML
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+  
+    // Cargar el encabezado y pie de página
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+  </script>
+</body>
+</html>
