@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIPS - Plato del Día</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="h-screen d-flex flex-column">
+    
+    <!-- Incluir el header -->
+    <div id="header"></div>
+
+    <!-- Div para el video de YouTube -->
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/8deLTxWYjIk" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <main class="flex-grow">
+      <section class="my-8">
+        <h4 class="h4-h4">Direction for:</h4>
+        <h2 class="h2-h2">PLATO DEL DIA / VIPS</h2>
+
+        <p class="p-p">
+          Every day we ask ourselves the same question: What should I eat?<br>
+          Something tasty? Something practical? Something healthy?<br>
+          And somehow, making that choice feels like just another task.<br>
+          At VIPS, we believe it shouldn’t be that complicated.<br>
+          That’s why we created a dish that has it all: flavor, convenience, and nutrition—all in one.<br>
+          A complete solution that makes your day easier and takes the weight off deciding what to eat.<br>
+          Because when everything you need is on a single plate… life becomes simpler, more comfortable, and so much more delicious.
+        </p>
+        
+        <div class="custom-slider">
+          <button class="arrow left-arrow">
+            <img src="images/FLECHITAS-01.png" alt="Flecha izquierda">
+          </button>
+          
+          <div class="slide horizontal active">
+            <img src="proyectos/VIPS/L1005510Gpk.jpg" alt="VIPS Image 1">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005552Gpk.jpg" alt="VIPS Image 2">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005566Gpk.jpg" alt="VIPS Image 3">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005598Gpk.jpg" alt="VIPS Image 4">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005629Gpk.jpg" alt="VIPS Image 5">
+          </div>
+          <div class="slide vertical">
+            <img src="proyectos/VIPS/L1005632Gpk.jpg" alt="VIPS Image 6">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005637Gpk.jpg" alt="VIPS Image 7">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005646Gpk.jpg" alt="VIPS Image 8">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005658Gpk.jpg" alt="VIPS Image 9">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005661Gpk.jpg" alt="VIPS Image 10">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005672Gpk.jpg" alt="VIPS Image 11">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005682Gpk.jpg" alt="VIPS Image 12">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005718Gpk.jpg" alt="VIPS Image 13">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005723Gpk.jpg" alt="VIPS Image 14">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/VIPS/L1005725Gpk.jpg" alt="VIPS Image 15">
+          </div>
+
+          <button class="arrow right-arrow">
+            <img src="images/FLECHITAS-02.png" alt="Flecha derecha">
+          </button>
+        </div>
+
+        <section class="my-8">
+          <h4 class="h4-h4">Credits:</h4>
+          <div class="credits-grid text-black">
+            <div class="credit-column">
+              <p>Director: PEDRO TRIVIÑO</p>
+              <p>Executive Producer: MARC GARDETA & RAQUEL PÉREZ TATO</p>
+              <p>Producer: OLIVIA CABELLO</p>
+              <p>DOP: ORIOL COLOMAR</p>
+              <p>Art Director: PAULA VEGA</p>
+              <p>Home Economist: RITA CIFUENTES</p>
+            </div>
+
+            <div class="credit-column">
+              <p>Stylist: CAROL BERNAL</p>
+              <p>Hair and makeup: SARAH MATIA</p>
+              <p>Edit: MARC PONS</p>
+              <p>Color Grading: DAVID CASTAÑÓN (MCNULTY)</p>
+              <p>Postproduction: MCNULTY</p>
+              <p>Sound Postproduction: LA PANADERÍA</p>
+            </div>
+          </div>
+        </section>          
+    </main>
+
+    <!-- Incluir el footer -->
+    <div id="footer"></div>
+    
+  </div>
+
+  <script src="Scripts/carousel.js"></script>
+  <!-- Código JavaScript para manejar los eventos de hover y reproducir audio -->
+  <script>
+    // Función para cargar dinámicamente el contenido HTML
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+  
+    // Cargar el encabezado y pie de página
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+    initCarousel();
+  </script>
+</body>
+</html>
