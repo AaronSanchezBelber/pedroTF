@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JUNIOR / SHORTS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="h-screen d-flex flex-column">
+    
+    <!-- Incluir el header -->
+    <div id="header"></div>
+
+    <!-- Div para el video de YouTube -->
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/QPdJ0Gpc45g" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <main class="flex-grow">
+      <section class="my-8">
+        <h4 class="h4-h4">Production / Direction for:</h4>
+        <h2 class="h2-h2">JUNIOR / SHORTS</h2>
+
+        <p class="p-p">
+          A series of short scenes we created a while ago for Junior's acting reel, exploring different emotional and dramatic registers through situations filled with tension, suspense, and intensity.<br>
+          We wanted to create brief but powerful pieces, giving space to the performance, silences, and subtle expressions to build tension and emotion.<br>
+          Visually, we went for an intense, cinematic approach, using light, contrast, and framing to heighten the drama of each scene and immerse us in the characters’ emotional states.<br>
+          The result is a collection of short stories that come together to showcase Junior's versatility and ability to perform across dramatic and suspense-driven roles.
+        </p>
+
+        <section class="my-8">
+          <h4 class="h4-h4">Credits:</h4>
+          <div class="credits-grid text-black">
+            <div class="credit-column">
+              <p>Production: Kumo @kumocreativeproject</p>
+              <p>Direction: Pedro Triviño @kumocreativeproject</p>
+              <p>Script: Junior Lefranc @junior.lefranc</p>
+              <p>DoP: Darío Rivera @darioriveraa</p>
+              <p>1AC: Pau Pomar @paupomar</p>
+              <p>Gaffer: Fernando Torcal @f_torcal</p>
+              <p>Head of Production: Sara Mango @saramango</p>
+            </div>
+
+            <div class="credit-column">
+              <p>Edit: @Alvsvonper</p>
+              <p>Color: Guillem Birba @gyem.rgb</p>
+              <p>Styling: Ira Climent @iraidxs</p>
+              <p>Art Director: Adriana Parisca @paris.ca</p>
+              <p>MUAH: Maria Chacin @themariachacin</p>
+              <p>Cast: Marina Barta @marinadebarta / Junior Lefranc @junior.lefranc / Sebastian Contry @sebastian.actor</p>
+            </div>
+          </div>
+        </section>          
+    </main>
+
+    <!-- Incluir el footer -->
+    <div id="footer"></div>
+    
+  </div>
+
+  <!-- Código JavaScript para cargar elementos comunes -->
+  <script>
+    // Función para cargar dinámicamente el contenido HTML
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+  
+    // Cargar el encabezado y pie de página
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+  </script>
+</body>
+</html>

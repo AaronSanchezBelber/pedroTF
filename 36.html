@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ING / DESUBICADOS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="h-screen d-flex flex-column">
+    
+    <!-- Incluir el header -->
+    <div id="header"></div>
+
+    <!-- Div para el video de YouTube -->
+    <div class="video-container">
+      <iframe 
+        src="https://www.youtube.com/embed/g-jjuPGthRk" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <main class="flex-grow">
+      <section class="my-8">
+        <h4 class="h4-h4">Production / Direction for:</h4>
+        <h2 class="h2-h2">ING / DESUBICADOS</h2>
+
+        <p class="p-p">
+          There’s something funny about turning 40: you finally know what you want, but you also realize you can change your mind whenever you want.<br>
+          Today, you might be booking a spontaneous getaway, tomorrow enjoying a deluxe plan with a wristband, and the next day dressing up for a show at the Liceu.<br>
+          Because at 40, it’s not about finding your place anymore. It’s about being able to choose where you want to be and how you want to live.<br>
+          A freedom of choice that connects directly with ING and its flexible mortgages, designed to adapt to you and the decisions you make.
+        </p>
+        
+        <div class="custom-slider">
+          <button class="arrow left-arrow">
+            <img src="images/FLECHITAS-01.png" alt="Flecha izquierda">
+          </button>
+          
+          <div class="slide horizontal active">
+            <img src="proyectos/ING/L1002922pk.jpg" alt="ING Image 1">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/ING/L1002926pk.jpg" alt="ING Image 2">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/ING/L1002936pk.jpg" alt="ING Image 3">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/ING/L1002952pk.jpg" alt="ING Image 4">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/ING/L1002971pk.jpg" alt="ING Image 5">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/ING/L1002973pk.jpg" alt="ING Image 6">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/ING/L1003000pk.jpg" alt="ING Image 7">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/ING/L1003004pk.jpg" alt="ING Image 8">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/ING/L1003037pk.jpg" alt="ING Image 9">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/ING/L1003039pk.jpg" alt="ING Image 10">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/ING/L1003054pk.jpg" alt="ING Image 11">
+          </div>
+
+          <button class="arrow right-arrow">
+            <img src="images/FLECHITAS-02.png" alt="Flecha derecha">
+          </button>
+        </div>
+
+        <section class="my-8">
+          <h4 class="h4-h4">Credits:</h4>
+          <div class="credits-grid text-black">
+            <div class="credit-column">
+              <p>Agency: @srarushmore</p>
+              <p>Direction: @kumocreativeproject</p>
+              <p>Postproduction coordinator: @perezdetudelam</p>
+              <p>Producer: @juanjogarciamo</p>
+              <p>Producer ag: @inakis</p>
+              <p>DOP: @oriolcolomar</p>
+            </div>
+
+            <div class="credit-column">
+              <p>Art Director: @pigmentostudio_</p>
+              <p>Sylist: @carol_bernal</p>
+              <p>MUAH: @dannizu</p>
+              <p>Lightning: @kilowatiosluz</p>
+              <p>Postproduction coordinator: @a.k.a.post</p>
+            </div>
+          </div>
+        </section>          
+    </main>
+
+    <!-- Incluir el footer -->
+    <div id="footer"></div>
+    
+  </div>
+
+  <script src="Scripts/carousel.js"></script>
+  <!-- Código JavaScript para cargar elementos comunes -->
+  <script>
+    // Función para cargar dinámicamente el contenido HTML
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+  
+    // Cargar el encabezado y pie de página
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+    initCarousel();
+  </script>
+</body>
+</html>
