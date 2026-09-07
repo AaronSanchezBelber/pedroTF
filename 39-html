@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>€ BY MAISON KINKI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="h-screen d-flex flex-column">
+    
+    <!-- Incluir el header -->
+    <div id="header"></div>
+
+    <main class="flex-grow">
+      <section class="my-8">
+        <h4 class="h4-h4">Creative Direction / design / Production for:</h4>
+        <h2 class="h2-h2">€ BY MAISON KINKI Y.1 / C.2 COLLECTION</h2>
+
+        <p class="p-p">
+          Based on how society perceives fashion through its value and acquired social status. Here, we propose a reflection between the real and abstract importance of money.<br>
+          Maison Kinki’s aim is to generate art and its experiences in a commercial environment, creating conceptual projects about usable products.<br>
+          “This collection concept is the result of an analysis of the fashion world and how it can influence contemporary society.”
+        </p>
+        
+        <div class="custom-slider">
+          <button class="arrow left-arrow">
+            <img src="images/FLECHITAS-01.png" alt="Flecha izquierda">
+          </button>
+          
+          <div class="slide horizontal active">
+            <img src="proyectos/MAISON_KINKI/bodegon0075-....jpg" alt="Maison Kinki Image 1">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/bodegon0139.jpg" alt="Maison Kinki Image 2">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/portada.jpg" alt="Maison Kinki Image 3">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/-ULTIMA.jpg" alt="Maison Kinki Image 4">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/1.jpg" alt="Maison Kinki Image 5">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/7 -screen.jpg" alt="Maison Kinki Image 6">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/8.jpg" alt="Maison Kinki Image 7">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/750.jpg" alt="Maison Kinki Image 8">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3372.jpg" alt="Maison Kinki Image 9">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3376.jpg" alt="Maison Kinki Image 10">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3385.jpg" alt="Maison Kinki Image 11">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3400.jpg" alt="Maison Kinki Image 12">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3407-chanda.jpg" alt="Maison Kinki Image 13">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3424.jpg" alt="Maison Kinki Image 14">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3441.jpg" alt="Maison Kinki Image 15">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3462.jpg" alt="Maison Kinki Image 16">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3478.jpg" alt="Maison Kinki Image 17">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3497.jpg" alt="Maison Kinki Image 18">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3506-chancla.jpg" alt="Maison Kinki Image 19">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3539-chancla.jpg" alt="Maison Kinki Image 20">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3565-chanclas.jpg" alt="Maison Kinki Image 21">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3582.jpg" alt="Maison Kinki Image 22">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3610.jpg" alt="Maison Kinki Image 23">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3621.jpg" alt="Maison Kinki Image 24">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/3625.jpg" alt="Maison Kinki Image 25">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/bodegon2.jpg" alt="Maison Kinki Image 26">
+          </div>
+          <div class="slide horizontal">
+            <img src="proyectos/MAISON_KINKI/pies.jpg" alt="Maison Kinki Image 27">
+          </div>
+
+          <button class="arrow right-arrow">
+            <img src="images/FLECHITAS-02.png" alt="Flecha derecha">
+          </button>
+        </div>
+
+        <section class="my-8">
+          <h4 class="h4-h4">Credits:</h4>
+          <div class="credits-grid text-black">
+            <div class="credit-column">
+              <p>Production: Kinkifactory</p>
+              <p>Design: Kinki factory</p>
+            </div>
+
+            <div class="credit-column">
+              <p>Creative Direction: Pedro Triviño Guillermo Aliaga</p>
+              <p>Direction Ass: @al.veiga</p>
+            </div>
+          </div>
+        </section>          
+    </main>
+
+    <!-- Incluir el footer -->
+    <div id="footer"></div>
+    
+  </div>
+
+  <script src="Scripts/carousel.js"></script>
+  <!-- Código JavaScript para cargar elementos comunes -->
+  <script>
+    function loadHTML(elementId, filePath) {
+      fetch(filePath)
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById(elementId).innerHTML = data;
+        })
+        .catch(error => console.error('Error al cargar el archivo:', error));
+    }
+  
+    loadHTML('header', 'header.html');
+    loadHTML('footer', 'footer.html');
+    initCarousel();
+  </script>
+</body>
+</html>
