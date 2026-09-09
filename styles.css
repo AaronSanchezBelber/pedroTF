@@ -8,7 +8,6 @@ html, body {
 }
 
 
-
 .container {
   width: 100%;
   min-height: auto; 
@@ -24,42 +23,51 @@ html, body {
   font-family: 'OTNeueMontreal-BookUltraSqueezed';
   src: url('assets/fonts/OTNeueMontreal-BookUltraSqueezed.otf') format('opentype');
 }
+
 /* ItalicSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-ItalicSqueezed';
   src: url('assets/fonts/OTNeueMontreal-ItalicSqueezed.otf') format('opentype');
 }
+
 /* SemiBoldUltraSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed';
   src: url('assets/fonts/OTNeueMontreal-SemiBoldUltraSqueezed.otf') format('opentype');
 }
+
 /* BookSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-BookSqueezed';
   src: url('assets/fonts/OTNeueMontreal-BookSqueezed.otf') format('opentype');
 }
+
 /* BoldUltraSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-BoldUltraSqueezed';
   src: url('assets/fonts/OTNeueMontreal-BoldUltraSqueezed.otf') format('opentype');
 }
+
 /* MediumSqueezed */
 @font-face {
   font-family: 'OTNeueMontreal-MediumSqueezed';
   src: url('assets/fonts/OTNeueMontreal-MediumSqueezed.otf') format('opentype');
 }
 
+
 /* ========================
    2. Cursor personalizado
    ======================== */
+
 * {
   cursor: url('images/cursor2.png'), default;
 }
 
+
 /* ========================
    3. Header
    ======================== */
+
 header {
   display: flex;
   align-items: center;
@@ -77,9 +85,8 @@ header {
   align-items: center;
   gap: 0; 
 }
- 
+
 .logo {
-  /*height: 15rem;  */
   height: 12.5vw;
   width: auto;
   object-fit: contain; 
@@ -93,26 +100,26 @@ header {
   align-items: center;
   justify-content: stretch;
   letter-spacing: -0.1rem; 
-  /* padding: 2.5rem 2rem; */
   padding: clamp(1rem, 5vw, 2.5rem) clamp(1rem, 3vw, 2rem);
 }
 
+
 /* Enlaces del header */
+
 .header-font a {
   font-family: 'OTNeueMontreal-SemiBoldUltraSqueezed', sans-serif;
-  /*font-size: 16.3rem;*/
   font-size: 13.6vw;
   text-decoration: none;
   color: red;
-/*   margin-left: 2rem;
-  line-height: 1rem; */
   margin-left: 1.65vw;
   line-height: 2vw;
 }
 
+
 /* ========================
    4. Layout principal
    ======================== */
+
 .h-screen {
   display: flex;
   flex-direction: column;
@@ -121,12 +128,13 @@ header {
 
 main {
   flex: 1;
- /*overflow: auto;*/
 }
+
 
 /* ========================
    5. Galería de index.html
    ======================== */
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -138,7 +146,7 @@ main {
   object-fit: cover;
 }
 
-.grid-container-2{
+.grid-container-2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -149,9 +157,11 @@ main {
   object-fit: cover;
 }
 
+
 /* ========================
    6. Video containers
    ======================== */
+
 .video-container {
   position: relative;
   width: 100%;
@@ -159,6 +169,7 @@ main {
   padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
   overflow: hidden;
 }
+
 .video-container iframe {
   position: absolute;
   top: 0;
@@ -167,18 +178,20 @@ main {
   height: 100%;
 }
 
+
 /* ==============================
    7. Slider (páginas de proyecto)
    ============================== */
+
 .custom-slider {
   position: relative;
   width: 100%;
-  height: 100vh; 
+  height: 100vh;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 .slide {
@@ -188,42 +201,40 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0; 
-  transition: opacity 0.5s ease-in-out; 
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
+
 .slide.active {
-  opacity: 1; 
+  opacity: 1;
 }
 
-/* Imágenes horizontales */
-.slide.horizontal img {
-  width: 100%;
+
+/* =================================
+   IMÁGENES DEL SLIDER
+   Adaptación automática horizontal/vertical
+   ================================= */
+
+.slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
   transition: transform 1s ease-in-out;
 }
-.slide.horizontal img:hover {
+
+.slide img:hover {
   transform: scale(1.05);
 }
 
-/* Imágenes verticales */
-.slide.vertical {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-}
-.slide.vertical img {
-  width: auto; 
-  height: 100%;
-  object-fit: contain; 
-  transition: transform 1s ease-in-out;
-  /*margin-left: 50%;  Espacio en blanco a la izquierda */
-}
-.slide.vertical img:hover {
-  transform: scale(1.05);
-}
 
-/* Flechas del slider */
+/* ========================
+   Flechas del slider
+   ======================== */
+
 .arrow {
   position: absolute;
   top: 50%;
@@ -233,39 +244,48 @@ main {
   cursor: pointer;
   z-index: 10;
   transition: opacity 0.3s ease;
-  opacity: 0; /* Por defecto ocultas */
+  opacity: 0;
 }
+
 .left-arrow {
   left: 10px;
 }
+
 .right-arrow {
   right: 10px;
 }
+
 .custom-slider:hover .arrow {
-  opacity: 1; /* Aparecen al hacer hover sobre el slider */
+  opacity: 1;
 }
+
 .arrow img {
-  width: 6rem; 
+  width: 6rem;
   height: auto;
 }
+
 .arrow:hover img {
-  transform: scale(1.1); 
+  transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
 }
+
 
 /* ========================
    8. Créditos
    ======================== */
+
 .credits-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem; 
 }
+
 .credit-column {
   display: flex;
   flex-direction: column;
   padding-top: 1rem;
 }
+
 .credit-column p {
   margin: 0;
   padding: 2px 0;
@@ -274,12 +294,14 @@ main {
   font-size: 2rem;
 }
 
+
 /* ========================
    9. Footer
    ======================== */
+
 footer {
-    height: 10rem;
-    margin-top: 15rem; /* Empuja el footer hacia abajo si hay espacio disponible */
+  height: 10rem;
+  margin-top: 15rem;
 }
 
 .foot1,
@@ -289,7 +311,9 @@ footer {
   font-family: 'OTNeueMontreal-ItalicSqueezed', sans-serif;
 }
 
-/* Ejemplo de foot1 */
+
+/* foot1 */
+
 .foot1 {
   font-size: 2.7rem;
   display: flex;
@@ -297,6 +321,7 @@ footer {
   justify-content: flex-start;
   width: 80%; 
 }
+
 .foot1 a {
   font-size: 1rem; 
   letter-spacing: 0rem;
@@ -304,7 +329,9 @@ footer {
   color: red;
 }
 
+
 /* foot2 */
+
 .foot2 {
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif;
   font-size: 1.5rem;
@@ -312,6 +339,7 @@ footer {
   padding-left: 1rem; 
   width: 80%; 
 }
+
 .foot2 a {
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif;
   font-size: 6rem;
@@ -321,7 +349,9 @@ footer {
   line-height: 1;
 }
 
+
 /* foot3 */
+
 .foot3 {
   font-family: 'OTNeueMontreal-BookSqueezed', sans-serif;
   font-size: 5rem;
@@ -333,11 +363,13 @@ footer {
   z-index: 1; 
 }
 
+
 /*
- parte derecha del footer.
-He añadido una linea que ignora clicks
-para asegurar que se puedan clikar los link
+=================================
+Parte derecha del footer
+=================================
 */
+
 .left-group-foot3 {
   display: flex;
   flex-direction: column;
@@ -348,8 +380,8 @@ para asegurar que se puedan clikar los link
   top: -140%;
   z-index: -2;
   pointer-events: none;
-
 }
+
 .left-group img {
   max-width: 100%;
   height: 8rem; 
@@ -372,18 +404,22 @@ para asegurar que se puedan clikar los link
   pointer-events: none;
 }
 
+
 /* ========================
    10. Estilos de texto genéricos
    ======================== */
+
 p {
   font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; 
   color: red;
 }
+
 .p-p {
   font-size: 3.3rem; 
   line-height: 3rem; 
   letter-spacing: 0rem; 
 }
+
 .h2-h2 {
   font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif;
   font-size: 9rem;
@@ -393,6 +429,7 @@ p {
   width: fit-content;
   line-height: 10rem;
 }
+
 .h4-h4 {
   font-family: 'OTNeueMontreal-MediumSqueezed', sans-serif; 
   font-size: 3.5rem; 
@@ -405,107 +442,103 @@ p {
 }
 
 
-
 /* ===============================
    11. About
    =============================== */ 
-  #aboutMain {
-    display: block; /* Evita que se expanda innecesariamente */
-    height: auto !important; /* Se ajusta al contenido */
-    min-height: 0;
-    padding: 0;
-  }
-  #aboutMain, .about-section {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
-  }
-  
-  #divGeneral{
-    min-height: 50rem;
-  }
 
-  .about-section {
-    position: relative;
-    min-height: 40vh;
-    margin: 0 !important;
-    padding: 0;
-
-  }
-
-  .about-section p {
-    margin-top:5rem;
-    max-width: 75%;
-    margin-bottom: 2rem;
-    font-size: 5rem; 
-    line-height: 4.5rem; 
-    letter-spacing: 0rem; 
-  
-  }
-  .background-gif {
-    position: absolute; /* Se posiciona dentro del contenedor */
-   /* Lo coloca debajo del texto */
-    top: 15%;
-    left: 80%; /* Lo centra horizontalmente */
-    transform: translateX(-50%) rotate(10deg); /* Centrado + rotación */
-    
-    width: 70vw; /* Escala proporcional en función del ancho de la pantalla */
-    max-width: 800px; /* Máximo tamaño del GIF */
-    height: 220%; /* Mantiene la proporción original */
-
-    background-image: url('gifs/Giff_about.gif'); /* Ruta del GIF */
-    background-size: contain; /* Se ajusta sin recorte */
-    background-repeat: no-repeat;
-    background-position: center;
-    z-index: 1; /* Asegura que esté debajo del texto */
+#aboutMain {
+  display: block;
+  height: auto !important;
+  min-height: 0;
+  padding: 0;
 }
 
-   
-  .content-overlay {
-    position: absolute; 
-    top: 2rem;
-    left: 0;
-    width: 100%; 
-    height:auto; 
-    z-index: 2;  
-    margin: 0;
-    padding: 0;
-  }
-  
+#aboutMain,
+.about-section {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+#divGeneral {
+  min-height: 50rem;
+}
+
+.about-section {
+  position: relative;
+  min-height: 40vh;
+  margin: 0 !important;
+  padding: 0;
+}
+
+.about-section p {
+  margin-top: 5rem;
+  max-width: 75%;
+  margin-bottom: 2rem;
+  font-size: 5rem; 
+  line-height: 4.5rem; 
+  letter-spacing: 0rem;
+}
+
+.background-gif {
+  position: absolute;
+  top: 15%;
+  left: 80%;
+  transform: translateX(-50%) rotate(10deg);
+  width: 70vw;
+  max-width: 800px;
+  height: 220%;
+  background-image: url('gifs/Giff_about.gif');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.content-overlay {
+  position: absolute; 
+  top: 2rem;
+  left: 0;
+  width: 100%; 
+  height: auto; 
+  z-index: 2;  
+  margin: 0;
+  padding: 0;
+}
+
+
 /* ===============================
    12. Media queries para phone
    =============================== */
+
 @media (max-width: 768px) {
 
-  html, body {
+  html,
+  body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden; /* Evita el desplazamiento horizontal */
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
   }
-  
+
   .container {
     width: 100%;
-    min-height: 100vh; /* Asegura que llene toda la altura visible */
+    min-height: 100vh;
   }
 
-  #grid{
-    width: auto;
-    height: auto;
-  }
 
-  /*
+  /* 
   =====
   ABOUT
   =====
   */
+
   .about-section {
-    /* Puedes ajustar la altura mínima si lo necesitas */
     min-height: 70vh;
     margin-top: 5rem;
   }
 
-  .background-gif{
+  .background-gif {
     height: 100%;
     width: 80%;
     top: -5.5rem;
@@ -514,41 +547,41 @@ p {
 
   .about-section p {
     max-width: 100%;
-    margin-top:2rem;
-  
+    margin-top: 2rem;
   }
 
   .content-overlay {
-    position: relative; /* Cambiamos a relative para evitar que se superponga demasiado */
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1;
   }
+
+
   /*
-  ====== 
+  ======
   Header
   ======
   */
+
   header {
-    height: clamp(5.1rem, 7vw, 5.8rem); /* Altura del header adaptable */
+    height: clamp(5.1rem, 7vw, 5.8rem);
   }
-  
+
   .logo {
-    height: clamp(4.8rem, 6vw, 5.1rem); /* Altura del logo adaptable */
+    height: clamp(4.8rem, 6vw, 5.1rem);
   }
-  
+
   .header-font {
-    padding-left: clamp(0rem, 1vw, 0rem); /* Padding adaptable */
-    padding-right: clamp(0.5rem, 3vw, 1.5rem); /* Asegurar simetría */
+    padding-left: clamp(0rem, 1vw, 0rem);
+    padding-right: clamp(0.5rem, 3vw, 1.5rem);
   }
-  
+
   .header-font a {
-    font-size: clamp(4.4rem, 5vw, 4.8rem); /* Tamaño de fuente adaptable */
+    font-size: clamp(4.4rem, 5vw, 4.8rem);
   }
 
-
-  
 
   /* 
   =========================
@@ -558,69 +591,85 @@ p {
 
   main {
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     margin-bottom: 0 !important;
     padding-bottom: 0 !important;
   }
-  .grid-container {
 
-    flex: 1; /* Hace que el grid se expanda para ocupar todo el espacio del main */
+  .grid-container {
+    flex: 1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 1fr;  /* Fuerza que todas las filas tengan la misma altura */
-    gap: 0;  /* Asegura que no haya espacio entre celdas */
+    grid-auto-rows: 1fr;
+    gap: 0;
   }
- 
-  .gallery-item {
-    overflow: hidden; /* Evita que el contenido se desborde de la celda */
 
+  .gallery-item {
+    overflow: hidden;
   }
 
   .gallery-item img {
     display: block;
     width: 100%;
-    height: 100%;      /* Fuerza a la imagen a ocupar toda la celda */
-    object-fit: cover; /* Ajusta la imagen para que cubra toda el área sin distorsionarse */
-  
+    height: 100%;
+    object-fit: cover;
   }
 
-  /* 
+
+  /*
   ========
   CAROUSEL
   ========
   */
 
   .custom-slider {
-    height: 20rem; /* Altura máxima razonable */
-    max-height: 90rem; /* Límite superior para pantallas pequeñas */
+    height: 70vh;
+    max-height: 90vh;
+    min-height: 20rem;
     width: 100%;
   }
-  .slide.vertical img {
-    margin-left: 0; 
-    display: block;
-    margin: 0 auto; 
-  }
-  .slide.slide.horizontal img {
-    margin-left: 0;
-    display: block;
-    margin: 0 auto; 
 
+  /*
+  Las imágenes verticales y horizontales
+  usan exactamente el mismo sistema.
+  */
+
+  .slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
- 
-  /* flechas carousel */
+
+  .slide img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+
+
+  /* 
+  =========================
+  FLECHAS CAROUSEL
+  =========================
+  */
+
   .arrow img {
-    /* adaptación del tamanyo */
     width: 1.5rem;
   }
 
-  /* espacio q ocupan las flechas */
   .arrow {
     top: 50%;
     transform: translateY(-50%);
   }
-    
+
   .left-arrow {
-    left: 2%; /* si flechas debajo, poner a 20% */
+    left: 2%;
   }
 
   .right-arrow {
@@ -628,15 +677,17 @@ p {
   }
 
   .custom-slider .arrow {
-    opacity: 1; /* Siempre visible, ya que hover no funciona en móvil */
+    opacity: 1;
   }
 
-   /* 
-   ======
-   FOOTER
-   ======
-   */
-   footer {
+
+  /*
+  ======
+  FOOTER
+  ======
+  */
+
+  footer {
     margin: 0;
     height: auto;
     text-align: center;
@@ -644,30 +695,34 @@ p {
     line-height: 1rem;
     padding-bottom: 1rem;
   }
-   .foot1 {
+
+  .foot1 {
     width: 100%;
     font-size: 1.5rem;
     padding-top: 0.5rem;
     letter-spacing: 0rem;
     line-height: 1rem;
     padding-left: 0;
-  } 
- .foot2{
+  }
+
+  .foot2 {
     width: 100%;
     margin-top: 0.7rem;
     line-height: 1rem;
     font-size: 1.2rem;
     padding-left: 1.5rem;
     text-align: left;
-  } 
+  }
 
-  .foot2 a, .foot3 a {
+  .foot2 a,
+  .foot3 a {
     font-size: 1.2rem;
     letter-spacing: 0rem;
     margin: 0.5rem 0;
     line-height: 1rem;
     text-align: left;
   }
+
   .foot3 {
     position: static;
     width: 100%;
@@ -676,13 +731,15 @@ p {
     font-size: 1.8rem;
     top: -1rem;
     left: 5rem;
-  } 
+  }
+
   .left-group-foot3 {
     margin-top: -5rem;
     margin-right: -3rem;
     position: static;
     z-index: 0;
   }
+
   .left-group {
     flex-direction: column;
     align-items: center;
@@ -693,21 +750,17 @@ p {
     left: 0px;
     top: 0px;
   }
+
   .left-group img {
     height: 70px;
     top: 0;
   }
 
-  .h-screen {
-    min-width: auto;
-  }
 
-  /*
-  ============================
-  TITULOS PROYECTOS + DETALLES
-  ============================
-  3.5 9 3.3
-  */
+  /* =========================
+     TÍTULOS PROYECTOS + DETALLES
+     ========================= */
+
   .h4-h4 {
     font-size: 2.4rem;
     line-height: 1; 
@@ -731,21 +784,28 @@ p {
   .about-section p {
     font-size: 2.4rem; 
     line-height: 2.2rem; 
-    letter-spacing: 0rem; 
-  
+    letter-spacing: 0rem;
   }
 
+
+  /* =========================
+     PANTALLAS MUY PEQUEÑAS
+     ========================= */
+
   @media (max-width: 375px) {
+
     header {
-      height: 5rem; /* Más pequeño en pantallas estrechas */
+      height: 5rem;
     }
-  
+
     .logo {
-      height: 4.8rem; /* Escala acorde a pantallas pequeñas */
+      height: 4.8rem;
     }
-  
+
     .header-font a {
-      font-size: 4rem; /* Fuente más pequeña en pantallas pequeñas */
+      font-size: 4rem;
     }
-}
+
+  }
+
 }
