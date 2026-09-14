@@ -508,7 +508,24 @@
       });
     }
   </script>
- 
+  <script src="Scripts/carousel.js"></script>
+    <!-- Código JavaScript para manejar los eventos de hover y reproducir audio -->
+    <script>
+      // Función para cargar dinámicamente el contenido HTML
+      function loadHTML(elementId, filePath) {
+        fetch(filePath)
+          .then(response => response.text())
+          .then(data => {
+            document.getElementById(elementId).innerHTML = data;
+          })
+          .catch(error => console.error('Error al cargar el archivo:', error));
+      }
+    
+      // Cargar el encabezado y pie de página
+      loadHTML('header', 'header.html');
+      loadHTML('footer', 'footer.html');
+      initCarousel();
+    </script>
 </body>
 </html>
 
